@@ -1,0 +1,267 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-background: #fff;
+  --color-accent: #3b6ea5;
+  --color-text: #1a1a1a;
+  --color-text-secondary: #4a4a4a;
+  --color-border: #e0e0e0;
+  --color-surface: #f8f9fa;
+  --font-size-body: 16px;
+  --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Hiragino Sans',
+    'Hiragino Kaku Gothic ProN', 'Yu Gothic', 'Meiryo', sans-serif;
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+  --max-width: 800px;
+}
+
+html {
+  font-size: var(--font-size-body);
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--color-background);
+  color: var(--color-text);
+  line-height: 1.8;
+  min-height: 100vh;
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+  line-height: 1.4;
+  margin-bottom: var(--spacing-sm);
+}
+
+h1 {
+  font-size: 1.75rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: var(--color-accent);
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+p {
+  margin-bottom: var(--spacing-sm);
+}
+
+main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--spacing-lg);
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--spacing-lg);
+}
+
+.question-box {
+  background-color: var(--color-surface);
+  border-left: 4px solid var(--color-accent);
+  padding: var(--spacing-md);
+  margin: var(--spacing-lg) 0;
+}
+
+.question-box h2 {
+  margin-bottom: var(--spacing-xs);
+}
+
+.practice-section {
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: var(--spacing-md);
+  margin: var(--spacing-lg) 0;
+}
+
+.practice-section summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--color-accent);
+}
+
+.practice-section[open] summary {
+  margin-bottom: var(--spacing-sm);
+}
+
+.memory-box {
+  background-color: var(--color-accent);
+  color: white;
+  padding: var(--spacing-md);
+  border-radius: 8px;
+  margin: var(--spacing-lg) 0;
+}
+
+.memory-box h3 {
+  margin-bottom: var(--spacing-sm);
+}
+
+.memory-box ol {
+  padding-left: var(--spacing-md);
+}
+
+.memory-box li {
+  margin-bottom: var(--spacing-xs);
+}
+
+.analogy {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-sm);
+  background-color: var(--color-surface);
+  border-radius: 4px;
+  margin: var(--spacing-xs) 0;
+}
+
+.analogy-term {
+  font-weight: 600;
+  min-width: 80px;
+}
+
+.analogy-equals {
+  color: var(--color-accent);
+}
+
+.svg-figure {
+  margin: var(--spacing-lg) 0;
+  text-align: center;
+}
+
+.svg-figure svg {
+  max-width: 100%;
+  height: auto;
+}
+
+.svg-figure figcaption {
+  margin-top: var(--spacing-xs);
+  color: var(--color-text-secondary);
+  font-size: 0.875rem;
+}
+
+.next-question {
+  background-color: var(--color-surface);
+  border-left: 4px solid var(--color-accent);
+  padding: var(--spacing-md);
+  margin-top: var(--spacing-xl);
+}
+
+button {
+  font-family: var(--font-family);
+  font-size: 1rem;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button.primary {
+  background-color: var(--color-accent);
+  color: white;
+}
+
+button.primary:hover {
+  background-color: #2d5a8a;
+}
+
+button:disabled {
+  background-color: var(--color-border);
+  color: var(--color-text-secondary);
+  cursor: not-allowed;
+}
+
+input,
+textarea {
+  font-family: var(--font-family);
+  font-size: 1rem;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  width: 100%;
+}
+
+input:focus,
+textarea:focus {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 1px;
+}
+
+.roadmap {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.roadmap-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-sm);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  transition: border-color 0.2s;
+}
+
+.roadmap-item:hover {
+  border-color: var(--color-accent);
+}
+
+.roadmap-item.completed {
+  background-color: var(--color-surface);
+}
+
+.roadmap-item.locked {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.roadmap-number {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: var(--color-accent);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+
+.roadmap-item.locked .roadmap-number {
+  background-color: var(--color-border);
+}
+
+.katex-display {
+  margin: var(--spacing-md) 0;
+  overflow-x: auto;
+}
