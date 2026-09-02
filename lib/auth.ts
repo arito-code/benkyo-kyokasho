@@ -1,5 +1,3 @@
-import { createHmac, timingSafeEqual } from 'crypto'
-
 const ALLOWED_EMAILS = [
   'info@g-knowthyself.com',
   'OtoI.snowman@gmail.com',
@@ -14,26 +12,38 @@ function getAuthSecret(): string {
   return process.env.AUTH_SECRET || FALLBACK_SECRET
 }
 
-function createSignature(payload: string): string {
+async function createSignature(payload: string): Promise<string> {
   const secret = getAuthSecret()
-  return createHmac('sha256', secret).update(payload).digest('hex')
+  const encoder = new TextEncoder()
+  const keyData = encoder.encode(secret)
+  const data = encoder.encode(payload)
+
+  const key = await crypto.subtle.importKey(
+    'raw',
+    keyData,
+    { name: 'HMAC', hash: 'SHA-256' },
+    false,
+    ['sign']
+  )
+
+  const signature = await crypto.subtle.sign('HMAC', key, data)
+  return Array.from(new Uint8Array(signature))
+    .map((b) => b.toString(16).padStart(2, '0'))
+    .join('')
 }
 
-function verifySignature(payload: string, signature: string): boolean {
-  const expectedSignature = createSignature(payload)
-  
-  try {
-    const sigBuffer = Buffer.from(signature, 'hex')
-    const expectedBuffer = Buffer.from(expectedSignature, 'hex')
-    
-    if (sigBuffer.length !== expectedBuffer.length) {
-      return false
-    }
-    
-    return timingSafeEqual(sigBuffer, expectedBuffer)
-  } catch {
+async function verifySignature(payload: string, signature: string): Promise<boolean> {
+  const expectedSignature = await createSignature(payload)
+
+  if (signature.length !== expectedSignature.length) {
     return false
   }
+
+  let result = 0
+  for (let i = 0; i < signature.length; i++) {
+    result |= signature.charCodeAt(i) ^ expectedSignature.charCodeAt(i)
+  }
+  return result === 0
 }
 
 export function isAllowedEmail(email: string): boolean {
@@ -46,27 +56,28 @@ export function getOriginalEmail(email: string): string | undefined {
   return ALLOWED_EMAILS.find((e) => e.toLowerCase() === normalizedEmail)
 }
 
-export function createAuthToken(email: string): string {
+export async function createAuthToken(email: string): Promise<string> {
   const payload = JSON.stringify({ email, ts: Date.now() })
-  const signature = createSignature(payload)
-  const token = `${Buffer.from(payload).toString('base64')}.${signature}`
+  const signature = await createSignature(payload)
+  const token = `${btoa(payload)}.${signature}`
   return token
 }
 
-export function parseAuthToken(token: string): { email: string; ts: number } | null {
+export async function parseAuthToken(token: string): Promise<{ email: string; ts: number } | null> {
   try {
     const parts = token.split('.')
     if (parts.length !== 2) {
       return null
     }
-    
+
     const [payloadBase64, signature] = parts
-    const payload = Buffer.from(payloadBase64, 'base64').toString('utf-8')
-    
-    if (!verifySignature(payload, signature)) {
+    const payload = atob(payloadBase64)
+
+    const isValid = await verifySignature(payload, signature)
+    if (!isValid) {
       return null
     }
-    
+
     const decoded = JSON.parse(payload)
     if (decoded.email && typeof decoded.ts === 'number') {
       return decoded
@@ -77,14 +88,14 @@ export function parseAuthToken(token: string): { email: string; ts: number } | n
   }
 }
 
-export function validateAuthToken(token: string): boolean {
-  const parsed = parseAuthToken(token)
+export async function validateAuthToken(token: string): Promise<boolean> {
+  const parsed = await parseAuthToken(token)
   if (!parsed) return false
-  
+
   if (!isAllowedEmail(parsed.email)) return false
-  
+
   const maxAge = 30 * 24 * 60 * 60 * 1000
   if (Date.now() - parsed.ts > maxAge) return false
-  
+
   return true
 }

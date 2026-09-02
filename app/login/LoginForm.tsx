@@ -4,30 +4,32 @@ import { useState } from 'react'
 
 export default function LoginForm() {
   const [email, setEmail] = useState('')
-  const [message, setMessage] = useState('')
+  const [error, setError] = useState('')
   const [isLoading, setIsLoading] = useState(false)
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsLoading(true)
-    setMessage('')
+    setError('')
 
     try {
       const res = await fetch('/api/auth/request', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
+        credentials: 'same-origin',
         body: JSON.stringify({ email }),
       })
 
       const data = await res.json()
 
-      if (res.ok) {
-        setMessage('認証リンクをメールで送信しました。メールをご確認ください。')
-      } else {
-        setMessage(data.error || 'エラーが発生しました。')
+      if (!res.ok) {
+        setError(data.error || 'エラーが発生しました。')
+        return
       }
+
+      window.location.assign(data.redirect || '/')
     } catch {
-      setMessage('ネットワークエラーが発生しました。')
+      setError('ネットワークエラーが発生しました。')
     } finally {
       setIsLoading(false)
     }
@@ -51,18 +53,16 @@ export default function LoginForm() {
         disabled={isLoading}
         style={{ width: '100%' }}
       >
-        {isLoading ? '送信中...' : 'ログインリンクを送信'}
+        {isLoading ? '確認中...' : '入る'}
       </button>
-      {message && (
+      {error && (
         <p
           style={{
             marginTop: 'var(--spacing-sm)',
-            color: message.includes('エラー')
-              ? '#c53030'
-              : 'var(--color-accent)',
+            color: '#c53030',
           }}
         >
-          {message}
+          {error}
         </p>
       )}
     </form>

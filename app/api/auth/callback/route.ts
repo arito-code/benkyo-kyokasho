@@ -23,7 +23,7 @@ export async function GET(request: NextRequest) {
       return NextResponse.redirect(new URL('/login?error=invalid_email', request.url))
     }
 
-    const authToken = createAuthToken(originalEmail)
+    const authToken = await createAuthToken(originalEmail)
 
     const cookieStore = await cookies()
     cookieStore.set('study_auth', authToken, {
