@@ -1,6 +1,8 @@
 import Header from '@/components/Header'
 import PracticeToggle from '@/components/PracticeToggle'
 import Formula from '@/components/Formula'
+import LessonIllustration from '@/components/illustrations/LessonIllustration'
+import AskBox from '@/components/AskBox'
 import Link from 'next/link'
 
 export default function Lesson01Page() {
@@ -8,6 +10,8 @@ export default function Lesson01Page() {
     <>
       <Header />
       <main>
+        <LessonIllustration lessonNumber={1} ready={true} />
+
         <div style={{ marginBottom: 'var(--spacing-md)' }}>
           <Link href="/">← ホームに戻る</Link>
         </div>
@@ -161,7 +165,9 @@ export default function Lesson01Page() {
           </ol>
         </div>
 
-        <div style={{ marginTop: 'var(--spacing-xl)' }}>
+        <AskBox lessonId="01-electricity" />
+
+        <div style={{ marginTop: 'var(--spacing-lg)' }}>
           <Link href="/">← ホームに戻る</Link>
         </div>
       </main>
