@@ -17,9 +17,9 @@ export const phases: Phase[] = [
     title: 'ものづくりの世界を知る',
     lessons: [
       { number: 1, title: '電気とは何か', slug: '01-electricity', ready: true },
-      { number: 2, title: '機械とは何か', slug: '02-machine', ready: false },
-      { number: 3, title: 'コンピュータとは何か', slug: '03-computer', ready: false },
-      { number: 4, title: '入力と出力', slug: '04-io', ready: false },
+      { number: 2, title: '機械とは何か', slug: '02-machine', ready: true },
+      { number: 3, title: 'コンピュータとは何か', slug: '03-computer', ready: true },
+      { number: 4, title: '入力と出力', slug: '04-io', ready: true },
       { number: 5, title: 'センサーとは何か', slug: '05-sensor-intro', ready: false },
       { number: 6, title: 'プログラムとは何か', slug: '06-program', ready: false },
     ],

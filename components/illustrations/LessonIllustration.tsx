@@ -8,11 +8,18 @@ export default function LessonIllustration({ lessonNumber, ready = true }: Lesso
     return <SoonIllustration />
   }
 
-  if (lessonNumber === 1) {
-    return <Lesson1Illustration />
+  switch (lessonNumber) {
+    case 1:
+      return <Lesson1Illustration />
+    case 2:
+      return <Lesson2Illustration />
+    case 3:
+      return <Lesson3Illustration />
+    case 4:
+      return <Lesson4Illustration />
+    default:
+      return <SoonIllustration />
   }
-
-  return <SoonIllustration />
 }
 
 function Lesson1Illustration() {
@@ -23,40 +30,179 @@ function Lesson1Illustration() {
       className="page-illustration"
       aria-label="電気とは何か - 電池と押し"
     >
-      {/* Background notebook lines */}
       <line x1="0" y1="35" x2="680" y2="35" stroke="#e0e0e0" strokeWidth="1" />
       <line x1="0" y1="70" x2="680" y2="70" stroke="#e0e0e0" strokeWidth="1" />
 
-      {/* Battery */}
       <g transform="translate(250, 15)">
-        {/* Battery body */}
         <rect x="0" y="10" width="60" height="40" rx="3" fill="none" stroke="#3b6ea5" strokeWidth="2" />
-        {/* Battery terminal */}
         <rect x="60" y="22" width="8" height="16" fill="#3b6ea5" />
-        
-        {/* + symbol */}
         <line x1="15" y1="30" x2="25" y2="30" stroke="#3b6ea5" strokeWidth="2" />
         <line x1="20" y1="25" x2="20" y2="35" stroke="#3b6ea5" strokeWidth="2" />
-        
-        {/* - symbol */}
         <line x1="40" y1="30" x2="50" y2="30" stroke="#3b6ea5" strokeWidth="2" />
-        
-        {/* Labels */}
         <text x="20" y="55" textAnchor="middle" fill="#3b6ea5" fontSize="10">＋</text>
         <text x="45" y="55" textAnchor="middle" fill="#3b6ea5" fontSize="10">−</text>
       </g>
 
-      {/* Arrow showing "push" */}
       <g transform="translate(340, 15)">
         <path d="M0 30 L40 30" fill="none" stroke="#3b6ea5" strokeWidth="2" />
         <polygon points="40,25 50,30 40,35" fill="#3b6ea5" />
         <text x="25" y="55" textAnchor="middle" fill="#3b6ea5" fontSize="11" fontWeight="500">押し</text>
       </g>
 
-      {/* Voltage indicator */}
       <g transform="translate(410, 15)">
         <text x="0" y="35" fill="#3b6ea5" fontSize="14" fontWeight="600">V</text>
         <text x="20" y="35" fill="#4a4a4a" fontSize="11">電圧</text>
+      </g>
+    </svg>
+  )
+}
+
+function Lesson2Illustration() {
+  return (
+    <svg
+      viewBox="0 0 680 100"
+      xmlns="http://www.w3.org/2000/svg"
+      className="page-illustration"
+      aria-label="機械とは何か - ギアとモーター"
+    >
+      <line x1="0" y1="35" x2="680" y2="35" stroke="#e0e0e0" strokeWidth="1" />
+      <line x1="0" y1="70" x2="680" y2="70" stroke="#e0e0e0" strokeWidth="1" />
+
+      {/* Gear 1 */}
+      <g transform="translate(250, 20)">
+        <circle cx="25" cy="25" r="20" fill="none" stroke="#3b6ea5" strokeWidth="2" />
+        <circle cx="25" cy="25" r="6" fill="#3b6ea5" />
+        <line x1="25" y1="5" x2="25" y2="0" stroke="#3b6ea5" strokeWidth="4" />
+        <line x1="39" y1="11" x2="43" y2="7" stroke="#3b6ea5" strokeWidth="4" />
+        <line x1="45" y1="25" x2="50" y2="25" stroke="#3b6ea5" strokeWidth="4" />
+        <line x1="39" y1="39" x2="43" y2="43" stroke="#3b6ea5" strokeWidth="4" />
+        <line x1="25" y1="45" x2="25" y2="50" stroke="#3b6ea5" strokeWidth="4" />
+        <line x1="11" y1="39" x2="7" y2="43" stroke="#3b6ea5" strokeWidth="4" />
+        <line x1="5" y1="25" x2="0" y2="25" stroke="#3b6ea5" strokeWidth="4" />
+        <line x1="11" y1="11" x2="7" y2="7" stroke="#3b6ea5" strokeWidth="4" />
+      </g>
+
+      {/* Arrow */}
+      <g transform="translate(310, 35)">
+        <path d="M0 10 L30 10" fill="none" stroke="#3b6ea5" strokeWidth="2" />
+        <polygon points="30,5 40,10 30,15" fill="#3b6ea5" />
+      </g>
+
+      {/* Gear 2 (smaller) */}
+      <g transform="translate(360, 25)">
+        <circle cx="20" cy="20" r="15" fill="none" stroke="#3b6ea5" strokeWidth="2" />
+        <circle cx="20" cy="20" r="5" fill="#3b6ea5" />
+        <line x1="20" y1="5" x2="20" y2="0" stroke="#3b6ea5" strokeWidth="3" />
+        <line x1="31" y1="9" x2="34" y2="6" stroke="#3b6ea5" strokeWidth="3" />
+        <line x1="35" y1="20" x2="40" y2="20" stroke="#3b6ea5" strokeWidth="3" />
+        <line x1="31" y1="31" x2="34" y2="34" stroke="#3b6ea5" strokeWidth="3" />
+        <line x1="20" y1="35" x2="20" y2="40" stroke="#3b6ea5" strokeWidth="3" />
+        <line x1="9" y1="31" x2="6" y2="34" stroke="#3b6ea5" strokeWidth="3" />
+        <line x1="5" y1="20" x2="0" y2="20" stroke="#3b6ea5" strokeWidth="3" />
+        <line x1="9" y1="9" x2="6" y2="6" stroke="#3b6ea5" strokeWidth="3" />
+      </g>
+
+      <text x="320" y="80" textAnchor="middle" fill="#3b6ea5" fontSize="11" fontWeight="500">力を伝える</text>
+    </svg>
+  )
+}
+
+function Lesson3Illustration() {
+  return (
+    <svg
+      viewBox="0 0 680 100"
+      xmlns="http://www.w3.org/2000/svg"
+      className="page-illustration"
+      aria-label="コンピュータとは何か - 計算と判断"
+    >
+      <line x1="0" y1="35" x2="680" y2="35" stroke="#e0e0e0" strokeWidth="1" />
+      <line x1="0" y1="70" x2="680" y2="70" stroke="#e0e0e0" strokeWidth="1" />
+
+      {/* Computer/Chip */}
+      <g transform="translate(260, 15)">
+        <rect x="20" y="10" width="40" height="40" rx="3" fill="none" stroke="#3b6ea5" strokeWidth="2" />
+        {/* Pins */}
+        <line x1="30" y1="10" x2="30" y2="3" stroke="#3b6ea5" strokeWidth="2" />
+        <line x1="40" y1="10" x2="40" y2="3" stroke="#3b6ea5" strokeWidth="2" />
+        <line x1="50" y1="10" x2="50" y2="3" stroke="#3b6ea5" strokeWidth="2" />
+        <line x1="30" y1="50" x2="30" y2="57" stroke="#3b6ea5" strokeWidth="2" />
+        <line x1="40" y1="50" x2="40" y2="57" stroke="#3b6ea5" strokeWidth="2" />
+        <line x1="50" y1="50" x2="50" y2="57" stroke="#3b6ea5" strokeWidth="2" />
+        <line x1="20" y1="20" x2="13" y2="20" stroke="#3b6ea5" strokeWidth="2" />
+        <line x1="20" y1="30" x2="13" y2="30" stroke="#3b6ea5" strokeWidth="2" />
+        <line x1="20" y1="40" x2="13" y2="40" stroke="#3b6ea5" strokeWidth="2" />
+        <line x1="60" y1="20" x2="67" y2="20" stroke="#3b6ea5" strokeWidth="2" />
+        <line x1="60" y1="30" x2="67" y2="30" stroke="#3b6ea5" strokeWidth="2" />
+        <line x1="60" y1="40" x2="67" y2="40" stroke="#3b6ea5" strokeWidth="2" />
+        {/* Center dot */}
+        <circle cx="40" cy="30" r="4" fill="#3b6ea5" />
+      </g>
+
+      {/* Arrow to result */}
+      <g transform="translate(350, 30)">
+        <path d="M0 15 L25 15" fill="none" stroke="#3b6ea5" strokeWidth="2" />
+        <polygon points="25,10 35,15 25,20" fill="#3b6ea5" />
+      </g>
+
+      {/* Result */}
+      <g transform="translate(395, 20)">
+        <rect x="0" y="5" width="50" height="30" rx="3" fill="none" stroke="#3b6ea5" strokeWidth="2" />
+        <text x="25" y="25" textAnchor="middle" fill="#3b6ea5" fontSize="12" fontWeight="600">判断</text>
+      </g>
+
+      <text x="305" y="80" textAnchor="middle" fill="#3b6ea5" fontSize="11" fontWeight="500">計算する</text>
+    </svg>
+  )
+}
+
+function Lesson4Illustration() {
+  return (
+    <svg
+      viewBox="0 0 680 100"
+      xmlns="http://www.w3.org/2000/svg"
+      className="page-illustration"
+      aria-label="入力と出力 - センサーとLED"
+    >
+      <line x1="0" y1="35" x2="680" y2="35" stroke="#e0e0e0" strokeWidth="1" />
+      <line x1="0" y1="70" x2="680" y2="70" stroke="#e0e0e0" strokeWidth="1" />
+
+      {/* Input - Sensor */}
+      <g transform="translate(200, 20)">
+        <circle cx="20" cy="20" r="18" fill="none" stroke="#3b6ea5" strokeWidth="2" />
+        <circle cx="20" cy="20" r="8" fill="#3b6ea5" opacity="0.3" />
+        <circle cx="20" cy="20" r="3" fill="#3b6ea5" />
+        <text x="20" y="55" textAnchor="middle" fill="#3b6ea5" fontSize="10" fontWeight="500">入力</text>
+      </g>
+
+      {/* Arrow to computer */}
+      <g transform="translate(250, 35)">
+        <path d="M0 5 L30 5" fill="none" stroke="#3b6ea5" strokeWidth="2" />
+        <polygon points="30,0 40,5 30,10" fill="#3b6ea5" />
+      </g>
+
+      {/* Computer */}
+      <g transform="translate(300, 20)">
+        <rect x="0" y="5" width="40" height="30" rx="3" fill="none" stroke="#3b6ea5" strokeWidth="2" />
+        <circle cx="20" cy="20" r="5" fill="#3b6ea5" />
+        <text x="20" y="55" textAnchor="middle" fill="#3b6ea5" fontSize="10" fontWeight="500">処理</text>
+      </g>
+
+      {/* Arrow to output */}
+      <g transform="translate(350, 35)">
+        <path d="M0 5 L30 5" fill="none" stroke="#3b6ea5" strokeWidth="2" />
+        <polygon points="30,0 40,5 30,10" fill="#3b6ea5" />
+      </g>
+
+      {/* Output - LED */}
+      <g transform="translate(400, 15)">
+        <path d="M10 25 L30 25 L20 5 Z" fill="none" stroke="#3b6ea5" strokeWidth="2" />
+        <line x1="8" y1="30" x2="32" y2="30" stroke="#3b6ea5" strokeWidth="2" />
+        <line x1="12" y1="35" x2="28" y2="35" stroke="#3b6ea5" strokeWidth="2" />
+        {/* Light rays */}
+        <line x1="5" y1="10" x2="0" y2="5" stroke="#3b6ea5" strokeWidth="1.5" opacity="0.6" />
+        <line x1="20" y1="0" x2="20" y2="-5" stroke="#3b6ea5" strokeWidth="1.5" opacity="0.6" />
+        <line x1="35" y1="10" x2="40" y2="5" stroke="#3b6ea5" strokeWidth="1.5" opacity="0.6" />
+        <text x="20" y="60" textAnchor="middle" fill="#3b6ea5" fontSize="10" fontWeight="500">出力</text>
       </g>
     </svg>
   )
@@ -70,10 +216,8 @@ function SoonIllustration() {
       className="page-illustration"
       aria-label="準備中"
     >
-      {/* Background notebook lines */}
       <line x1="0" y1="30" x2="680" y2="30" stroke="#e0e0e0" strokeWidth="1" />
 
-      {/* Simple placeholder mark */}
       <g transform="translate(310, 10)">
         <rect x="0" y="5" width="60" height="30" rx="4" fill="none" stroke="#e0e0e0" strokeWidth="2" />
         <text x="30" y="25" textAnchor="middle" fill="#e0e0e0" fontSize="10">準備中</text>
