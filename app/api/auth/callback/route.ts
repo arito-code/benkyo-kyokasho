@@ -1,13 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { cookies } from 'next/headers'
-
-const ALLOWED_EMAILS = [
-  'info@g-knowthyself.com',
-  'OtoI.snowman@gmail.com',
-  'fujii@g-knowthyself.com',
-  'asakura@g-knowthyself.com',
-  'iida@g-knowthyself.com',
-]
+import { isAllowedEmail, getOriginalEmail, createAuthToken } from '@/lib/auth'
 
 export async function GET(request: NextRequest) {
   const { searchParams } = new URL(request.url)
@@ -21,15 +14,16 @@ export async function GET(request: NextRequest) {
     const decoded = JSON.parse(atob(token))
     const { email } = decoded
 
-    if (!email || !ALLOWED_EMAILS.map((e) => e.toLowerCase()).includes(email.toLowerCase())) {
+    if (!email || !isAllowedEmail(email)) {
       return NextResponse.redirect(new URL('/login?error=invalid_email', request.url))
     }
 
-    const originalEmail = ALLOWED_EMAILS.find(
-      (e) => e.toLowerCase() === email.toLowerCase()
-    )
+    const originalEmail = getOriginalEmail(email)
+    if (!originalEmail) {
+      return NextResponse.redirect(new URL('/login?error=invalid_email', request.url))
+    }
 
-    const authToken = btoa(JSON.stringify({ email: originalEmail, ts: Date.now() }))
+    const authToken = createAuthToken(originalEmail)
 
     const cookieStore = await cookies()
     cookieStore.set('study_auth', authToken, {
