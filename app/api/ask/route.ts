@@ -4,7 +4,7 @@ import { askQuestion } from '@/lib/ask'
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json()
-    const { question } = body
+    const { question, lessonId } = body
 
     if (!question || typeof question !== 'string') {
       return NextResponse.json(
@@ -20,7 +20,7 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    const { answer, source } = await askQuestion(question)
+    const { answer, source } = await askQuestion(question, lessonId)
 
     return NextResponse.json({ answer, source })
   } catch (error) {

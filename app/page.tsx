@@ -1,12 +1,16 @@
 import Link from 'next/link'
 import Header from '@/components/Header'
 import CourseRoadmap from '@/components/CourseRoadmap'
+import HomeIllustration from '@/components/illustrations/HomeIllustration'
+import AskBox from '@/components/AskBox'
 
 export default function HomePage() {
   return (
     <>
       <Header />
       <main>
+        <HomeIllustration />
+
         <section style={{ marginBottom: 'var(--spacing-xl)' }}>
           <h1>技術営業のための100回講座</h1>
           <p style={{ fontSize: '1.125rem', lineHeight: 1.9 }}>
@@ -40,9 +44,10 @@ export default function HomePage() {
           <h2>その他</h2>
           <nav style={{ display: 'flex', gap: 'var(--spacing-md)', flexWrap: 'wrap' }}>
             <Link href="/glossary">用語集</Link>
-            <Link href="/ask">質問する</Link>
           </nav>
         </section>
+
+        <AskBox compact />
       </main>
     </>
   )

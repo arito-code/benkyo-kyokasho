@@ -1,5 +1,7 @@
 import Link from 'next/link'
 import Header from '@/components/Header'
+import GlossaryIllustration from '@/components/illustrations/GlossaryIllustration'
+import AskBox from '@/components/AskBox'
 import { getAllGlossaryTerms } from '@/lib/glossary'
 
 export default function GlossaryPage() {
@@ -9,6 +11,8 @@ export default function GlossaryPage() {
     <>
       <Header />
       <main>
+        <GlossaryIllustration />
+
         <h1>用語集</h1>
         <p>
           この講座で使う技術用語をまとめています。
@@ -31,7 +35,9 @@ export default function GlossaryPage() {
           ))}
         </div>
 
-        <div style={{ marginTop: 'var(--spacing-xl)' }}>
+        <AskBox compact />
+
+        <div style={{ marginTop: 'var(--spacing-lg)' }}>
           <Link href="/">← ホームに戻る</Link>
         </div>
       </main>

@@ -1,6 +1,8 @@
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import Header from '@/components/Header'
+import GlossaryIllustration from '@/components/illustrations/GlossaryIllustration'
+import AskBox from '@/components/AskBox'
 import { getGlossaryTerm, getAllGlossaryTerms } from '@/lib/glossary'
 import { getLessonByNumber } from '@/lib/course'
 
@@ -33,6 +35,8 @@ export default async function GlossaryTermPage({ params }: Props) {
     <>
       <Header />
       <main>
+        <GlossaryIllustration />
+
         <div style={{ marginBottom: 'var(--spacing-md)' }}>
           <Link href="/glossary">← 用語集に戻る</Link>
         </div>
@@ -110,6 +114,8 @@ export default async function GlossaryTermPage({ params }: Props) {
             </ul>
           </section>
         )}
+
+        <AskBox compact />
       </main>
     </>
   )

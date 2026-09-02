@@ -2,9 +2,15 @@
 
 import { useState } from 'react'
 
-export default function AskBox() {
+interface AskBoxProps {
+  lessonId?: string
+  compact?: boolean
+}
+
+export default function AskBox({ lessonId, compact = false }: AskBoxProps) {
   const [question, setQuestion] = useState('')
   const [answer, setAnswer] = useState('')
+  const [source, setSource] = useState<'model' | 'lesson' | null>(null)
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState('')
 
@@ -15,18 +21,20 @@ export default function AskBox() {
     setIsLoading(true)
     setError('')
     setAnswer('')
+    setSource(null)
 
     try {
       const res = await fetch('/api/ask', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ question }),
+        body: JSON.stringify({ question, lessonId }),
       })
 
       const data = await res.json()
 
       if (res.ok) {
         setAnswer(data.answer)
+        setSource(data.source)
       } else {
         setError(data.error || 'エラーが発生しました。')
       }
@@ -38,52 +46,59 @@ export default function AskBox() {
   }
 
   return (
-    <div style={{ marginTop: 'var(--spacing-lg)' }}>
+    <div className={`ask-box ${compact ? 'ask-box-compact' : ''}`}>
+      <div className="ask-box-header">
+        <svg
+          viewBox="0 0 24 24"
+          width="20"
+          height="20"
+          fill="none"
+          stroke="#3b6ea5"
+          strokeWidth="2"
+          aria-hidden="true"
+        >
+          <circle cx="12" cy="12" r="10" />
+          <path d="M9 9a3 3 0 1 1 4 2.83V14" />
+          <circle cx="12" cy="18" r="0.5" fill="#3b6ea5" />
+        </svg>
+        <span>質問する</span>
+      </div>
       <form onSubmit={handleSubmit}>
         <div style={{ marginBottom: 'var(--spacing-sm)' }}>
           <textarea
             value={question}
             onChange={(e) => setQuestion(e.target.value)}
-            placeholder="質問を入力してください..."
-            rows={4}
+            placeholder={lessonId ? 'この授業について質問...' : '学習内容について質問...'}
+            rows={compact ? 2 : 3}
             disabled={isLoading}
-            style={{ resize: 'vertical' }}
+            className="ask-textarea"
           />
         </div>
         <button
           type="submit"
-          className="primary"
+          className="primary ask-button"
           disabled={isLoading || !question.trim()}
         >
-          {isLoading ? '送信中...' : '質問する'}
+          {isLoading ? '考え中...' : '聞く'}
         </button>
       </form>
 
       {error && (
-        <div
-          style={{
-            marginTop: 'var(--spacing-md)',
-            padding: 'var(--spacing-sm)',
-            backgroundColor: '#fee',
-            borderRadius: '4px',
-            color: '#c53030',
-          }}
-        >
+        <div className="ask-error">
           {error}
         </div>
       )}
 
       {answer && (
-        <div
-          style={{
-            marginTop: 'var(--spacing-md)',
-            padding: 'var(--spacing-md)',
-            backgroundColor: 'var(--color-surface)',
-            borderRadius: '8px',
-            borderLeft: '4px solid var(--color-accent)',
-          }}
-        >
-          <h3 style={{ marginBottom: 'var(--spacing-sm)' }}>回答</h3>
+        <div className="ask-answer">
+          <div className="ask-answer-header">
+            <span>回答</span>
+            {source && (
+              <span className="ask-source">
+                {source === 'model' ? 'AIによる回答' : '教材から抜粋'}
+              </span>
+            )}
+          </div>
           <p style={{ marginBottom: 0, whiteSpace: 'pre-wrap' }}>{answer}</p>
         </div>
       )}
