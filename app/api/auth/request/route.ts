@@ -1,5 +1,4 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { cookies } from 'next/headers'
 import { isAllowedEmail, getOriginalEmail, createAuthToken } from '@/lib/auth'
 
 export async function POST(request: NextRequest) {
@@ -29,10 +28,11 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    const authToken = createAuthToken(originalEmail)
+    const authToken = await createAuthToken(originalEmail)
 
-    const cookieStore = await cookies()
-    cookieStore.set('study_auth', authToken, {
+    const response = NextResponse.json({ ok: true, redirect: '/' })
+
+    response.cookies.set('study_auth', authToken, {
       httpOnly: true,
       secure: process.env.NODE_ENV === 'production',
       sameSite: 'lax',
@@ -40,7 +40,7 @@ export async function POST(request: NextRequest) {
       path: '/',
     })
 
-    return NextResponse.redirect(new URL('/', request.url))
+    return response
   } catch {
     return NextResponse.json(
       { error: 'リクエストの処理中にエラーが発生しました。' },
