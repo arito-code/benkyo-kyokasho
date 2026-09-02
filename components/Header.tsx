@@ -25,13 +25,10 @@ export default function Header() {
             color: 'var(--color-text)',
           }}
         >
-          勉強教科書
+          技術営業100回講座
         </Link>
         <div style={{ display: 'flex', gap: 'var(--spacing-md)' }}>
-          <Link href="/electronics">電子工作</Link>
-          <Link href="/raspi">ラズパイ</Link>
-          <Link href="/robot">ロボット</Link>
-          <Link href="/space">宇宙</Link>
+          <Link href="/glossary">用語集</Link>
           <Link href="/ask">質問</Link>
         </div>
       </nav>
