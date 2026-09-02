@@ -1,13 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { cookies } from 'next/headers'
-
-const ALLOWED_EMAILS = [
-  'info@g-knowthyself.com',
-  'OtoI.snowman@gmail.com',
-  'fujii@g-knowthyself.com',
-  'asakura@g-knowthyself.com',
-  'iida@g-knowthyself.com',
-]
+import { isAllowedEmail, getOriginalEmail, createAuthToken } from '@/lib/auth'
 
 export async function POST(request: NextRequest) {
   try {
@@ -21,21 +14,22 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    const normalizedEmail = email.toLowerCase().trim()
-    const allowedNormalized = ALLOWED_EMAILS.map((e) => e.toLowerCase())
-
-    if (!allowedNormalized.includes(normalizedEmail)) {
+    if (!isAllowedEmail(email)) {
       return NextResponse.json(
         { error: 'このメールアドレスは許可されていません。' },
         { status: 403 }
       )
     }
 
-    const originalEmail = ALLOWED_EMAILS.find(
-      (e) => e.toLowerCase() === normalizedEmail
-    )
+    const originalEmail = getOriginalEmail(email)
+    if (!originalEmail) {
+      return NextResponse.json(
+        { error: 'このメールアドレスは許可されていません。' },
+        { status: 403 }
+      )
+    }
 
-    const authToken = btoa(JSON.stringify({ email: originalEmail, ts: Date.now() }))
+    const authToken = createAuthToken(originalEmail)
 
     const cookieStore = await cookies()
     cookieStore.set('study_auth', authToken, {
