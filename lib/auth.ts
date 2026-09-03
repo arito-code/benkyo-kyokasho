@@ -4,6 +4,8 @@ const ALLOWED_EMAILS = [
   'fujii@g-knowthyself.com',
   'asakura@g-knowthyself.com',
   'iida@g-knowthyself.com',
+  'maekawa@tomoiki-works.jp',
+  'minamida@kanbutsu.co.jp',
 ]
 
 const FALLBACK_SECRET = 'benkyo-kyokasho-default-secret-change-in-production'
