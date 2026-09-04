@@ -4,6 +4,10 @@ import './globals.css'
 export const metadata: Metadata = {
   title: '勉強教科書',
   description: '日本語で学ぶ理系教科書',
+  robots: {
+    index: false,
+    follow: false,
+  },
 }
 
 export default function RootLayout({
