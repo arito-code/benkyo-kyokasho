@@ -23,6 +23,12 @@ export default function LessonIllustration({ lessonNumber, ready = true }: Lesso
       return <Lesson6Illustration />
     case 7:
       return <Lesson7Illustration />
+    case 8:
+      return <Lesson8Illustration />
+    case 9:
+      return <Lesson9Illustration />
+    case 10:
+      return <Lesson10Illustration />
     default:
       return <SoonIllustration />
   }
@@ -330,6 +336,94 @@ function Lesson7Illustration() {
       <g transform="translate(395, 15)">
         <text x="0" y="35" fill="#3b6ea5" fontSize="24" fontWeight="600">V</text>
         <text x="30" y="35" fill="#4a4a4a" fontSize="12">電圧</text>
+      </g>
+    </svg>
+  )
+}
+
+function Lesson8Illustration() {
+  return (
+    <svg
+      viewBox="0 0 680 100"
+      xmlns="http://www.w3.org/2000/svg"
+      className="page-illustration"
+      aria-label="電流とは何か - 流れる量"
+    >
+      <line x1="0" y1="35" x2="680" y2="35" stroke="#e0e0e0" strokeWidth="1" />
+      <line x1="0" y1="70" x2="680" y2="70" stroke="#e0e0e0" strokeWidth="1" />
+
+      {/* Pipe with flow arrows */}
+      <g transform="translate(230, 15)">
+        <rect x="0" y="15" width="100" height="30" rx="5" fill="none" stroke="#3b6ea5" strokeWidth="2" />
+        {/* Flow arrows */}
+        <line x1="20" y1="30" x2="40" y2="30" stroke="#3b6ea5" strokeWidth="2" />
+        <polygon points="40,25 50,30 40,35" fill="#3b6ea5" />
+        <line x1="55" y1="30" x2="75" y2="30" stroke="#3b6ea5" strokeWidth="2" />
+        <polygon points="75,25 85,30 75,35" fill="#3b6ea5" />
+        <text x="50" y="60" textAnchor="middle" fill="#3b6ea5" fontSize="11" fontWeight="500">流れる量</text>
+      </g>
+
+      {/* I symbol */}
+      <g transform="translate(360, 15)">
+        <text x="0" y="40" fill="#3b6ea5" fontSize="24" fontWeight="600">I</text>
+        <text x="25" y="40" fill="#4a4a4a" fontSize="12">電流</text>
+      </g>
+    </svg>
+  )
+}
+
+function Lesson9Illustration() {
+  return (
+    <svg
+      viewBox="0 0 680 100"
+      xmlns="http://www.w3.org/2000/svg"
+      className="page-illustration"
+      aria-label="抵抗とは何か - 流れにくさ"
+    >
+      <line x1="0" y1="35" x2="680" y2="35" stroke="#e0e0e0" strokeWidth="1" />
+      <line x1="0" y1="70" x2="680" y2="70" stroke="#e0e0e0" strokeWidth="1" />
+
+      {/* Resistor symbol */}
+      <g transform="translate(230, 25)">
+        <line x1="0" y1="25" x2="20" y2="25" stroke="#3b6ea5" strokeWidth="2" />
+        <path d="M20 25 L25 15 L35 35 L45 15 L55 35 L65 15 L75 35 L80 25" fill="none" stroke="#3b6ea5" strokeWidth="2" />
+        <line x1="80" y1="25" x2="100" y2="25" stroke="#3b6ea5" strokeWidth="2" />
+        <text x="50" y="60" textAnchor="middle" fill="#3b6ea5" fontSize="11" fontWeight="500">流れにくさ</text>
+      </g>
+
+      {/* R symbol with Ω */}
+      <g transform="translate(360, 15)">
+        <text x="0" y="40" fill="#3b6ea5" fontSize="24" fontWeight="600">R</text>
+        <text x="25" y="40" fill="#4a4a4a" fontSize="12">抵抗</text>
+        <text x="60" y="40" fill="#3b6ea5" fontSize="16">Ω</text>
+      </g>
+    </svg>
+  )
+}
+
+function Lesson10Illustration() {
+  return (
+    <svg
+      viewBox="0 0 680 100"
+      xmlns="http://www.w3.org/2000/svg"
+      className="page-illustration"
+      aria-label="オームの法則 - V=IR"
+    >
+      <line x1="0" y1="35" x2="680" y2="35" stroke="#e0e0e0" strokeWidth="1" />
+      <line x1="0" y1="70" x2="680" y2="70" stroke="#e0e0e0" strokeWidth="1" />
+
+      {/* V = I × R formula */}
+      <g transform="translate(250, 15)">
+        <text x="0" y="40" fill="#3b6ea5" fontSize="24" fontWeight="600">V</text>
+        <text x="30" y="40" fill="#3b6ea5" fontSize="24" fontWeight="600">=</text>
+        <text x="60" y="40" fill="#3b6ea5" fontSize="24" fontWeight="600">I</text>
+        <text x="85" y="40" fill="#3b6ea5" fontSize="20">×</text>
+        <text x="110" y="40" fill="#3b6ea5" fontSize="24" fontWeight="600">R</text>
+      </g>
+
+      {/* Label */}
+      <g transform="translate(390, 25)">
+        <text x="0" y="25" fill="#4a4a4a" fontSize="12">オームの法則</text>
       </g>
     </svg>
   )
