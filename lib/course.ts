@@ -29,10 +29,13 @@ export const phases: Phase[] = [
     title: '電気の基本',
     lessons: [
       { number: 7, title: '電圧とは何か', slug: '07-voltage', ready: true },
-      ...Array.from({ length: 11 }, (_, i) => ({
-        number: 8 + i,
+      { number: 8, title: '電流とは何か', slug: '08-current', ready: true },
+      { number: 9, title: '抵抗とは何か', slug: '09-resistance', ready: true },
+      { number: 10, title: 'オームの法則', slug: '10-ohms-law', ready: true },
+      ...Array.from({ length: 8 }, (_, i) => ({
+        number: 11 + i,
         title: '',
-        slug: `${String(8 + i).padStart(2, '0')}-electrical-${i + 2}`,
+        slug: `${String(11 + i).padStart(2, '0')}-electrical-${i + 5}`,
         ready: false,
       })),
     ],
