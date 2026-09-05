@@ -54,33 +54,31 @@ export default function Lesson12Page() {
 
         <figure className="svg-figure">
           <svg viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg">
-            {/* Series circuit */}
+            {/* Series circuit - using resistors */}
             <g transform="translate(20, 20)">
-              <text x="80" y="0" textAnchor="middle" fill="#3b6ea5" fontSize="11" fontWeight="600">直列回路</text>
+              <text x="80" y="0" textAnchor="middle" fill="#3b6ea5" fontSize="11" fontWeight="600">直列回路（抵抗の例）</text>
               
               {/* Battery */}
               <rect x="60" y="20" width="40" height="25" rx="3" fill="none" stroke="#3b6ea5" strokeWidth="2" />
-              <text x="80" y="36" textAnchor="middle" fill="#3b6ea5" fontSize="8">3V</text>
+              <text x="80" y="36" textAnchor="middle" fill="#3b6ea5" fontSize="8">6V</text>
               
-              {/* Wire to LED 1 */}
+              {/* Wire to R1 */}
               <line x1="100" y1="32" x2="130" y2="32" stroke="#3b6ea5" strokeWidth="2" />
-              <line x1="130" y1="32" x2="130" y2="55" stroke="#3b6ea5" strokeWidth="2" />
+              <line x1="130" y1="32" x2="130" y2="50" stroke="#3b6ea5" strokeWidth="2" />
               
-              {/* LED 1 */}
-              <path d="M120 65 L140 65 L130 50 Z" fill="none" stroke="#3b6ea5" strokeWidth="2" />
-              <line x1="115" y1="70" x2="145" y2="70" stroke="#3b6ea5" strokeWidth="2" />
-              <text x="130" y="85" textAnchor="middle" fill="#4a4a4a" fontSize="8">1.5V</text>
+              {/* Resistor 1 */}
+              <path d="M130 50 L135 43 L143 57 L151 43 L159 57 L165 50" fill="none" stroke="#3b6ea5" strokeWidth="2" transform="rotate(90, 147, 65)" />
+              <text x="155" y="70" textAnchor="start" fill="#4a4a4a" fontSize="8">3V</text>
               
-              {/* Wire to LED 2 */}
-              <line x1="130" y1="75" x2="130" y2="100" stroke="#3b6ea5" strokeWidth="2" />
+              {/* Wire to R2 */}
+              <line x1="130" y1="80" x2="130" y2="95" stroke="#3b6ea5" strokeWidth="2" />
               
-              {/* LED 2 */}
-              <path d="M120 110 L140 110 L130 95 Z" fill="none" stroke="#3b6ea5" strokeWidth="2" />
-              <line x1="115" y1="115" x2="145" y2="115" stroke="#3b6ea5" strokeWidth="2" />
-              <text x="130" y="130" textAnchor="middle" fill="#4a4a4a" fontSize="8">1.5V</text>
+              {/* Resistor 2 */}
+              <path d="M130 95 L135 88 L143 102 L151 88 L159 102 L165 95" fill="none" stroke="#3b6ea5" strokeWidth="2" transform="rotate(90, 147, 110)" />
+              <text x="155" y="115" textAnchor="start" fill="#4a4a4a" fontSize="8">3V</text>
               
               {/* Wire back */}
-              <line x1="130" y1="120" x2="130" y2="145" stroke="#3b6ea5" strokeWidth="2" />
+              <line x1="130" y1="125" x2="130" y2="145" stroke="#3b6ea5" strokeWidth="2" />
               <line x1="30" y1="145" x2="130" y2="145" stroke="#3b6ea5" strokeWidth="2" />
               <line x1="30" y1="32" x2="30" y2="145" stroke="#3b6ea5" strokeWidth="2" />
               <line x1="30" y1="32" x2="60" y2="32" stroke="#3b6ea5" strokeWidth="2" />
@@ -93,13 +91,13 @@ export default function Lesson12Page() {
               <text x="80" y="185" textAnchor="middle" fill="#3b6ea5" fontSize="10">電圧は分かれる</text>
             </g>
 
-            {/* Parallel circuit */}
+            {/* Parallel circuit - using resistors */}
             <g transform="translate(200, 20)">
-              <text x="90" y="0" textAnchor="middle" fill="#3b6ea5" fontSize="11" fontWeight="600">並列回路</text>
+              <text x="90" y="0" textAnchor="middle" fill="#3b6ea5" fontSize="11" fontWeight="600">並列回路（抵抗の例）</text>
               
               {/* Battery */}
               <rect x="70" y="20" width="40" height="25" rx="3" fill="none" stroke="#3b6ea5" strokeWidth="2" />
-              <text x="90" y="36" textAnchor="middle" fill="#3b6ea5" fontSize="8">3V</text>
+              <text x="90" y="36" textAnchor="middle" fill="#3b6ea5" fontSize="8">6V</text>
               
               {/* Wire split */}
               <line x1="110" y1="32" x2="130" y2="32" stroke="#3b6ea5" strokeWidth="2" />
@@ -107,19 +105,17 @@ export default function Lesson12Page() {
               <line x1="130" y1="50" x2="90" y2="50" stroke="#3b6ea5" strokeWidth="2" />
               <line x1="130" y1="50" x2="170" y2="50" stroke="#3b6ea5" strokeWidth="2" />
               
-              {/* LED 1 (left) */}
-              <line x1="90" y1="50" x2="90" y2="65" stroke="#3b6ea5" strokeWidth="2" />
-              <path d="M80 75 L100 75 L90 60 Z" fill="none" stroke="#3b6ea5" strokeWidth="2" />
-              <line x1="75" y1="80" x2="105" y2="80" stroke="#3b6ea5" strokeWidth="2" />
-              <text x="90" y="98" textAnchor="middle" fill="#4a4a4a" fontSize="8">3V</text>
-              <line x1="90" y1="85" x2="90" y2="115" stroke="#3b6ea5" strokeWidth="2" />
+              {/* Resistor 1 (left) */}
+              <line x1="90" y1="50" x2="90" y2="58" stroke="#3b6ea5" strokeWidth="2" />
+              <path d="M90 58 L95 51 L103 65 L111 51 L119 65 L125 58" fill="none" stroke="#3b6ea5" strokeWidth="2" transform="rotate(90, 107, 73)" />
+              <text x="90" y="98" textAnchor="middle" fill="#4a4a4a" fontSize="8">6V</text>
+              <line x1="90" y1="88" x2="90" y2="115" stroke="#3b6ea5" strokeWidth="2" />
               
-              {/* LED 2 (right) */}
-              <line x1="170" y1="50" x2="170" y2="65" stroke="#3b6ea5" strokeWidth="2" />
-              <path d="M160 75 L180 75 L170 60 Z" fill="none" stroke="#3b6ea5" strokeWidth="2" />
-              <line x1="155" y1="80" x2="185" y2="80" stroke="#3b6ea5" strokeWidth="2" />
-              <text x="170" y="98" textAnchor="middle" fill="#4a4a4a" fontSize="8">3V</text>
-              <line x1="170" y1="85" x2="170" y2="115" stroke="#3b6ea5" strokeWidth="2" />
+              {/* Resistor 2 (right) */}
+              <line x1="170" y1="50" x2="170" y2="58" stroke="#3b6ea5" strokeWidth="2" />
+              <path d="M170 58 L175 51 L183 65 L191 51 L199 65 L205 58" fill="none" stroke="#3b6ea5" strokeWidth="2" transform="rotate(90, 187, 73)" />
+              <text x="170" y="98" textAnchor="middle" fill="#4a4a4a" fontSize="8">6V</text>
+              <line x1="170" y1="88" x2="170" y2="115" stroke="#3b6ea5" strokeWidth="2" />
               
               {/* Wire merge */}
               <line x1="90" y1="115" x2="130" y2="115" stroke="#3b6ea5" strokeWidth="2" />
@@ -137,7 +133,7 @@ export default function Lesson12Page() {
               <text x="100" y="185" textAnchor="middle" fill="#3b6ea5" fontSize="10">電流は分かれる</text>
             </g>
 
-            <text x="200" y="215" textAnchor="middle" fill="#4a4a4a" fontSize="11">図1: 直列回路と並列回路</text>
+            <text x="200" y="215" textAnchor="middle" fill="#4a4a4a" fontSize="11">図1: 直列回路と並列回路（抵抗の例）</text>
           </svg>
           <figcaption>直列では電圧が部品で分かれ、並列では各部品に同じ電圧がかかります。</figcaption>
         </figure>
@@ -147,13 +143,18 @@ export default function Lesson12Page() {
           <p>
             直列回路では、すべての部品に同じ電流が流れます。
             電流は枝分かれしないので、どの部品を通っても同じ量です。
-            一方、電圧は各部品で分け合います。たとえば3Vの電池にLEDを2つ直列につなぐと、各LEDには約1.5Vずつかかります。
+            一方、電圧は各部品で分け合います。たとえば6Vの電池に同じ値の抵抗を2つ直列につなぐと、各抵抗には3Vずつかかります。
+          </p>
+          <p>
+            LEDの場合は少し異なります。LEDには「順方向電圧（Vf）」があり、赤色LEDは約2Vです。
+            LEDを直列につなぐと、必要な電圧はVfの合計になります。
+            赤色LEDを2つ直列につなぐには約4V、3つなら約6V必要です。
+            3Vの電池では赤色LED2つを直列で光らせるのは難しいのです。
           </p>
           <p>
             直列回路の特徴は、「1つ切れると全部消える」ことです。
             昔のクリスマスツリーの電飾は直列で、1つの電球が切れると全部消えました。
             部品が多くなるほど、必要な電圧が高くなります。
-            LEDを10個直列につなぐには、少なくとも20V程度の電源が必要になります。
           </p>
         </section>
 
@@ -197,14 +198,15 @@ export default function Lesson12Page() {
           <h2>並列回路の特徴</h2>
           <p>
             並列回路では、すべての部品に同じ電圧がかかります。
-            電源が3Vなら、どの枝のLEDにも3Vがかかります。
+            電源が5Vなら、どの枝にも5Vがかかります。
             一方、電流は各枝で分かれます。電源から出た電流が、枝分かれして各部品に流れます。
           </p>
           <p>
             並列回路の特徴は、「1つ切れても他は点く」ことです。
             家庭のコンセントは並列で、1つの家電を消しても他の家電は動きます。
             部品を増やすと、電源からの総電流が増えます。
-            LEDを10個並列につなぐと、電流は10倍必要になるので、電源の容量に注意が必要です。
+            LEDを並列につなぐときは、各枝に電流制限用の抵抗が必要です。
+            10個並列なら抵抗も10個必要になり、総電流も10倍になるので、電源の容量に注意が必要です。
           </p>
         </section>
 
