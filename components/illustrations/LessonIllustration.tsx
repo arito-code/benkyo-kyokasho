@@ -17,6 +17,12 @@ export default function LessonIllustration({ lessonNumber, ready = true }: Lesso
       return <Lesson3Illustration />
     case 4:
       return <Lesson4Illustration />
+    case 5:
+      return <Lesson5Illustration />
+    case 6:
+      return <Lesson6Illustration />
+    case 7:
+      return <Lesson7Illustration />
     default:
       return <SoonIllustration />
   }
@@ -203,6 +209,127 @@ function Lesson4Illustration() {
         <line x1="20" y1="0" x2="20" y2="-5" stroke="#3b6ea5" strokeWidth="1.5" opacity="0.6" />
         <line x1="35" y1="10" x2="40" y2="5" stroke="#3b6ea5" strokeWidth="1.5" opacity="0.6" />
         <text x="20" y="60" textAnchor="middle" fill="#3b6ea5" fontSize="10" fontWeight="500">出力</text>
+      </g>
+    </svg>
+  )
+}
+
+function Lesson5Illustration() {
+  return (
+    <svg
+      viewBox="0 0 680 100"
+      xmlns="http://www.w3.org/2000/svg"
+      className="page-illustration"
+      aria-label="センサーとは何か - 物理量を電気信号に"
+    >
+      <line x1="0" y1="35" x2="680" y2="35" stroke="#e0e0e0" strokeWidth="1" />
+      <line x1="0" y1="70" x2="680" y2="70" stroke="#e0e0e0" strokeWidth="1" />
+
+      {/* Physical quantity (waves) */}
+      <g transform="translate(220, 20)">
+        <circle cx="25" cy="25" r="20" fill="none" stroke="#3b6ea5" strokeWidth="2" strokeDasharray="4,2" />
+        <text x="25" y="20" textAnchor="middle" fill="#3b6ea5" fontSize="8">温度</text>
+        <text x="25" y="32" textAnchor="middle" fill="#3b6ea5" fontSize="8">光</text>
+        <text x="25" y="58" textAnchor="middle" fill="#4a4a4a" fontSize="9">物理量</text>
+      </g>
+
+      {/* Arrow */}
+      <g transform="translate(275, 35)">
+        <path d="M0 10 L30 10" fill="none" stroke="#3b6ea5" strokeWidth="2" />
+        <polygon points="30,5 40,10 30,15" fill="#3b6ea5" />
+      </g>
+
+      {/* Sensor */}
+      <g transform="translate(325, 15)">
+        <rect x="0" y="5" width="50" height="40" rx="5" fill="none" stroke="#3b6ea5" strokeWidth="2" />
+        <circle cx="25" cy="25" r="12" fill="none" stroke="#3b6ea5" strokeWidth="2" />
+        <circle cx="25" cy="25" r="4" fill="#3b6ea5" />
+        <text x="25" y="58" textAnchor="middle" fill="#3b6ea5" fontSize="10" fontWeight="500">センサー</text>
+      </g>
+
+      {/* Arrow */}
+      <g transform="translate(385, 35)">
+        <path d="M0 10 L30 10" fill="none" stroke="#3b6ea5" strokeWidth="2" />
+        <polygon points="30,5 40,10 30,15" fill="#3b6ea5" />
+      </g>
+
+      {/* Electric signal */}
+      <g transform="translate(435, 20)">
+        <path d="M0 25 L10 15 L20 35 L30 20 L40 25" fill="none" stroke="#3b6ea5" strokeWidth="2" />
+        <text x="20" y="55" textAnchor="middle" fill="#4a4a4a" fontSize="9">電気信号</text>
+      </g>
+    </svg>
+  )
+}
+
+function Lesson6Illustration() {
+  return (
+    <svg
+      viewBox="0 0 680 100"
+      xmlns="http://www.w3.org/2000/svg"
+      className="page-illustration"
+      aria-label="プログラムとは何か - 手順のレシピ"
+    >
+      <line x1="0" y1="35" x2="680" y2="35" stroke="#e0e0e0" strokeWidth="1" />
+      <line x1="0" y1="70" x2="680" y2="70" stroke="#e0e0e0" strokeWidth="1" />
+
+      {/* Recipe/Program list */}
+      <g transform="translate(250, 10)">
+        <rect x="0" y="0" width="80" height="55" rx="3" fill="none" stroke="#3b6ea5" strokeWidth="2" />
+        <line x1="10" y1="0" x2="10" y2="55" stroke="#3b6ea5" strokeWidth="1" />
+        <text x="48" y="18" textAnchor="middle" fill="#3b6ea5" fontSize="8">1. 読む</text>
+        <text x="48" y="32" textAnchor="middle" fill="#3b6ea5" fontSize="8">2. 判断</text>
+        <text x="48" y="46" textAnchor="middle" fill="#3b6ea5" fontSize="8">3. 動く</text>
+      </g>
+
+      {/* Arrow */}
+      <g transform="translate(340, 30)">
+        <path d="M0 10 L25 10" fill="none" stroke="#3b6ea5" strokeWidth="2" />
+        <polygon points="25,5 35,10 25,15" fill="#3b6ea5" />
+      </g>
+
+      {/* If-then diamond */}
+      <g transform="translate(385, 15)">
+        <polygon points="30,0 55,25 30,50 5,25" fill="none" stroke="#3b6ea5" strokeWidth="2" />
+        <text x="30" y="22" textAnchor="middle" fill="#3b6ea5" fontSize="8">もし</text>
+        <text x="30" y="33" textAnchor="middle" fill="#3b6ea5" fontSize="8">〜なら</text>
+        <text x="30" y="68" textAnchor="middle" fill="#3b6ea5" fontSize="10" fontWeight="500">判断</text>
+      </g>
+    </svg>
+  )
+}
+
+function Lesson7Illustration() {
+  return (
+    <svg
+      viewBox="0 0 680 100"
+      xmlns="http://www.w3.org/2000/svg"
+      className="page-illustration"
+      aria-label="電圧とは何か - 電気を押す力"
+    >
+      <line x1="0" y1="35" x2="680" y2="35" stroke="#e0e0e0" strokeWidth="1" />
+      <line x1="0" y1="70" x2="680" y2="70" stroke="#e0e0e0" strokeWidth="1" />
+
+      {/* Battery */}
+      <g transform="translate(250, 15)">
+        <rect x="0" y="10" width="50" height="35" rx="3" fill="none" stroke="#3b6ea5" strokeWidth="2" />
+        <rect x="50" y="20" width="6" height="15" fill="#3b6ea5" />
+        <text x="15" y="32" textAnchor="middle" fill="#3b6ea5" fontSize="10">＋</text>
+        <text x="40" y="32" textAnchor="middle" fill="#3b6ea5" fontSize="10">−</text>
+        <text x="28" y="60" textAnchor="middle" fill="#4a4a4a" fontSize="9">電池</text>
+      </g>
+
+      {/* Arrow with "push" */}
+      <g transform="translate(320, 25)">
+        <path d="M0 20 L50 20" fill="none" stroke="#3b6ea5" strokeWidth="2" />
+        <polygon points="50,15 60,20 50,25" fill="#3b6ea5" />
+        <text x="30" y="45" textAnchor="middle" fill="#3b6ea5" fontSize="10" fontWeight="500">押す</text>
+      </g>
+
+      {/* V symbol */}
+      <g transform="translate(395, 15)">
+        <text x="0" y="35" fill="#3b6ea5" fontSize="24" fontWeight="600">V</text>
+        <text x="30" y="35" fill="#4a4a4a" fontSize="12">電圧</text>
       </g>
     </svg>
   )

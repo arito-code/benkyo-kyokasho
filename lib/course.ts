@@ -20,19 +20,22 @@ export const phases: Phase[] = [
       { number: 2, title: '機械とは何か', slug: '02-machine', ready: true },
       { number: 3, title: 'コンピュータとは何か', slug: '03-computer', ready: true },
       { number: 4, title: '入力と出力', slug: '04-io', ready: true },
-      { number: 5, title: 'センサーとは何か', slug: '05-sensor-intro', ready: false },
-      { number: 6, title: 'プログラムとは何か', slug: '06-program', ready: false },
+      { number: 5, title: 'センサーとは何か', slug: '05-sensor-intro', ready: true },
+      { number: 6, title: 'プログラムとは何か', slug: '06-program', ready: true },
     ],
   },
   {
     id: 2,
     title: '電気の基本',
-    lessons: Array.from({ length: 12 }, (_, i) => ({
-      number: 7 + i,
-      title: '',
-      slug: `${String(7 + i).padStart(2, '0')}-electrical-${i + 1}`,
-      ready: false,
-    })),
+    lessons: [
+      { number: 7, title: '電圧とは何か', slug: '07-voltage', ready: true },
+      ...Array.from({ length: 11 }, (_, i) => ({
+        number: 8 + i,
+        title: '',
+        slug: `${String(8 + i).padStart(2, '0')}-electrical-${i + 2}`,
+        ready: false,
+      })),
+    ],
   },
   {
     id: 3,
