@@ -48,12 +48,16 @@ export const phases: Phase[] = [
     lessons: [
       { number: 19, title: '電子部品の読み方', slug: '19-reading-parts', ready: true },
       { number: 20, title: 'コンデンサとは何か', slug: '20-capacitor', ready: true },
-      ...Array.from({ length: 10 }, (_, i) => ({
-        number: 21 + i,
-        title: '',
-        slug: `${String(21 + i).padStart(2, '0')}-components-${i + 3}`,
-        ready: false,
-      })),
+      { number: 21, title: 'ダイオードとは何か', slug: '21-diode', ready: true },
+      { number: 22, title: 'トランジスタとは何か', slug: '22-transistor', ready: true },
+      { number: 23, title: 'リレーとは何か', slug: '23-relay', ready: true },
+      { number: 24, title: 'MOSFETとは何か', slug: '24-mosfet', ready: true },
+      { number: 25, title: 'アナログとデジタル', slug: '25-analog-digital', ready: true },
+      { number: 26, title: 'ADCとは何か', slug: '26-adc', ready: true },
+      { number: 27, title: 'PWMとは何か', slug: '27-pwm', ready: true },
+      { number: 28, title: 'プルアップとプルダウン', slug: '28-pull-up-down', ready: true },
+      { number: 29, title: 'デバウンス', slug: '29-debounce', ready: true },
+      { number: 30, title: '入出力を組み合わせる', slug: '30-combine-io', ready: true },
     ],
   },
   {
