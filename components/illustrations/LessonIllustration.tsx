@@ -49,6 +49,26 @@ export default function LessonIllustration({ lessonNumber, ready = true }: Lesso
       return <Lesson19Illustration />
     case 20:
       return <Lesson20Illustration />
+    case 21:
+      return <Lesson21Illustration />
+    case 22:
+      return <Lesson22Illustration />
+    case 23:
+      return <Lesson23Illustration />
+    case 24:
+      return <Lesson24Illustration />
+    case 25:
+      return <Lesson25Illustration />
+    case 26:
+      return <Lesson26Illustration />
+    case 27:
+      return <Lesson27Illustration />
+    case 28:
+      return <Lesson28Illustration />
+    case 29:
+      return <Lesson29Illustration />
+    case 30:
+      return <Lesson30Illustration />
     default:
       return <SoonIllustration />
   }
@@ -852,6 +872,376 @@ function Lesson20Illustration() {
       <g transform="translate(430, 30)">
         <text x="0" y="15" fill="#3b6ea5" fontSize="12" fontWeight="600">蓄電</text>
         <text x="0" y="35" fill="#4a4a4a" fontSize="10">μF (マイクロファラド)</text>
+      </g>
+    </svg>
+  )
+}
+
+function Lesson21Illustration() {
+  return (
+    <svg
+      viewBox="0 0 680 100"
+      xmlns="http://www.w3.org/2000/svg"
+      className="page-illustration"
+      aria-label="ダイオードとは何か - 一方通行"
+    >
+      <line x1="0" y1="35" x2="680" y2="35" stroke="#e0e0e0" strokeWidth="1" />
+      <line x1="0" y1="70" x2="680" y2="70" stroke="#e0e0e0" strokeWidth="1" />
+
+      {/* Diode symbol */}
+      <g transform="translate(240, 25)">
+        <line x1="0" y1="25" x2="40" y2="25" stroke="#3b6ea5" strokeWidth="2" />
+        <polygon points="45,15 45,35 70,25" fill="none" stroke="#3b6ea5" strokeWidth="2" />
+        <line x1="70" y1="15" x2="70" y2="35" stroke="#3b6ea5" strokeWidth="2" />
+        <line x1="70" y1="25" x2="110" y2="25" stroke="#3b6ea5" strokeWidth="2" />
+        <text x="55" y="55" textAnchor="middle" fill="#3b6ea5" fontSize="10" fontWeight="500">ダイオード</text>
+      </g>
+
+      {/* Arrow showing direction */}
+      <g transform="translate(370, 25)">
+        <line x1="0" y1="25" x2="40" y2="25" stroke="#27ae60" strokeWidth="2" />
+        <polygon points="35,20 45,25 35,30" fill="#27ae60" />
+        <text x="20" y="55" textAnchor="middle" fill="#27ae60" fontSize="10">→ 一方通行</text>
+      </g>
+    </svg>
+  )
+}
+
+function Lesson22Illustration() {
+  return (
+    <svg
+      viewBox="0 0 680 100"
+      xmlns="http://www.w3.org/2000/svg"
+      className="page-illustration"
+      aria-label="トランジスタとは何か - スイッチ"
+    >
+      <line x1="0" y1="35" x2="680" y2="35" stroke="#e0e0e0" strokeWidth="1" />
+      <line x1="0" y1="70" x2="680" y2="70" stroke="#e0e0e0" strokeWidth="1" />
+
+      {/* Transistor symbol */}
+      <g transform="translate(260, 15)">
+        <circle cx="40" cy="35" r="25" fill="none" stroke="#3b6ea5" strokeWidth="2" />
+        <line x1="0" y1="35" x2="15" y2="35" stroke="#3b6ea5" strokeWidth="2" />
+        <line x1="15" y1="20" x2="15" y2="50" stroke="#3b6ea5" strokeWidth="2" />
+        <line x1="15" y1="25" x2="40" y2="15" stroke="#3b6ea5" strokeWidth="2" />
+        <line x1="15" y1="45" x2="40" y2="55" stroke="#3b6ea5" strokeWidth="2" />
+        <polygon points="35,50 40,55 35,58" fill="#3b6ea5" />
+        <text x="5" y="70" fill="#3b6ea5" fontSize="8">B</text>
+        <text x="40" y="8" fill="#3b6ea5" fontSize="8">C</text>
+        <text x="40" y="75" fill="#3b6ea5" fontSize="8">E</text>
+      </g>
+
+      {/* Label */}
+      <g transform="translate(360, 30)">
+        <text x="0" y="20" fill="#3b6ea5" fontSize="11" fontWeight="500">小電流で大電流を制御</text>
+      </g>
+    </svg>
+  )
+}
+
+function Lesson23Illustration() {
+  return (
+    <svg
+      viewBox="0 0 680 100"
+      xmlns="http://www.w3.org/2000/svg"
+      className="page-illustration"
+      aria-label="リレーとは何か - 電磁石スイッチ"
+    >
+      <line x1="0" y1="35" x2="680" y2="35" stroke="#e0e0e0" strokeWidth="1" />
+      <line x1="0" y1="70" x2="680" y2="70" stroke="#e0e0e0" strokeWidth="1" />
+
+      {/* Relay coil */}
+      <g transform="translate(230, 20)">
+        <rect x="0" y="10" width="40" height="40" rx="3" fill="none" stroke="#3b6ea5" strokeWidth="2" />
+        <path d="M10 25 Q8 20 10 25 Q12 30 10 25 M10 30 Q8 25 10 30 Q12 35 10 30 M10 35 Q8 30 10 35 Q12 40 10 35" fill="none" stroke="#3b6ea5" strokeWidth="2" />
+        <text x="20" y="65" textAnchor="middle" fill="#3b6ea5" fontSize="8">コイル</text>
+      </g>
+
+      {/* Switch contact */}
+      <g transform="translate(310, 20)">
+        <circle cx="10" cy="30" r="3" fill="#3b6ea5" />
+        <line x1="10" y1="27" x2="30" y2="18" stroke="#3b6ea5" strokeWidth="2" />
+        <circle cx="35" cy="30" r="3" fill="#3b6ea5" />
+        <text x="22" y="55" textAnchor="middle" fill="#3b6ea5" fontSize="8">接点</text>
+      </g>
+
+      {/* Isolation */}
+      <g transform="translate(280, 25)">
+        <line x1="0" y1="0" x2="0" y2="40" stroke="#e67e22" strokeWidth="2" strokeDasharray="4,2" />
+        <text x="0" y="55" textAnchor="middle" fill="#e67e22" fontSize="7">絶縁</text>
+      </g>
+
+      {/* Label */}
+      <g transform="translate(380, 35)">
+        <text x="0" y="15" fill="#3b6ea5" fontSize="11" fontWeight="500">電磁石でスイッチを動かす</text>
+      </g>
+    </svg>
+  )
+}
+
+function Lesson24Illustration() {
+  return (
+    <svg
+      viewBox="0 0 680 100"
+      xmlns="http://www.w3.org/2000/svg"
+      className="page-illustration"
+      aria-label="MOSFETとは何か - 電圧制御スイッチ"
+    >
+      <line x1="0" y1="35" x2="680" y2="35" stroke="#e0e0e0" strokeWidth="1" />
+      <line x1="0" y1="70" x2="680" y2="70" stroke="#e0e0e0" strokeWidth="1" />
+
+      {/* MOSFET symbol */}
+      <g transform="translate(260, 15)">
+        <circle cx="40" cy="35" r="25" fill="none" stroke="#3b6ea5" strokeWidth="2" />
+        <line x1="0" y1="35" x2="12" y2="35" stroke="#3b6ea5" strokeWidth="2" />
+        <line x1="12" y1="20" x2="12" y2="50" stroke="#3b6ea5" strokeWidth="2" />
+        <line x1="16" y1="20" x2="16" y2="50" stroke="#3b6ea5" strokeWidth="2" />
+        <line x1="16" y1="22" x2="40" y2="22" stroke="#3b6ea5" strokeWidth="2" />
+        <line x1="16" y1="48" x2="40" y2="48" stroke="#3b6ea5" strokeWidth="2" />
+        <line x1="40" y1="10" x2="40" y2="22" stroke="#3b6ea5" strokeWidth="2" />
+        <line x1="40" y1="48" x2="40" y2="60" stroke="#3b6ea5" strokeWidth="2" />
+        <text x="5" y="70" fill="#3b6ea5" fontSize="8">G</text>
+        <text x="45" y="15" fill="#3b6ea5" fontSize="8">D</text>
+        <text x="45" y="65" fill="#3b6ea5" fontSize="8">S</text>
+      </g>
+
+      {/* Label */}
+      <g transform="translate(360, 30)">
+        <text x="0" y="15" fill="#3b6ea5" fontSize="11" fontWeight="500">電圧で大電流を制御</text>
+        <text x="0" y="35" fill="#4a4a4a" fontSize="9">高速・高効率</text>
+      </g>
+    </svg>
+  )
+}
+
+function Lesson25Illustration() {
+  return (
+    <svg
+      viewBox="0 0 680 100"
+      xmlns="http://www.w3.org/2000/svg"
+      className="page-illustration"
+      aria-label="アナログとデジタル"
+    >
+      <line x1="0" y1="35" x2="680" y2="35" stroke="#e0e0e0" strokeWidth="1" />
+      <line x1="0" y1="70" x2="680" y2="70" stroke="#e0e0e0" strokeWidth="1" />
+
+      {/* Analog wave */}
+      <g transform="translate(200, 20)">
+        <path d="M0 30 Q20 10 40 30 T80 30" fill="none" stroke="#3b6ea5" strokeWidth="2" />
+        <text x="40" y="55" textAnchor="middle" fill="#3b6ea5" fontSize="10" fontWeight="500">アナログ</text>
+        <text x="40" y="70" textAnchor="middle" fill="#4a4a4a" fontSize="8">連続</text>
+      </g>
+
+      {/* VS */}
+      <g transform="translate(320, 35)">
+        <text x="0" y="15" fill="#4a4a4a" fontSize="12" fontWeight="500">vs</text>
+      </g>
+
+      {/* Digital wave */}
+      <g transform="translate(380, 20)">
+        <path d="M0 40 L0 20 L20 20 L20 40 L40 40 L40 20 L60 20 L60 40 L80 40" fill="none" stroke="#27ae60" strokeWidth="2" />
+        <text x="40" y="55" textAnchor="middle" fill="#27ae60" fontSize="10" fontWeight="500">デジタル</text>
+        <text x="40" y="70" textAnchor="middle" fill="#4a4a4a" fontSize="8">0と1</text>
+      </g>
+    </svg>
+  )
+}
+
+function Lesson26Illustration() {
+  return (
+    <svg
+      viewBox="0 0 680 100"
+      xmlns="http://www.w3.org/2000/svg"
+      className="page-illustration"
+      aria-label="ADCとは何か - 変換"
+    >
+      <line x1="0" y1="35" x2="680" y2="35" stroke="#e0e0e0" strokeWidth="1" />
+      <line x1="0" y1="70" x2="680" y2="70" stroke="#e0e0e0" strokeWidth="1" />
+
+      {/* Analog input */}
+      <g transform="translate(200, 25)">
+        <path d="M0 25 Q15 10 30 25 T60 25" fill="none" stroke="#3b6ea5" strokeWidth="2" />
+        <text x="30" y="50" textAnchor="middle" fill="#4a4a4a" fontSize="8">アナログ</text>
+      </g>
+
+      {/* Arrow */}
+      <g transform="translate(270, 40)">
+        <line x1="0" y1="10" x2="25" y2="10" stroke="#3b6ea5" strokeWidth="2" />
+        <polygon points="20,5 30,10 20,15" fill="#3b6ea5" />
+      </g>
+
+      {/* ADC box */}
+      <g transform="translate(305, 20)">
+        <rect x="0" y="5" width="60" height="35" rx="3" fill="#e3f2fd" stroke="#3b6ea5" strokeWidth="2" />
+        <text x="30" y="28" textAnchor="middle" fill="#3b6ea5" fontSize="12" fontWeight="600">ADC</text>
+      </g>
+
+      {/* Arrow */}
+      <g transform="translate(375, 40)">
+        <line x1="0" y1="10" x2="25" y2="10" stroke="#27ae60" strokeWidth="2" />
+        <polygon points="20,5 30,10 20,15" fill="#27ae60" />
+      </g>
+
+      {/* Digital output */}
+      <g transform="translate(410, 25)">
+        <text x="30" y="25" textAnchor="middle" fill="#27ae60" fontSize="14" fontWeight="600">512</text>
+        <text x="30" y="50" textAnchor="middle" fill="#4a4a4a" fontSize="8">デジタル値</text>
+      </g>
+    </svg>
+  )
+}
+
+function Lesson27Illustration() {
+  return (
+    <svg
+      viewBox="0 0 680 100"
+      xmlns="http://www.w3.org/2000/svg"
+      className="page-illustration"
+      aria-label="PWMとは何か - パルス幅変調"
+    >
+      <line x1="0" y1="35" x2="680" y2="35" stroke="#e0e0e0" strokeWidth="1" />
+      <line x1="0" y1="70" x2="680" y2="70" stroke="#e0e0e0" strokeWidth="1" />
+
+      {/* PWM waveform 25% */}
+      <g transform="translate(180, 20)">
+        <path d="M0 35 L0 15 L15 15 L15 35 L45 35 L45 15 L60 15 L60 35 L90 35" fill="none" stroke="#3b6ea5" strokeWidth="2" />
+        <text x="45" y="55" textAnchor="middle" fill="#3b6ea5" fontSize="8">25%</text>
+      </g>
+
+      {/* PWM waveform 50% */}
+      <g transform="translate(300, 20)">
+        <path d="M0 35 L0 15 L22 15 L22 35 L45 35 L45 15 L67 15 L67 35 L90 35" fill="none" stroke="#27ae60" strokeWidth="2" />
+        <text x="45" y="55" textAnchor="middle" fill="#27ae60" fontSize="8">50%</text>
+      </g>
+
+      {/* PWM waveform 75% */}
+      <g transform="translate(420, 20)">
+        <path d="M0 35 L0 15 L32 15 L32 35 L45 35 L45 15 L77 15 L77 35 L90 35" fill="none" stroke="#f39c12" strokeWidth="2" />
+        <text x="45" y="55" textAnchor="middle" fill="#f39c12" fontSize="8">75%</text>
+      </g>
+
+      {/* Label */}
+      <g transform="translate(280, 70)">
+        <text x="60" y="15" textAnchor="middle" fill="#4a4a4a" fontSize="10">デューティ比で平均電圧を調整</text>
+      </g>
+    </svg>
+  )
+}
+
+function Lesson28Illustration() {
+  return (
+    <svg
+      viewBox="0 0 680 100"
+      xmlns="http://www.w3.org/2000/svg"
+      className="page-illustration"
+      aria-label="プルアップとプルダウン"
+    >
+      <line x1="0" y1="35" x2="680" y2="35" stroke="#e0e0e0" strokeWidth="1" />
+      <line x1="0" y1="70" x2="680" y2="70" stroke="#e0e0e0" strokeWidth="1" />
+
+      {/* Pull-up */}
+      <g transform="translate(220, 15)">
+        <text x="30" y="0" textAnchor="middle" fill="#c0392b" fontSize="8">VCC</text>
+        <line x1="30" y1="5" x2="30" y2="15" stroke="#c0392b" strokeWidth="2" />
+        <path d="M30 15 L30 20 L25 23 L35 29 L25 35 L35 41 L30 45 L30 50" fill="none" stroke="#3b6ea5" strokeWidth="2" />
+        <circle cx="30" cy="50" r="2" fill="#3b6ea5" />
+        <line x1="32" y1="50" x2="55" y2="50" stroke="#3b6ea5" strokeWidth="2" />
+        <text x="30" y="75" textAnchor="middle" fill="#3b6ea5" fontSize="9" fontWeight="500">プルアップ</text>
+      </g>
+
+      {/* Pull-down */}
+      <g transform="translate(400, 15)">
+        <line x1="30" y1="10" x2="55" y2="10" stroke="#3b6ea5" strokeWidth="2" />
+        <circle cx="30" cy="10" r="2" fill="#3b6ea5" />
+        <path d="M30 12 L30 17 L25 20 L35 26 L25 32 L35 38 L30 42 L30 47" fill="none" stroke="#3b6ea5" strokeWidth="2" />
+        <line x1="30" y1="47" x2="30" y2="55" stroke="#3b6ea5" strokeWidth="2" />
+        <line x1="20" y1="55" x2="40" y2="55" stroke="#3b6ea5" strokeWidth="2" />
+        <text x="30" y="75" textAnchor="middle" fill="#3b6ea5" fontSize="9" fontWeight="500">プルダウン</text>
+      </g>
+
+      {/* Label */}
+      <g transform="translate(280, 80)">
+        <text x="60" y="10" textAnchor="middle" fill="#4a4a4a" fontSize="9">入力を安定させる抵抗</text>
+      </g>
+    </svg>
+  )
+}
+
+function Lesson29Illustration() {
+  return (
+    <svg
+      viewBox="0 0 680 100"
+      xmlns="http://www.w3.org/2000/svg"
+      className="page-illustration"
+      aria-label="デバウンス - チャタリング対策"
+    >
+      <line x1="0" y1="35" x2="680" y2="35" stroke="#e0e0e0" strokeWidth="1" />
+      <line x1="0" y1="70" x2="680" y2="70" stroke="#e0e0e0" strokeWidth="1" />
+
+      {/* Chattering signal */}
+      <g transform="translate(200, 20)">
+        <path d="M0 35 L20 35 L20 15 L25 35 L30 15 L35 35 L40 15 L45 15 L80 15 L80 35 L85 15 L90 35 L95 15 L100 35 L110 35" fill="none" stroke="#c0392b" strokeWidth="2" />
+        <text x="55" y="55" textAnchor="middle" fill="#c0392b" fontSize="8">チャタリング</text>
+      </g>
+
+      {/* Arrow */}
+      <g transform="translate(325, 35)">
+        <line x1="0" y1="15" x2="25" y2="15" stroke="#3b6ea5" strokeWidth="2" />
+        <polygon points="20,10 30,15 20,20" fill="#3b6ea5" />
+        <text x="15" y="35" textAnchor="middle" fill="#3b6ea5" fontSize="8">デバウンス</text>
+      </g>
+
+      {/* Clean signal */}
+      <g transform="translate(380, 20)">
+        <path d="M0 35 L20 35 L20 15 L80 15 L80 35 L110 35" fill="none" stroke="#27ae60" strokeWidth="2" />
+        <text x="55" y="55" textAnchor="middle" fill="#27ae60" fontSize="8">安定した信号</text>
+      </g>
+    </svg>
+  )
+}
+
+function Lesson30Illustration() {
+  return (
+    <svg
+      viewBox="0 0 680 100"
+      xmlns="http://www.w3.org/2000/svg"
+      className="page-illustration"
+      aria-label="入出力を組み合わせる - 測る→判断→動かす"
+    >
+      <line x1="0" y1="35" x2="680" y2="35" stroke="#e0e0e0" strokeWidth="1" />
+      <line x1="0" y1="70" x2="680" y2="70" stroke="#e0e0e0" strokeWidth="1" />
+
+      {/* Measure */}
+      <g transform="translate(180, 20)">
+        <rect x="0" y="10" width="70" height="35" rx="5" fill="#e3f2fd" stroke="#3b6ea5" strokeWidth="2" />
+        <text x="35" y="32" textAnchor="middle" fill="#3b6ea5" fontSize="10" fontWeight="500">測る</text>
+        <text x="35" y="60" textAnchor="middle" fill="#4a4a4a" fontSize="8">センサー</text>
+      </g>
+
+      {/* Arrow */}
+      <g transform="translate(260, 35)">
+        <line x1="0" y1="12" x2="25" y2="12" stroke="#3b6ea5" strokeWidth="2" />
+        <polygon points="20,7 30,12 20,17" fill="#3b6ea5" />
+      </g>
+
+      {/* Judge */}
+      <g transform="translate(295, 20)">
+        <rect x="0" y="10" width="70" height="35" rx="5" fill="#fff3e0" stroke="#f39c12" strokeWidth="2" />
+        <text x="35" y="32" textAnchor="middle" fill="#f39c12" fontSize="10" fontWeight="500">判断</text>
+        <text x="35" y="60" textAnchor="middle" fill="#4a4a4a" fontSize="8">マイコン</text>
+      </g>
+
+      {/* Arrow */}
+      <g transform="translate(375, 35)">
+        <line x1="0" y1="12" x2="25" y2="12" stroke="#f39c12" strokeWidth="2" />
+        <polygon points="20,7 30,12 20,17" fill="#f39c12" />
+      </g>
+
+      {/* Move */}
+      <g transform="translate(410, 20)">
+        <rect x="0" y="10" width="70" height="35" rx="5" fill="#e8f5e9" stroke="#27ae60" strokeWidth="2" />
+        <text x="35" y="32" textAnchor="middle" fill="#27ae60" fontSize="10" fontWeight="500">動かす</text>
+        <text x="35" y="60" textAnchor="middle" fill="#4a4a4a" fontSize="8">アクチュエータ</text>
       </g>
     </svg>
   )
