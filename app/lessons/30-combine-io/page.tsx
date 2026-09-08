@@ -193,9 +193,10 @@ export default function Lesson30Page() {
           </p>
           <p>
             このシステムでは<Link href="/glossary/pwm" className="glossary-link">PWM</Link>を使って、
-            明るさに応じて照明の光量を調整することもできます。
+            明るさに応じてDC照明（LEDなど）の光量を調整することもできます。
             「暗いほど明るく、明るいほど暗く」という連続制御で、より快適な照明環境を作れます。
-            PWMでMOSFETを制御し、照明の電力を調整します。
+            PWMでMOSFETを制御し、DC照明の電力を調整します。
+            なお、家庭用のAC100V照明はこの方法では調光できません。リレーでのON/OFF制御か、専用の調光器を使います。
           </p>
         </section>
 
@@ -258,7 +259,7 @@ export default function Lesson30Page() {
               
               {/* Note */}
               <g transform="translate(50, 90)">
-                <text x="120" y="0" textAnchor="middle" fill="#4a4a4a" fontSize="8">ON/OFFだけならリレー、連続調光ならPWM+MOSFET</text>
+                <text x="120" y="0" textAnchor="middle" fill="#4a4a4a" fontSize="8">ON/OFFだけならリレー、DC LED連続調光ならPWM+MOSFET</text>
               </g>
             </g>
 
