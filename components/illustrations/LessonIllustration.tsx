@@ -69,6 +69,26 @@ export default function LessonIllustration({ lessonNumber, ready = true }: Lesso
       return <Lesson29Illustration />
     case 30:
       return <Lesson30Illustration />
+    case 31:
+      return <Lesson31Illustration />
+    case 32:
+      return <Lesson32Illustration />
+    case 33:
+      return <Lesson33Illustration />
+    case 34:
+      return <Lesson34Illustration />
+    case 35:
+      return <Lesson35Illustration />
+    case 36:
+      return <Lesson36Illustration />
+    case 37:
+      return <Lesson37Illustration />
+    case 38:
+      return <Lesson38Illustration />
+    case 39:
+      return <Lesson39Illustration />
+    case 40:
+      return <Lesson40Illustration />
     default:
       return <SoonIllustration />
   }
@@ -1242,6 +1262,486 @@ function Lesson30Illustration() {
         <rect x="0" y="10" width="70" height="35" rx="5" fill="#e8f5e9" stroke="#27ae60" strokeWidth="2" />
         <text x="35" y="32" textAnchor="middle" fill="#27ae60" fontSize="10" fontWeight="500">動かす</text>
         <text x="35" y="60" textAnchor="middle" fill="#4a4a4a" fontSize="8">アクチュエータ</text>
+      </g>
+    </svg>
+  )
+}
+
+function Lesson31Illustration() {
+  return (
+    <svg
+      viewBox="0 0 680 100"
+      xmlns="http://www.w3.org/2000/svg"
+      className="page-illustration"
+      aria-label="温度センサー - 温度を電気に"
+    >
+      <line x1="0" y1="35" x2="680" y2="35" stroke="#e0e0e0" strokeWidth="1" />
+      <line x1="0" y1="70" x2="680" y2="70" stroke="#e0e0e0" strokeWidth="1" />
+
+      {/* Thermometer */}
+      <g transform="translate(230, 10)">
+        <rect x="15" y="5" width="10" height="45" rx="2" fill="none" stroke="#3b6ea5" strokeWidth="2" />
+        <rect x="17" y="30" width="6" height="18" fill="#c0392b" />
+        <circle cx="20" cy="55" r="10" fill="#c0392b" stroke="#3b6ea5" strokeWidth="2" />
+        <text x="20" y="80" textAnchor="middle" fill="#4a4a4a" fontSize="9">温度</text>
+      </g>
+
+      {/* Arrow */}
+      <g transform="translate(280, 40)">
+        <line x1="0" y1="10" x2="30" y2="10" stroke="#3b6ea5" strokeWidth="2" />
+        <polygon points="25,5 35,10 25,15" fill="#3b6ea5" />
+      </g>
+
+      {/* Sensor chip */}
+      <g transform="translate(330, 20)">
+        <rect x="0" y="10" width="60" height="35" rx="3" fill="#e3f2fd" stroke="#3b6ea5" strokeWidth="2" />
+        <text x="30" y="32" textAnchor="middle" fill="#3b6ea5" fontSize="9" fontWeight="500">温度センサー</text>
+        <line x1="15" y1="45" x2="15" y2="55" stroke="#3b6ea5" strokeWidth="2" />
+        <line x1="30" y1="45" x2="30" y2="55" stroke="#3b6ea5" strokeWidth="2" />
+        <line x1="45" y1="45" x2="45" y2="55" stroke="#3b6ea5" strokeWidth="2" />
+      </g>
+
+      {/* Arrow to voltage */}
+      <g transform="translate(400, 40)">
+        <line x1="0" y1="10" x2="30" y2="10" stroke="#27ae60" strokeWidth="2" />
+        <polygon points="25,5 35,10 25,15" fill="#27ae60" />
+      </g>
+
+      {/* Voltage output */}
+      <g transform="translate(440, 25)">
+        <path d="M0 25 Q15 10 30 25 T60 25" fill="none" stroke="#27ae60" strokeWidth="2" />
+        <text x="30" y="50" textAnchor="middle" fill="#27ae60" fontSize="10" fontWeight="500">電圧</text>
+      </g>
+    </svg>
+  )
+}
+
+function Lesson32Illustration() {
+  return (
+    <svg
+      viewBox="0 0 680 100"
+      xmlns="http://www.w3.org/2000/svg"
+      className="page-illustration"
+      aria-label="光センサー - 光を電気に"
+    >
+      <line x1="0" y1="35" x2="680" y2="35" stroke="#e0e0e0" strokeWidth="1" />
+      <line x1="0" y1="70" x2="680" y2="70" stroke="#e0e0e0" strokeWidth="1" />
+
+      {/* Sun/Light */}
+      <g transform="translate(220, 20)">
+        <circle cx="25" cy="25" r="15" fill="#f39c12" opacity="0.3" stroke="#f39c12" strokeWidth="2" />
+        <line x1="25" y1="0" x2="25" y2="8" stroke="#f39c12" strokeWidth="2" />
+        <line x1="25" y1="42" x2="25" y2="50" stroke="#f39c12" strokeWidth="2" />
+        <line x1="0" y1="25" x2="8" y2="25" stroke="#f39c12" strokeWidth="2" />
+        <line x1="42" y1="25" x2="50" y2="25" stroke="#f39c12" strokeWidth="2" />
+        <text x="25" y="70" textAnchor="middle" fill="#4a4a4a" fontSize="9">光</text>
+      </g>
+
+      {/* Arrow */}
+      <g transform="translate(280, 40)">
+        <line x1="0" y1="5" x2="30" y2="5" stroke="#f39c12" strokeWidth="2" />
+        <polygon points="25,0 35,5 25,10" fill="#f39c12" />
+      </g>
+
+      {/* CdS / Sensor */}
+      <g transform="translate(325, 20)">
+        <circle cx="30" cy="25" r="20" fill="#e3f2fd" stroke="#3b6ea5" strokeWidth="2" />
+        <path d="M22 22 L38 22 M24 28 L36 28" stroke="#3b6ea5" strokeWidth="1.5" />
+        <text x="30" y="60" textAnchor="middle" fill="#3b6ea5" fontSize="9" fontWeight="500">光センサー</text>
+      </g>
+
+      {/* Arrow */}
+      <g transform="translate(390, 40)">
+        <line x1="0" y1="5" x2="30" y2="5" stroke="#27ae60" strokeWidth="2" />
+        <polygon points="25,0 35,5 25,10" fill="#27ae60" />
+      </g>
+
+      {/* Output */}
+      <g transform="translate(430, 25)">
+        <text x="30" y="20" textAnchor="middle" fill="#27ae60" fontSize="14" fontWeight="600">lux</text>
+        <text x="30" y="40" textAnchor="middle" fill="#4a4a4a" fontSize="9">明るさ</text>
+      </g>
+    </svg>
+  )
+}
+
+function Lesson33Illustration() {
+  return (
+    <svg
+      viewBox="0 0 680 100"
+      xmlns="http://www.w3.org/2000/svg"
+      className="page-illustration"
+      aria-label="距離センサー - 距離を測る"
+    >
+      <line x1="0" y1="35" x2="680" y2="35" stroke="#e0e0e0" strokeWidth="1" />
+      <line x1="0" y1="70" x2="680" y2="70" stroke="#e0e0e0" strokeWidth="1" />
+
+      {/* Ultrasonic sensor */}
+      <g transform="translate(220, 20)">
+        <rect x="0" y="10" width="60" height="35" rx="3" fill="#e3f2fd" stroke="#3b6ea5" strokeWidth="2" />
+        <circle cx="18" cy="27" r="8" fill="none" stroke="#3b6ea5" strokeWidth="1.5" />
+        <circle cx="42" cy="27" r="8" fill="none" stroke="#3b6ea5" strokeWidth="1.5" />
+        <text x="18" y="30" textAnchor="middle" fill="#3b6ea5" fontSize="6">T</text>
+        <text x="42" y="30" textAnchor="middle" fill="#3b6ea5" fontSize="6">R</text>
+        <text x="30" y="60" textAnchor="middle" fill="#3b6ea5" fontSize="9">距離センサー</text>
+      </g>
+
+      {/* Sound waves */}
+      <g transform="translate(290, 30)">
+        <path d="M0 20 Q20 10 40 20" fill="none" stroke="#3b6ea5" strokeWidth="1.5" strokeDasharray="4,2" />
+        <path d="M0 20 Q20 30 40 20" fill="none" stroke="#3b6ea5" strokeWidth="1.5" strokeDasharray="4,2" />
+      </g>
+
+      {/* Object */}
+      <g transform="translate(340, 15)">
+        <rect x="0" y="10" width="15" height="40" fill="#4a4a4a" rx="2" />
+      </g>
+
+      {/* Return waves */}
+      <g transform="translate(355, 35)">
+        <path d="M20 15 Q10 5 0 15" fill="none" stroke="#27ae60" strokeWidth="1.5" strokeDasharray="4,2" />
+        <path d="M20 15 Q10 25 0 15" fill="none" stroke="#27ae60" strokeWidth="1.5" strokeDasharray="4,2" />
+      </g>
+
+      {/* Distance label */}
+      <g transform="translate(400, 30)">
+        <text x="30" y="20" textAnchor="middle" fill="#27ae60" fontSize="14" fontWeight="600">cm</text>
+        <text x="30" y="40" textAnchor="middle" fill="#4a4a4a" fontSize="9">距離</text>
+      </g>
+    </svg>
+  )
+}
+
+function Lesson34Illustration() {
+  return (
+    <svg
+      viewBox="0 0 680 100"
+      xmlns="http://www.w3.org/2000/svg"
+      className="page-illustration"
+      aria-label="人感センサー - 人を検知"
+    >
+      <line x1="0" y1="35" x2="680" y2="35" stroke="#e0e0e0" strokeWidth="1" />
+      <line x1="0" y1="70" x2="680" y2="70" stroke="#e0e0e0" strokeWidth="1" />
+
+      {/* PIR sensor */}
+      <g transform="translate(220, 15)">
+        <rect x="0" y="15" width="60" height="40" rx="5" fill="#e3f2fd" stroke="#3b6ea5" strokeWidth="2" />
+        <circle cx="30" cy="35" r="12" fill="none" stroke="#3b6ea5" strokeWidth="2" />
+        <circle cx="30" cy="35" r="5" fill="#3b6ea5" opacity="0.3" />
+        <text x="30" y="70" textAnchor="middle" fill="#3b6ea5" fontSize="9">PIRセンサー</text>
+      </g>
+
+      {/* Detection cone */}
+      <g transform="translate(285, 25)">
+        <path d="M0 25 L60 5 L60 45 Z" fill="#3b6ea5" opacity="0.1" stroke="#3b6ea5" strokeWidth="1" strokeDasharray="3,2" />
+      </g>
+
+      {/* Person */}
+      <g transform="translate(360, 10)">
+        <circle cx="20" cy="10" r="8" fill="none" stroke="#c0392b" strokeWidth="2" />
+        <line x1="20" y1="18" x2="20" y2="40" stroke="#c0392b" strokeWidth="2" />
+        <line x1="20" y1="25" x2="8" y2="35" stroke="#c0392b" strokeWidth="2" />
+        <line x1="20" y1="25" x2="32" y2="35" stroke="#c0392b" strokeWidth="2" />
+        <line x1="20" y1="40" x2="12" y2="55" stroke="#c0392b" strokeWidth="2" />
+        <line x1="20" y1="40" x2="28" y2="55" stroke="#c0392b" strokeWidth="2" />
+        <text x="20" y="70" textAnchor="middle" fill="#c0392b" fontSize="9">人</text>
+      </g>
+
+      {/* Output */}
+      <g transform="translate(420, 30)">
+        <rect x="0" y="0" width="50" height="25" rx="3" fill="#e8f5e9" stroke="#27ae60" strokeWidth="2" />
+        <text x="25" y="17" textAnchor="middle" fill="#27ae60" fontSize="10" fontWeight="500">検知!</text>
+      </g>
+    </svg>
+  )
+}
+
+function Lesson35Illustration() {
+  return (
+    <svg
+      viewBox="0 0 680 100"
+      xmlns="http://www.w3.org/2000/svg"
+      className="page-illustration"
+      aria-label="湿度センサー - 湿度を測る"
+    >
+      <line x1="0" y1="35" x2="680" y2="35" stroke="#e0e0e0" strokeWidth="1" />
+      <line x1="0" y1="70" x2="680" y2="70" stroke="#e0e0e0" strokeWidth="1" />
+
+      {/* Water droplets */}
+      <g transform="translate(220, 20)">
+        <circle cx="15" cy="25" r="5" fill="#3b6ea5" opacity="0.4" />
+        <circle cx="35" cy="20" r="4" fill="#3b6ea5" opacity="0.5" />
+        <circle cx="50" cy="30" r="6" fill="#3b6ea5" opacity="0.3" />
+        <circle cx="25" cy="40" r="4" fill="#3b6ea5" opacity="0.6" />
+        <circle cx="45" cy="45" r="5" fill="#3b6ea5" opacity="0.4" />
+        <text x="32" y="70" textAnchor="middle" fill="#4a4a4a" fontSize="9">湿気</text>
+      </g>
+
+      {/* Arrow */}
+      <g transform="translate(285, 40)">
+        <line x1="0" y1="5" x2="30" y2="5" stroke="#3b6ea5" strokeWidth="2" />
+        <polygon points="25,0 35,5 25,10" fill="#3b6ea5" />
+      </g>
+
+      {/* DHT sensor */}
+      <g transform="translate(330, 15)">
+        <rect x="0" y="10" width="50" height="40" rx="3" fill="#e3f2fd" stroke="#3b6ea5" strokeWidth="2" />
+        <text x="25" y="35" textAnchor="middle" fill="#3b6ea5" fontSize="9" fontWeight="500">DHT</text>
+        <line x1="12" y1="50" x2="12" y2="60" stroke="#3b6ea5" strokeWidth="2" />
+        <line x1="25" y1="50" x2="25" y2="60" stroke="#3b6ea5" strokeWidth="2" />
+        <line x1="38" y1="50" x2="38" y2="60" stroke="#3b6ea5" strokeWidth="2" />
+      </g>
+
+      {/* Arrow */}
+      <g transform="translate(390, 40)">
+        <line x1="0" y1="5" x2="30" y2="5" stroke="#27ae60" strokeWidth="2" />
+        <polygon points="25,0 35,5 25,10" fill="#27ae60" />
+      </g>
+
+      {/* Output */}
+      <g transform="translate(430, 25)">
+        <text x="30" y="20" textAnchor="middle" fill="#27ae60" fontSize="14" fontWeight="600">%RH</text>
+        <text x="30" y="40" textAnchor="middle" fill="#4a4a4a" fontSize="9">湿度</text>
+      </g>
+    </svg>
+  )
+}
+
+function Lesson36Illustration() {
+  return (
+    <svg
+      viewBox="0 0 680 100"
+      xmlns="http://www.w3.org/2000/svg"
+      className="page-illustration"
+      aria-label="加速度センサー - 動きと傾きを測る"
+    >
+      <line x1="0" y1="35" x2="680" y2="35" stroke="#e0e0e0" strokeWidth="1" />
+      <line x1="0" y1="70" x2="680" y2="70" stroke="#e0e0e0" strokeWidth="1" />
+
+      {/* Sensor chip */}
+      <g transform="translate(240, 20)">
+        <rect x="0" y="10" width="50" height="35" rx="3" fill="#e3f2fd" stroke="#3b6ea5" strokeWidth="2" />
+        <text x="25" y="32" textAnchor="middle" fill="#3b6ea5" fontSize="8" fontWeight="500">加速度</text>
+      </g>
+
+      {/* 3D axes */}
+      <g transform="translate(330, 35)">
+        <line x1="0" y1="15" x2="40" y2="15" stroke="#c0392b" strokeWidth="2" />
+        <polygon points="35,11 45,15 35,19" fill="#c0392b" />
+        <text x="50" y="18" fill="#c0392b" fontSize="9">X</text>
+
+        <line x1="20" y1="35" x2="20" y2="-5" stroke="#27ae60" strokeWidth="2" />
+        <polygon points="16,-5 20,-15 24,-5" fill="#27ae60" />
+        <text x="20" y="-20" textAnchor="middle" fill="#27ae60" fontSize="9">Y</text>
+
+        <line x1="20" y1="15" x2="5" y2="30" stroke="#3b6ea5" strokeWidth="2" />
+        <polygon points="3,26 -2,35 8,30" fill="#3b6ea5" />
+        <text x="-5" y="40" fill="#3b6ea5" fontSize="9">Z</text>
+      </g>
+
+      {/* G label */}
+      <g transform="translate(420, 25)">
+        <text x="20" y="20" textAnchor="middle" fill="#4a4a4a" fontSize="16" fontWeight="600">G</text>
+        <text x="20" y="40" textAnchor="middle" fill="#4a4a4a" fontSize="9">傾き・動き</text>
+      </g>
+    </svg>
+  )
+}
+
+function Lesson37Illustration() {
+  return (
+    <svg
+      viewBox="0 0 680 100"
+      xmlns="http://www.w3.org/2000/svg"
+      className="page-illustration"
+      aria-label="振動センサー - 振動を検知"
+    >
+      <line x1="0" y1="35" x2="680" y2="35" stroke="#e0e0e0" strokeWidth="1" />
+      <line x1="0" y1="70" x2="680" y2="70" stroke="#e0e0e0" strokeWidth="1" />
+
+      {/* Machine with vibration */}
+      <g transform="translate(220, 15)">
+        <rect x="5" y="15" width="50" height="40" rx="3" fill="#f8f9fa" stroke="#4a4a4a" strokeWidth="2" />
+        <circle cx="30" cy="35" r="10" fill="none" stroke="#4a4a4a" strokeWidth="2" />
+        <circle cx="30" cy="35" r="3" fill="#4a4a4a" />
+        {/* Vibration lines */}
+        <path d="M-5 25 L0 20 L5 30 L10 20" fill="none" stroke="#c0392b" strokeWidth="1.5" />
+        <path d="M55 25 L60 20 L65 30 L70 20" fill="none" stroke="#c0392b" strokeWidth="1.5" />
+        <text x="30" y="70" textAnchor="middle" fill="#4a4a4a" fontSize="9">機械</text>
+      </g>
+
+      {/* Arrow */}
+      <g transform="translate(305, 40)">
+        <line x1="0" y1="5" x2="30" y2="5" stroke="#3b6ea5" strokeWidth="2" />
+        <polygon points="25,0 35,5 25,10" fill="#3b6ea5" />
+      </g>
+
+      {/* Vibration sensor */}
+      <g transform="translate(350, 20)">
+        <circle cx="25" cy="25" r="18" fill="#e3f2fd" stroke="#3b6ea5" strokeWidth="2" />
+        <circle cx="25" cy="25" r="5" fill="#3b6ea5" />
+        <text x="25" y="60" textAnchor="middle" fill="#3b6ea5" fontSize="9">振動センサー</text>
+      </g>
+
+      {/* Arrow */}
+      <g transform="translate(400, 40)">
+        <line x1="0" y1="5" x2="30" y2="5" stroke="#27ae60" strokeWidth="2" />
+        <polygon points="25,0 35,5 25,10" fill="#27ae60" />
+      </g>
+
+      {/* Output waveform */}
+      <g transform="translate(440, 25)">
+        <path d="M0 25 L10 15 L20 35 L30 10 L40 30 L50 20" fill="none" stroke="#27ae60" strokeWidth="2" />
+        <text x="25" y="50" textAnchor="middle" fill="#4a4a4a" fontSize="9">振動検知</text>
+      </g>
+    </svg>
+  )
+}
+
+function Lesson38Illustration() {
+  return (
+    <svg
+      viewBox="0 0 680 100"
+      xmlns="http://www.w3.org/2000/svg"
+      className="page-illustration"
+      aria-label="磁気センサー - 磁気を検知"
+    >
+      <line x1="0" y1="35" x2="680" y2="35" stroke="#e0e0e0" strokeWidth="1" />
+      <line x1="0" y1="70" x2="680" y2="70" stroke="#e0e0e0" strokeWidth="1" />
+
+      {/* Magnet */}
+      <g transform="translate(220, 20)">
+        <rect x="0" y="10" width="20" height="40" rx="2" fill="#c0392b" stroke="#8b0000" strokeWidth="1" />
+        <rect x="20" y="10" width="20" height="40" rx="2" fill="#3b6ea5" stroke="#2c5282" strokeWidth="1" />
+        <text x="10" y="35" textAnchor="middle" fill="white" fontSize="10" fontWeight="600">N</text>
+        <text x="30" y="35" textAnchor="middle" fill="white" fontSize="10" fontWeight="600">S</text>
+        <text x="20" y="65" textAnchor="middle" fill="#4a4a4a" fontSize="9">磁石</text>
+      </g>
+
+      {/* Magnetic field lines */}
+      <g transform="translate(265, 25)">
+        <path d="M0 25 Q20 10 40 25" fill="none" stroke="#3b6ea5" strokeWidth="1" strokeDasharray="4,2" opacity="0.5" />
+        <path d="M0 25 Q20 40 40 25" fill="none" stroke="#3b6ea5" strokeWidth="1" strokeDasharray="4,2" opacity="0.5" />
+      </g>
+
+      {/* Reed switch */}
+      <g transform="translate(320, 20)">
+        <rect x="0" y="15" width="60" height="25" rx="10" fill="#f8f9fa" stroke="#3b6ea5" strokeWidth="2" />
+        <line x1="15" y1="27" x2="28" y2="27" stroke="#4a4a4a" strokeWidth="2" />
+        <line x1="32" y1="27" x2="45" y2="27" stroke="#4a4a4a" strokeWidth="2" />
+        <text x="30" y="55" textAnchor="middle" fill="#3b6ea5" fontSize="9">磁気センサー</text>
+      </g>
+
+      {/* Arrow */}
+      <g transform="translate(390, 35)">
+        <line x1="0" y1="5" x2="30" y2="5" stroke="#27ae60" strokeWidth="2" />
+        <polygon points="25,0 35,5 25,10" fill="#27ae60" />
+      </g>
+
+      {/* Output */}
+      <g transform="translate(430, 25)">
+        <rect x="0" y="0" width="50" height="25" rx="3" fill="#e8f5e9" stroke="#27ae60" strokeWidth="2" />
+        <text x="25" y="17" textAnchor="middle" fill="#27ae60" fontSize="10" fontWeight="500">ON/OFF</text>
+        <text x="25" y="45" textAnchor="middle" fill="#4a4a4a" fontSize="8">開閉検知</text>
+      </g>
+    </svg>
+  )
+}
+
+function Lesson39Illustration() {
+  return (
+    <svg
+      viewBox="0 0 680 100"
+      xmlns="http://www.w3.org/2000/svg"
+      className="page-illustration"
+      aria-label="圧力センサー - 圧力を測る"
+    >
+      <line x1="0" y1="35" x2="680" y2="35" stroke="#e0e0e0" strokeWidth="1" />
+      <line x1="0" y1="70" x2="680" y2="70" stroke="#e0e0e0" strokeWidth="1" />
+
+      {/* Pressure arrow */}
+      <g transform="translate(230, 10)">
+        <line x1="25" y1="0" x2="25" y2="25" stroke="#f39c12" strokeWidth="3" />
+        <polygon points="20,25 25,35 30,25" fill="#f39c12" />
+        <text x="25" y="-5" textAnchor="middle" fill="#f39c12" fontSize="9">押す</text>
+      </g>
+
+      {/* FSR sensor */}
+      <g transform="translate(220, 35)">
+        <circle cx="25" cy="20" r="20" fill="#e3f2fd" stroke="#3b6ea5" strokeWidth="2" />
+        <text x="25" y="24" textAnchor="middle" fill="#3b6ea5" fontSize="9" fontWeight="500">FSR</text>
+        <text x="25" y="55" textAnchor="middle" fill="#4a4a4a" fontSize="8">感圧</text>
+      </g>
+
+      {/* Divider */}
+      <g transform="translate(300, 30)">
+        <line x1="0" y1="0" x2="0" y2="40" stroke="#e0e0e0" strokeWidth="2" />
+      </g>
+
+      {/* Air pressure */}
+      <g transform="translate(330, 15)">
+        <rect x="0" y="10" width="60" height="40" rx="3" fill="#e8f5e9" stroke="#27ae60" strokeWidth="2" />
+        <text x="30" y="28" textAnchor="middle" fill="#27ae60" fontSize="8">BMP280</text>
+        <text x="30" y="42" textAnchor="middle" fill="#4a4a4a" fontSize="7">気圧</text>
+      </g>
+
+      {/* Arrow */}
+      <g transform="translate(400, 40)">
+        <line x1="0" y1="5" x2="30" y2="5" stroke="#27ae60" strokeWidth="2" />
+        <polygon points="25,0 35,5 25,10" fill="#27ae60" />
+      </g>
+
+      {/* Output */}
+      <g transform="translate(440, 25)">
+        <text x="25" y="20" textAnchor="middle" fill="#27ae60" fontSize="12" fontWeight="600">hPa</text>
+        <text x="25" y="40" textAnchor="middle" fill="#4a4a4a" fontSize="9">圧力</text>
+      </g>
+    </svg>
+  )
+}
+
+function Lesson40Illustration() {
+  return (
+    <svg
+      viewBox="0 0 680 100"
+      xmlns="http://www.w3.org/2000/svg"
+      className="page-illustration"
+      aria-label="センサーの選び方 - 課題から選ぶ"
+    >
+      <line x1="0" y1="35" x2="680" y2="35" stroke="#e0e0e0" strokeWidth="1" />
+      <line x1="0" y1="70" x2="680" y2="70" stroke="#e0e0e0" strokeWidth="1" />
+
+      {/* Problem */}
+      <g transform="translate(190, 20)">
+        <rect x="0" y="10" width="70" height="35" rx="5" fill="#ffcccc" stroke="#c0392b" strokeWidth="2" />
+        <text x="35" y="32" textAnchor="middle" fill="#c0392b" fontSize="10" fontWeight="500">課題</text>
+        <text x="35" y="55" textAnchor="middle" fill="#4a4a4a" fontSize="7">何に困っている?</text>
+      </g>
+
+      {/* Arrow */}
+      <g transform="translate(265, 35)">
+        <line x1="0" y1="10" x2="25" y2="10" stroke="#4a4a4a" strokeWidth="2" />
+        <polygon points="20,5 30,10 20,15" fill="#4a4a4a" />
+      </g>
+
+      {/* Physical quantity */}
+      <g transform="translate(295, 20)">
+        <rect x="0" y="10" width="70" height="35" rx="5" fill="#fff3cd" stroke="#f39c12" strokeWidth="2" />
+        <text x="35" y="32" textAnchor="middle" fill="#f39c12" fontSize="10" fontWeight="500">物理量</text>
+        <text x="35" y="55" textAnchor="middle" fill="#4a4a4a" fontSize="7">何を測る?</text>
+      </g>
+
+      {/* Arrow */}
+      <g transform="translate(370, 35)">
+        <line x1="0" y1="10" x2="25" y2="10" stroke="#4a4a4a" strokeWidth="2" />
+        <polygon points="20,5 30,10 20,15" fill="#4a4a4a" />
+      </g>
+
+      {/* Sensor */}
+      <g transform="translate(400, 20)">
+        <rect x="0" y="10" width="70" height="35" rx="5" fill="#e8f5e9" stroke="#27ae60" strokeWidth="2" />
+        <text x="35" y="32" textAnchor="middle" fill="#27ae60" fontSize="10" fontWeight="500">センサー</text>
+        <text x="35" y="55" textAnchor="middle" fill="#4a4a4a" fontSize="7">どれを使う?</text>
       </g>
     </svg>
   )

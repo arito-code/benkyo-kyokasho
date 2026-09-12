@@ -63,12 +63,21 @@ export const phases: Phase[] = [
   {
     id: 4,
     title: 'センサーで世界を測る',
-    lessons: Array.from({ length: 13 }, (_, i) => ({
-      number: 31 + i,
-      title: '',
-      slug: `${String(31 + i).padStart(2, '0')}-sensors-${i + 1}`,
-      ready: false,
-    })),
+    lessons: [
+      { number: 31, title: '温度センサー', slug: '31-temp-sensor', ready: true },
+      { number: 32, title: '光センサー', slug: '32-light-sensor', ready: true },
+      { number: 33, title: '距離センサー', slug: '33-distance-sensor', ready: true },
+      { number: 34, title: '人感センサー', slug: '34-pir-sensor', ready: true },
+      { number: 35, title: '湿度センサー', slug: '35-humidity-sensor', ready: true },
+      { number: 36, title: '加速度センサー', slug: '36-accel-sensor', ready: true },
+      { number: 37, title: '振動センサー', slug: '37-vibration-sensor', ready: true },
+      { number: 38, title: '磁気センサー', slug: '38-magnetic-sensor', ready: true },
+      { number: 39, title: '圧力センサー', slug: '39-pressure-sensor', ready: true },
+      { number: 40, title: 'センサーの選び方', slug: '40-choosing-sensors', ready: true },
+      { number: 41, title: '', slug: '41-sensors-11', ready: false },
+      { number: 42, title: '', slug: '42-sensors-12', ready: false },
+      { number: 43, title: '', slug: '43-sensors-13', ready: false },
+    ],
   },
   {
     id: 5,
