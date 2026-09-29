@@ -2,6 +2,7 @@ import Header from '@/components/Header'
 import PracticeToggle from '@/components/PracticeToggle'
 import LessonIllustration from '@/components/illustrations/LessonIllustration'
 import AskBox from '@/components/AskBox'
+import LessonNavigation from '@/components/LessonNavigation'
 import Link from 'next/link'
 
 export default function Lesson73Page() {
@@ -37,6 +38,8 @@ export default function Lesson73Page() {
         <div className="next-question"><h3>次の問い</h3><p>撮影した画像をどこに保存し、どうやって他のシステムに転送するのでしょうか。次の第74回で学びます。</p></div>
         <div className="memory-box"><h3>今日覚えること</h3><ol><li>OpenCVは画像処理・コンピュータビジョンの定番ライブラリです。</li><li>pip install opencv-python でインストール、import cv2 で使用開始です。</li><li>色変換、フィルタ、輪郭検出、顔検出など多彩な機能があります。</li></ol></div>
         <AskBox lessonId="73-opencv-intro" />
+
+        <LessonNavigation currentLessonNumber={73} />
         <div style={{ marginTop: 'var(--spacing-lg)' }}><Link href="/">← ホームに戻る</Link></div>
       </main>
     </>

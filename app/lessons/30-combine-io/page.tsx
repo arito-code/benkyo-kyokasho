@@ -2,6 +2,7 @@ import Header from '@/components/Header'
 import PracticeToggle from '@/components/PracticeToggle'
 import LessonIllustration from '@/components/illustrations/LessonIllustration'
 import AskBox from '@/components/AskBox'
+import LessonNavigation from '@/components/LessonNavigation'
 import Link from 'next/link'
 
 export default function Lesson30Page() {
@@ -364,6 +365,8 @@ export default function Lesson30Page() {
         </div>
 
         <AskBox lessonId="30-combine-io" />
+
+        <LessonNavigation currentLessonNumber={30} />
 
         <div style={{ marginTop: 'var(--spacing-lg)' }}>
           <Link href="/">← ホームに戻る</Link>

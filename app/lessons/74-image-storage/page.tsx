@@ -2,6 +2,7 @@ import Header from '@/components/Header'
 import PracticeToggle from '@/components/PracticeToggle'
 import LessonIllustration from '@/components/illustrations/LessonIllustration'
 import AskBox from '@/components/AskBox'
+import LessonNavigation from '@/components/LessonNavigation'
 import Link from 'next/link'
 
 export default function Lesson74Page() {
@@ -130,6 +131,8 @@ export default function Lesson74Page() {
         </div>
 
         <AskBox lessonId="74-image-storage" />
+
+        <LessonNavigation currentLessonNumber={74} />
       </main>
     </>
   )

@@ -2,6 +2,7 @@ import Header from '@/components/Header'
 import PracticeToggle from '@/components/PracticeToggle'
 import LessonIllustration from '@/components/illustrations/LessonIllustration'
 import AskBox from '@/components/AskBox'
+import LessonNavigation from '@/components/LessonNavigation'
 import Link from 'next/link'
 
 export default function Lesson71Page() {
@@ -34,6 +35,8 @@ export default function Lesson71Page() {
         <div className="next-question"><h3>次の問い</h3><p>撮影した映像をリアルタイムで他のPCやスマホに送る「ストリーミング」は、どうやるのでしょうか。次の第72回で学びます。</p></div>
         <div className="memory-box"><h3>今日覚えること</h3><ol><li>rpicam-stillコマンドで簡単に静止画を撮影できます。</li><li>Pythonのpicamera2ライブラリでプログラムから制御できます。</li><li>タイマーやセンサーと組み合わせて自動撮影できます。</li></ol></div>
         <AskBox lessonId="71-capture-image" />
+
+        <LessonNavigation currentLessonNumber={71} />
         <div style={{ marginTop: 'var(--spacing-lg)' }}><Link href="/">← ホームに戻る</Link></div>
       </main>
     </>

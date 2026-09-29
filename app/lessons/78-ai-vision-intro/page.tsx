@@ -2,6 +2,7 @@ import Header from '@/components/Header'
 import PracticeToggle from '@/components/PracticeToggle'
 import LessonIllustration from '@/components/illustrations/LessonIllustration'
 import AskBox from '@/components/AskBox'
+import LessonNavigation from '@/components/LessonNavigation'
 import Link from 'next/link'
 
 export default function Lesson78Page() {
@@ -132,6 +133,8 @@ export default function Lesson78Page() {
         </div>
 
         <AskBox lessonId="78-ai-vision-intro" />
+
+        <LessonNavigation currentLessonNumber={78} />
       </main>
     </>
   )
