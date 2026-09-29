@@ -50,7 +50,7 @@ export default function Lesson68Page() {
               <g transform="translate(40, 85)">
                 <rect x="0" y="0" width="280" height="35" fill="#f8f9fa" stroke="#4a4a4a" strokeWidth="1" rx="3" />
                 <text x="140" y="14" textAnchor="middle" fill="#4a4a4a" fontSize="8">ImagerでWi-Fi/SSHを事前設定しておくと便利</text>
-                <text x="140" y="28" textAnchor="middle" fill="#4a4a4a" fontSize="8">ssh pi@raspberrypi.local でアクセス</text>
+                <text x="140" y="28" textAnchor="middle" fill="#4a4a4a" fontSize="8">ssh ユーザー名@raspberrypi.local でアクセス</text>
               </g>
             </g>
           </svg>

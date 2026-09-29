@@ -19,11 +19,11 @@ export default function Lesson69Page() {
         <h1>第69回: Raspberry PiのGPIO</h1>
         <section>
           <h2>概念: GPIOは「外の世界とつなぐピン」</h2>
-          <p>GPIO(General Purpose Input/Output)は、Raspberry Piの縁にある40本のピンです。<Link href="/lessons/04-io">入力と出力</Link>に使え、LEDを光らせたり、センサーの値を読んだりできます。M5Stackと同じようにハードウェア制御ができますが、プログラミング言語としてPythonがよく使われます。</p>
+          <p>Raspberry Piの縁には40本のピンがまとまった「40ピンヘッダ」があります。このヘッダにはGPIO（汎用入出力）ピンのほか、3.3V電源、5V電源、GND（グラウンド）も含まれています。GPIO(General Purpose Input/Output)ピンを使うと、<Link href="/lessons/04-io">入力と出力</Link>としてLEDを光らせたり、センサーの値を読んだりできます。M5Stackと同じようにハードウェア制御ができますが、プログラミング言語としてPythonがよく使われます。</p>
           <div className="analogy">
-            <span className="analogy-term">GPIO</span>
+            <span className="analogy-term">40ピンヘッダ</span>
             <span className="analogy-equals">=</span>
-            <span>Raspberry Piと外の世界(LED、センサー)をつなぐピン</span>
+            <span>GPIOピン + 電源(3.3V/5V) + GND を含む接続端子</span>
           </div>
         </section>
         <figure className="svg-figure">
@@ -48,7 +48,7 @@ export default function Lesson69Page() {
               </g>
             </g>
           </svg>
-          <figcaption>40ピンのGPIOで、さまざまなハードウェアを制御できます。</figcaption>
+          <figcaption>40ピンヘッダには、GPIOのほか電源(3.3V/5V)やGNDも含まれています。</figcaption>
         </figure>
         <section>
           <h2>PythonでのGPIO制御</h2>
@@ -69,7 +69,7 @@ export default function Lesson69Page() {
         <div className="memory-box">
           <h3>今日覚えること</h3>
           <ol>
-            <li>GPIOは40本のピンで、LEDやセンサーを制御できます。</li>
+            <li>40ピンヘッダにはGPIO、電源(3.3V/5V)、GNDが含まれています。</li>
             <li>Pythonのgpiozeroライブラリで簡単にプログラミングできます。</li>
             <li>3.3Vロジックなので、5Vセンサーには注意が必要です。</li>
           </ol>

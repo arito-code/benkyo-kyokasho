@@ -33,7 +33,7 @@ export default function Lesson51Page() {
             <Link href="/lessons/13-power-sources">第13回</Link>で学んだ電源の基本を思い出しましょう。
           </p>
           <p>
-            M5Stack Basicの内蔵バッテリーは約150mAhで、
+            M5Stack Basicの内蔵バッテリーは機種や世代により異なりますが（約110〜150mAh程度）、
             画面をつけて常時動作すると1〜2時間程度しか持ちません。
             長時間のバッテリー運用には、省電力の工夫が必要です。
           </p>
@@ -60,7 +60,7 @@ export default function Lesson51Page() {
               <g transform="translate(135, 25)">
                 <rect x="0" y="0" width="100" height="60" rx="5" fill="#fff3cd" stroke="#f39c12" strokeWidth="2" />
                 <text x="50" y="20" textAnchor="middle" fill="#f39c12" fontSize="9" fontWeight="500">内蔵バッテリー</text>
-                <text x="50" y="38" textAnchor="middle" fill="#4a4a4a" fontSize="7">150mAh / 1〜2時間</text>
+                <text x="50" y="38" textAnchor="middle" fill="#4a4a4a" fontSize="7">110〜150mAh程度</text>
                 <text x="50" y="52" textAnchor="middle" fill="#c0392b" fontSize="7">短時間向け</text>
               </g>
               

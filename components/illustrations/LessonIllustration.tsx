@@ -2015,6 +2015,39 @@ function Lesson47Illustration() {
 
 function Lesson48Illustration() {
   return (
+    <svg viewBox="0 0 680 100" xmlns="http://www.w3.org/2000/svg" className="page-illustration" aria-label="I2C通信の基本">
+      <line x1="0" y1="35" x2="680" y2="35" stroke="#e0e0e0" strokeWidth="1" />
+      <line x1="0" y1="70" x2="680" y2="70" stroke="#e0e0e0" strokeWidth="1" />
+      <g transform="translate(200, 15)">
+        <rect x="0" y="10" width="60" height="40" rx="3" fill="#1a1a1a" stroke="#3b6ea5" strokeWidth="2" />
+        <text x="30" y="32" textAnchor="middle" fill="white" fontSize="8">M5Stack</text>
+        <text x="30" y="44" textAnchor="middle" fill="white" fontSize="6">(マスター)</text>
+      </g>
+      <g transform="translate(275, 30)">
+        <line x1="0" y1="10" x2="30" y2="10" stroke="#f39c12" strokeWidth="2" />
+        <line x1="0" y1="20" x2="30" y2="20" stroke="#27ae60" strokeWidth="2" />
+        <text x="15" y="40" textAnchor="middle" fill="#f39c12" fontSize="6">SDA</text>
+        <text x="15" y="50" textAnchor="middle" fill="#27ae60" fontSize="6">SCL</text>
+      </g>
+      <g transform="translate(320, 15)">
+        <rect x="0" y="5" width="50" height="25" rx="3" fill="#e3f2fd" stroke="#3b6ea5" strokeWidth="2" />
+        <text x="25" y="21" textAnchor="middle" fill="#3b6ea5" fontSize="7">センサー1</text>
+        <text x="25" y="42" textAnchor="middle" fill="#4a4a4a" fontSize="6">0x76</text>
+      </g>
+      <g transform="translate(385, 15)">
+        <rect x="0" y="5" width="50" height="25" rx="3" fill="#e8f5e9" stroke="#27ae60" strokeWidth="2" />
+        <text x="25" y="21" textAnchor="middle" fill="#27ae60" fontSize="7">センサー2</text>
+        <text x="25" y="42" textAnchor="middle" fill="#4a4a4a" fontSize="6">0x68</text>
+      </g>
+      <g transform="translate(320, 58)">
+        <text x="55" y="12" textAnchor="middle" fill="#4a4a4a" fontSize="8">2本の線で複数接続</text>
+      </g>
+    </svg>
+  )
+}
+
+function Lesson49Illustration() {
+  return (
     <svg viewBox="0 0 680 100" xmlns="http://www.w3.org/2000/svg" className="page-illustration" aria-label="M5StackのWiFi接続">
       <line x1="0" y1="35" x2="680" y2="35" stroke="#e0e0e0" strokeWidth="1" />
       <line x1="0" y1="70" x2="680" y2="70" stroke="#e0e0e0" strokeWidth="1" />
@@ -2037,7 +2070,7 @@ function Lesson48Illustration() {
   )
 }
 
-function Lesson49Illustration() {
+function Lesson50Illustration() {
   return (
     <svg viewBox="0 0 680 100" xmlns="http://www.w3.org/2000/svg" className="page-illustration" aria-label="簡易ダッシュボード">
       <line x1="0" y1="35" x2="680" y2="35" stroke="#e0e0e0" strokeWidth="1" />
@@ -2060,7 +2093,7 @@ function Lesson49Illustration() {
   )
 }
 
-function Lesson50Illustration() {
+function Lesson51Illustration() {
   return (
     <svg viewBox="0 0 680 100" xmlns="http://www.w3.org/2000/svg" className="page-illustration" aria-label="M5Stackの電源管理">
       <line x1="0" y1="35" x2="680" y2="35" stroke="#e0e0e0" strokeWidth="1" />
@@ -2069,7 +2102,7 @@ function Lesson50Illustration() {
         <rect x="0" y="10" width="70" height="40" rx="3" fill="#1a1a1a" stroke="#3b6ea5" strokeWidth="2" />
         <rect x="8" y="35" width="54" height="10" rx="2" fill="#27ae60" />
         <text x="35" y="42" textAnchor="middle" fill="white" fontSize="6">バッテリー</text>
-        <text x="35" y="65" textAnchor="middle" fill="#4a4a4a" fontSize="8">内蔵150mAh</text>
+        <text x="35" y="65" textAnchor="middle" fill="#4a4a4a" fontSize="8">内蔵バッテリー</text>
       </g>
       <g transform="translate(310, 35)">
         <rect x="0" y="0" width="30" height="15" rx="2" fill="#4a4a4a" />
@@ -2083,7 +2116,7 @@ function Lesson50Illustration() {
   )
 }
 
-function Lesson51Illustration() {
+function Lesson52Illustration() {
   return (
     <svg viewBox="0 0 680 100" xmlns="http://www.w3.org/2000/svg" className="page-illustration" aria-label="M5Stackライブラリ活用">
       <line x1="0" y1="35" x2="680" y2="35" stroke="#e0e0e0" strokeWidth="1" />
@@ -2106,7 +2139,7 @@ function Lesson51Illustration() {
   )
 }
 
-function Lesson52Illustration() {
+function Lesson53Illustration() {
   return (
     <svg viewBox="0 0 680 100" xmlns="http://www.w3.org/2000/svg" className="page-illustration" aria-label="M5Stackで作るミニプロジェクト">
       <line x1="0" y1="35" x2="680" y2="35" stroke="#e0e0e0" strokeWidth="1" />
@@ -2140,7 +2173,7 @@ function Lesson52Illustration() {
   )
 }
 
-function Lesson53Illustration() {
+function Lesson54Illustration() {
   return (
     <svg viewBox="0 0 680 100" xmlns="http://www.w3.org/2000/svg" className="page-illustration" aria-label="M5Stackのトラブル対応">
       <line x1="0" y1="35" x2="680" y2="35" stroke="#e0e0e0" strokeWidth="1" />
@@ -2159,32 +2192,6 @@ function Lesson53Illustration() {
         <rect x="0" y="5" width="70" height="45" rx="3" fill="#e8f5e9" stroke="#27ae60" strokeWidth="2" />
         <text x="35" y="25" textAnchor="middle" fill="#27ae60" fontSize="10">解決</text>
         <text x="35" y="40" textAnchor="middle" fill="#27ae60" fontSize="8">シリアルモニタ</text>
-      </g>
-    </svg>
-  )
-}
-
-function Lesson54Illustration() {
-  return (
-    <svg viewBox="0 0 680 100" xmlns="http://www.w3.org/2000/svg" className="page-illustration" aria-label="M5Stackの選び方">
-      <line x1="0" y1="35" x2="680" y2="35" stroke="#e0e0e0" strokeWidth="1" />
-      <line x1="0" y1="70" x2="680" y2="70" stroke="#e0e0e0" strokeWidth="1" />
-      <g transform="translate(200, 15)">
-        <rect x="0" y="10" width="55" height="45" rx="3" fill="#1a1a1a" stroke="#3b6ea5" strokeWidth="2" />
-        <rect x="5" y="15" width="45" height="25" rx="2" fill="#e3f2fd" />
-        <text x="27" y="65" textAnchor="middle" fill="#3b6ea5" fontSize="8">Core</text>
-      </g>
-      <g transform="translate(280, 20)">
-        <rect x="0" y="15" width="40" height="30" rx="3" fill="#1a1a1a" stroke="#27ae60" strokeWidth="2" />
-        <rect x="5" y="20" width="30" height="15" rx="2" fill="#e8f5e9" />
-        <text x="20" y="60" textAnchor="middle" fill="#27ae60" fontSize="8">Stick</text>
-      </g>
-      <g transform="translate(350, 25)">
-        <rect x="5" y="10" width="24" height="24" rx="3" fill="#1a1a1a" stroke="#f39c12" strokeWidth="2" />
-        <text x="17" y="55" textAnchor="middle" fill="#f39c12" fontSize="8">ATOM</text>
-      </g>
-      <g transform="translate(420, 30)">
-        <text x="0" y="15" fill="#4a4a4a" fontSize="9">用途で選ぶ</text>
       </g>
     </svg>
   )

@@ -31,7 +31,7 @@ export default function Lesson70Page() {
           </svg>
           <figcaption>用途に応じてカメラモジュールを選びます。</figcaption>
         </figure>
-        <section><h2>接続と設定</h2><p>カメラモジュールはフレキシブルケーブルでCSI端子に接続します。Raspberry Pi OS では libcamera コマンドで撮影でき、Python では picamera2 ライブラリを使います。raspi-config でカメラを有効化することを忘れないでください。</p></section>
+        <section><h2>接続と設定</h2><p>カメラモジュールはフレキシブルケーブルでCSI端子に接続します。現在のRaspberry Pi OS（Bookworm以降）ではカメラは自動検出されます。<code>rpicam-hello --list-cameras</code>コマンドで接続を確認できます。Pythonではpicamera2ライブラリを使います。</p></section>
         <PracticeToggle><h3>提案で使うと</h3><p>「画像検査をしたい」というお客様には、Raspberry Piとカメラモジュールの組み合わせを提案できます。「専用モジュールなので低遅延で、AIでの画像認識にも対応できます」と説明できます。</p></PracticeToggle>
         <div className="next-question"><h3>次の問い</h3><p>カメラで画像を撮影するプログラムは、どう書くのでしょうか。次の第71回で学びます。</p></div>
         <div className="memory-box"><h3>今日覚えること</h3><ol><li>専用カメラモジュールはCSI端子に接続し、低遅延で高性能です。</li><li>標準・NoIR(暗所向け)・HQ(高画質)などの種類があります。</li><li>libcameraコマンドやpicamera2ライブラリで制御します。</li></ol></div>

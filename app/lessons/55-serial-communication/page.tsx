@@ -77,7 +77,7 @@ export default function Lesson55Page() {
               <g transform="translate(40, 100)">
                 <rect x="0" y="0" width="260" height="40" fill="#f8f9fa" stroke="#4a4a4a" strokeWidth="1" rx="3" />
                 <text x="130" y="16" textAnchor="middle" fill="#4a4a4a" fontSize="9" fontWeight="500">メリット</text>
-                <text x="130" y="32" textAnchor="middle" fill="#4a4a4a" fontSize="8">配線が少ない / 長距離通信に向く / ノイズに強い</text>
+                <text x="130" y="32" textAnchor="middle" fill="#4a4a4a" fontSize="8">配線が少ない / 長距離通信に向く / 広く普及</text>
               </g>
             </g>
           </svg>

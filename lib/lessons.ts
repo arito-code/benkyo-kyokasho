@@ -635,9 +635,9 @@ Pythonのgpiozeroライブラリで簡単に制御できます。
     title: 'カメラモジュール接続',
     description: 'Raspberry Piにカメラモジュールを接続する方法を学びます。',
     summary: `Raspberry Pi Camera Moduleはフレキシブルケーブルで接続します。
-/boot/config.txtでカメラを有効化し、libcameraコマンドで動作確認します。
-公式カメラとサードパーティ製で設定方法が異なることがあります。`,
-    keywords: ['Raspberry Pi', 'カメラ', 'Camera Module', 'libcamera', 'CSI', '接続'],
+現在のRaspberry Pi OS（Bookworm以降）ではカメラは自動検出されます。
+rpicam-hello --list-camerasコマンドで接続を確認できます。`,
+    keywords: ['Raspberry Pi', 'カメラ', 'Camera Module', 'rpicam', 'CSI', '接続'],
   },
   '71-image-capture': {
     id: '71-image-capture',
@@ -679,7 +679,7 @@ Pythonのpicamera2ライブラリでプログラムから撮影を制御でき�
     id: '75-raspi-power',
     title: 'Raspberry Piの電源管理',
     description: 'Raspberry Piを安定稼働させるための電源管理を学びます。',
-    summary: `Raspberry Piには5V 3A以上の安定電源が必要です。
+    summary: `Raspberry Piには安定電源が必要です（Pi 4: 5V 3A、Pi 5: 5V 5A）。
 UPSで停電時も安全にシャットダウンできます。
 電源は直接抜かず、shutdownコマンドを使うのが基本です。`,
     keywords: ['Raspberry Pi', '電源', 'UPS', 'シャットダウン', '安定', '24時間'],

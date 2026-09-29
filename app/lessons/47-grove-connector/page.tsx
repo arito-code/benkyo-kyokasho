@@ -75,9 +75,9 @@ export default function Lesson47Page() {
                 <rect x="0" y="27" width="12" height="12" fill="#1a1a1a" />
                 <text x="18" y="37" fill="#4a4a4a" fontSize="8">GND (グラウンド)</text>
                 <rect x="150" y="10" width="12" height="12" fill="#f39c12" />
-                <text x="168" y="20" fill="#4a4a4a" fontSize="8">信号1 (SDA/TX/アナログ)</text>
+                <text x="168" y="20" fill="#4a4a4a" fontSize="8">信号1 (SCL/TX/デジタル)</text>
                 <rect x="150" y="27" width="12" height="12" fill="white" stroke="#4a4a4a" strokeWidth="1" />
-                <text x="168" y="37" fill="#4a4a4a" fontSize="8">信号2 (SCL/RX/デジタル)</text>
+                <text x="168" y="37" fill="#4a4a4a" fontSize="8">信号2 (SDA/RX/アナログ)</text>
               </g>
               
               <g transform="translate(40, 145)">
@@ -119,7 +119,7 @@ export default function Lesson47Page() {
               <g transform="translate(135, 25)">
                 <rect x="0" y="0" width="100" height="60" rx="5" fill="#e8f5e9" stroke="#27ae60" strokeWidth="2" />
                 <text x="50" y="20" textAnchor="middle" fill="#27ae60" fontSize="9" fontWeight="500">アナログ</text>
-                <text x="50" y="38" textAnchor="middle" fill="#4a4a4a" fontSize="7">連続値 (0〜1023)</text>
+                <text x="50" y="38" textAnchor="middle" fill="#4a4a4a" fontSize="7">連続値（分解能は機種依存）</text>
                 <text x="50" y="52" textAnchor="middle" fill="#4a4a4a" fontSize="7">光、音、可変抵抗</text>
               </g>
               

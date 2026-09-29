@@ -50,8 +50,9 @@ export default function Lesson75Page() {
             <text x="155" y="128" textAnchor="middle" fontSize="6" fill="white">バッテリー</text>
 
             <rect x="220" y="60" width="70" height="80" fill="#f3e5f5" stroke="#7b1fa2" strokeWidth="2" rx="5"/>
-            <text x="255" y="95" textAnchor="middle" fontSize="10">電源アダプタ</text>
-            <text x="255" y="110" textAnchor="middle" fontSize="8">5V 3A</text>
+            <text x="255" y="90" textAnchor="middle" fontSize="10">電源アダプタ</text>
+            <text x="255" y="105" textAnchor="middle" fontSize="8">Pi4: 5V 3A</text>
+            <text x="255" y="118" textAnchor="middle" fontSize="8">Pi5: 5V 5A</text>
 
             <rect x="320" y="60" width="70" height="80" fill="#e8f5e9" stroke="#2e7d32" strokeWidth="2" rx="5"/>
             <text x="355" y="95" textAnchor="middle" fontSize="10">Raspberry</text>
@@ -79,9 +80,11 @@ export default function Lesson75Page() {
           <h3>1. 適切な電源アダプタ</h3>
           <p>
             Raspberry Piには十分な電流を供給できるアダプタが必要です。
+            モデルによって必要な電力が異なります。
           </p>
           <ul>
-            <li><strong>Pi 4/5</strong>: 5V 3A（15W）以上の公式電源推奨</li>
+            <li><strong>Pi 4</strong>: 5V 3A（15W）の公式電源推奨</li>
+            <li><strong>Pi 5</strong>: 5V 5A（27W）の公式USB-C電源推奨。3Aでも動作しますが、USBポートの出力が制限されます</li>
             <li><strong>USB-Cケーブル</strong>: 太く短いものを選ぶ（電圧降下防止）</li>
             <li><strong>警告表示</strong>: 画面右上の稲妻マーク=電力不足</li>
           </ul>
@@ -127,7 +130,7 @@ export default function Lesson75Page() {
         <div className="memory-box">
           <h3>今日覚えること</h3>
           <ol>
-            <li>Pi 4/5には5V 3A以上の電源が必要。稲妻マークは電力不足の警告</li>
+            <li>Pi 4は5V 3A、Pi 5は5V 5A（27W）の電源が必要。稲妻マークは電力不足の警告</li>
             <li>UPSで停電時も安全シャットダウンが可能になる</li>
             <li>電源は直接抜かず、必ずshutdownコマンドを使う</li>
           </ol>
