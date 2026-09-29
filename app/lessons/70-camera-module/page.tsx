@@ -2,6 +2,7 @@ import Header from '@/components/Header'
 import PracticeToggle from '@/components/PracticeToggle'
 import LessonIllustration from '@/components/illustrations/LessonIllustration'
 import AskBox from '@/components/AskBox'
+import LessonNavigation from '@/components/LessonNavigation'
 import Link from 'next/link'
 
 export default function Lesson70Page() {
@@ -36,6 +37,8 @@ export default function Lesson70Page() {
         <div className="next-question"><h3>次の問い</h3><p>カメラで画像を撮影するプログラムは、どう書くのでしょうか。次の第71回で学びます。</p></div>
         <div className="memory-box"><h3>今日覚えること</h3><ol><li>専用カメラモジュールはCSI端子に接続し、低遅延で高性能です。</li><li>標準・NoIR(暗所向け)・HQ(高画質)などの種類があります。</li><li>libcameraコマンドやpicamera2ライブラリで制御します。</li></ol></div>
         <AskBox lessonId="70-camera-module" />
+
+        <LessonNavigation currentLessonNumber={70} />
         <div style={{ marginTop: 'var(--spacing-lg)' }}><Link href="/">← ホームに戻る</Link></div>
       </main>
     </>

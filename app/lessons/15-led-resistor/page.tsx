@@ -3,6 +3,7 @@ import PracticeToggle from '@/components/PracticeToggle'
 import Formula from '@/components/Formula'
 import LessonIllustration from '@/components/illustrations/LessonIllustration'
 import AskBox from '@/components/AskBox'
+import LessonNavigation from '@/components/LessonNavigation'
 import Link from 'next/link'
 
 export default function Lesson15Page() {
@@ -284,6 +285,8 @@ export default function Lesson15Page() {
         </div>
 
         <AskBox lessonId="15-led-resistor" />
+
+        <LessonNavigation currentLessonNumber={15} />
 
         <div style={{ marginTop: 'var(--spacing-lg)' }}>
           <Link href="/">← ホームに戻る</Link>

@@ -2,6 +2,7 @@ import Header from '@/components/Header'
 import PracticeToggle from '@/components/PracticeToggle'
 import LessonIllustration from '@/components/illustrations/LessonIllustration'
 import AskBox from '@/components/AskBox'
+import LessonNavigation from '@/components/LessonNavigation'
 import Link from 'next/link'
 
 export default function Lesson44Page() {
@@ -188,6 +189,8 @@ export default function Lesson44Page() {
         </div>
 
         <AskBox lessonId="44-m5stack-intro" />
+
+        <LessonNavigation currentLessonNumber={44} />
 
         <div style={{ marginTop: 'var(--spacing-lg)' }}>
           <Link href="/">← ホームに戻る</Link>

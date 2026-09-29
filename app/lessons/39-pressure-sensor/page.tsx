@@ -2,6 +2,7 @@ import Header from '@/components/Header'
 import PracticeToggle from '@/components/PracticeToggle'
 import LessonIllustration from '@/components/illustrations/LessonIllustration'
 import AskBox from '@/components/AskBox'
+import LessonNavigation from '@/components/LessonNavigation'
 import Link from 'next/link'
 
 export default function Lesson39Page() {
@@ -249,6 +250,8 @@ export default function Lesson39Page() {
         </div>
 
         <AskBox lessonId="39-pressure-sensor" />
+
+        <LessonNavigation currentLessonNumber={39} />
 
         <div style={{ marginTop: 'var(--spacing-lg)' }}>
           <Link href="/">← ホームに戻る</Link>

@@ -2,6 +2,7 @@ import Header from '@/components/Header'
 import PracticeToggle from '@/components/PracticeToggle'
 import LessonIllustration from '@/components/illustrations/LessonIllustration'
 import AskBox from '@/components/AskBox'
+import LessonNavigation from '@/components/LessonNavigation'
 import Link from 'next/link'
 
 export default function Lesson80Page() {
@@ -155,6 +156,8 @@ export default function Lesson80Page() {
         </div>
 
         <AskBox lessonId="80-image-model-intuition" />
+
+        <LessonNavigation currentLessonNumber={80} />
       </main>
     </>
   )

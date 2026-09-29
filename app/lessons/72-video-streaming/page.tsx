@@ -2,6 +2,7 @@ import Header from '@/components/Header'
 import PracticeToggle from '@/components/PracticeToggle'
 import LessonIllustration from '@/components/illustrations/LessonIllustration'
 import AskBox from '@/components/AskBox'
+import LessonNavigation from '@/components/LessonNavigation'
 import Link from 'next/link'
 
 export default function Lesson72Page() {
@@ -37,6 +38,8 @@ export default function Lesson72Page() {
         <div className="next-question"><h3>次の問い</h3><p>撮影した画像を加工・分析する「OpenCV」とは何でしょうか。次の第73回で学びます。</p></div>
         <div className="memory-box"><h3>今日覚えること</h3><ol><li>ストリーミングで、カメラ映像をネットワーク経由でリアルタイム配信できます。</li><li>mjpg-streamer、Flask+picamera2などの方法があります。</li><li>ブラウザからアクセスして映像を確認できます。</li></ol></div>
         <AskBox lessonId="72-video-streaming" />
+
+        <LessonNavigation currentLessonNumber={72} />
         <div style={{ marginTop: 'var(--spacing-lg)' }}><Link href="/">← ホームに戻る</Link></div>
       </main>
     </>

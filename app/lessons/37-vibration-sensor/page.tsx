@@ -2,6 +2,7 @@ import Header from '@/components/Header'
 import PracticeToggle from '@/components/PracticeToggle'
 import LessonIllustration from '@/components/illustrations/LessonIllustration'
 import AskBox from '@/components/AskBox'
+import LessonNavigation from '@/components/LessonNavigation'
 import Link from 'next/link'
 
 export default function Lesson37Page() {
@@ -247,6 +248,8 @@ export default function Lesson37Page() {
         </div>
 
         <AskBox lessonId="37-vibration-sensor" />
+
+        <LessonNavigation currentLessonNumber={37} />
 
         <div style={{ marginTop: 'var(--spacing-lg)' }}>
           <Link href="/">← ホームに戻る</Link>
