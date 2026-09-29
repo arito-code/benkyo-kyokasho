@@ -369,6 +369,366 @@ BME280は気圧+温度+湿度の3-in-1で、環境監視に便利です。`,
 お客様の「本当に必要な精度」を確認し、必要十分なセンサーを提案します。`,
     keywords: ['センサー選定', '物理量', '提案', '測定範囲', '精度', '技術営業', '課題解決'],
   },
+  '41-sensor-noise': {
+    id: '41-sensor-noise',
+    title: 'センサーのノイズ',
+    description: 'センサー値が揺れる原因と、ノイズを減らす方法を学びます。',
+    summary: `センサー値の揺れ（ノイズ）は電気的・機械的・環境的な原因で発生します。
+移動平均やローパスフィルタでノイズを軽減できます。
+配線を短くしたり、シールドケーブルを使うことでも改善します。`,
+    keywords: ['ノイズ', 'センサー', '移動平均', 'フィルタ', 'シールド', '揺れ', 'ローパス'],
+  },
+  '42-sensor-calibration': {
+    id: '42-sensor-calibration',
+    title: 'センサーの校正',
+    description: '基準値を使ってセンサーの誤差を補正する校正の方法を学びます。',
+    summary: `校正（キャリブレーション）は基準値と比較してセンサーの誤差を補正することです。
+オフセット校正とゲイン校正の2種類があります。
+定期的な校正で精度を維持し、信頼性のある計測を実現します。`,
+    keywords: ['校正', 'キャリブレーション', '誤差', 'オフセット', 'ゲイン', '基準', '補正'],
+  },
+  '43-combining-sensors': {
+    id: '43-combining-sensors',
+    title: '複数センサーの組み合わせ',
+    description: '複数のセンサーを組み合わせて信頼性を高める方法を学びます。',
+    summary: `複数センサーを組み合わせると信頼性と精度が向上します。
+冗長構成で故障に備え、センサーフュージョンで精度を高めます。
+異なる種類のセンサーを組み合わせることで検知漏れを減らせます。`,
+    keywords: ['センサーフュージョン', '冗長', '信頼性', '組み合わせ', '複合', '精度向上'],
+  },
+  '44-m5stack-intro': {
+    id: '44-m5stack-intro',
+    title: 'M5Stackとは何か',
+    description: 'Phase 5の始まり。M5Stackの特徴とラインナップを学びます。',
+    summary: `M5StackはESP32搭載の開発キットで、画面・ボタン・バッテリーが一体化しています。
+Arduino IDEやUIFlowで手軽にプログラミングできます。
+Core、Stick、ATOMなど用途に応じたラインナップがあります。`,
+    keywords: ['M5Stack', 'ESP32', 'Arduino', 'UIFlow', 'Core', 'ATOM', '開発キット'],
+  },
+  '45-m5stack-display': {
+    id: '45-m5stack-display',
+    title: 'M5Stackの画面表示',
+    description: 'M5Stackの液晶画面にテキストや図形を表示する方法を学びます。',
+    summary: `M5Stackの画面は320×240ピクセルのカラー液晶です。
+テキスト、図形、画像を表示でき、センサー値の可視化に便利です。
+スプライトを使うとちらつきを防いでスムーズに更新できます。`,
+    keywords: ['M5Stack', '画面', '液晶', 'LCD', '表示', 'スプライト', 'TFT'],
+  },
+  '46-m5stack-buttons': {
+    id: '46-m5stack-buttons',
+    title: 'M5Stackのボタン操作',
+    description: 'M5Stackの物理ボタンを使った入力処理を学びます。',
+    summary: `M5Stackには3つの物理ボタン（A/B/C）があります。
+wasPressed()で押した瞬間を、isPressed()で押し続けている状態を検知します。
+長押しや同時押しも判定でき、メニュー操作などに活用できます。`,
+    keywords: ['M5Stack', 'ボタン', '入力', 'wasPressed', '長押し', 'UI'],
+  },
+  '47-grove-i2c': {
+    id: '47-grove-i2c',
+    title: 'Grove/I2Cセンサーの接続',
+    description: 'M5StackにGroveセンサーやI2Cセンサーを接続する方法を学びます。',
+    summary: `Groveは4ピンのコネクタで統一されたセンサー接続システムです。
+I2Cは2本の線で複数のセンサーを数珠つなぎにできる通信方式です。
+M5StackのPort AがI2C用で、多くのGroveセンサーをそのまま接続できます。`,
+    keywords: ['Grove', 'I2C', 'M5Stack', 'センサー', 'コネクタ', 'Port A', '接続'],
+  },
+  '48-m5stack-wifi': {
+    id: '48-m5stack-wifi',
+    title: 'M5StackのWiFi接続',
+    description: 'M5StackをWiFiネットワークに接続する方法を学びます。',
+    summary: `M5StackはESP32搭載でWiFi通信が可能です。
+WiFi.begin()でSSIDとパスワードを指定して接続します。
+接続状態の確認とエラー処理を実装することが重要です。`,
+    keywords: ['M5Stack', 'WiFi', 'ESP32', 'SSID', 'ネットワーク', '無線', '接続'],
+  },
+  '49-m5stack-dashboard': {
+    id: '49-m5stack-dashboard',
+    title: '簡易ダッシュボード',
+    description: 'M5Stackでセンサー値を表示するダッシュボードを作る方法を学びます。',
+    summary: `センサー値を画面に見やすく表示するダッシュボードを作成します。
+数値、グラフ、アイコンを組み合わせて直感的な表示を実現します。
+更新頻度と表示レイアウトを工夫してユーザビリティを向上させます。`,
+    keywords: ['M5Stack', 'ダッシュボード', 'センサー', '表示', 'グラフ', 'UI', '可視化'],
+  },
+  '50-m5stack-power': {
+    id: '50-m5stack-power',
+    title: 'M5Stackの電源管理',
+    description: 'M5Stackのバッテリーと電源管理の方法を学びます。',
+    summary: `M5Stackは内蔵バッテリーで動作し、USB-Cで充電できます。
+バッテリー残量の取得やスリープモードで省電力化が可能です。
+長時間運用には外部バッテリーや電源供給の工夫が必要です。`,
+    keywords: ['M5Stack', '電源', 'バッテリー', '充電', 'スリープ', '省電力', 'USB-C'],
+  },
+  '51-m5stack-libraries': {
+    id: '51-m5stack-libraries',
+    title: 'M5Stackライブラリ活用',
+    description: 'M5Stack開発で使える便利なライブラリを学びます。',
+    summary: `M5Stack公式ライブラリでハードウェア機能を簡単に使えます。
+ArduinoJsonでJSON処理、HTTPClientでWeb通信が可能です。
+ライブラリの選定と使い方で開発効率が大きく変わります。`,
+    keywords: ['M5Stack', 'ライブラリ', 'Arduino', 'JSON', 'HTTP', '開発', 'API'],
+  },
+  '52-m5stack-project': {
+    id: '52-m5stack-project',
+    title: 'M5Stackで作るミニプロジェクト',
+    description: '学んだ知識を組み合わせて実際に動くものを作ります。',
+    summary: `センサー＋画面表示＋ボタン操作を組み合わせた実用的なプロジェクトを作成します。
+温度計、タイマー、カウンターなど、身近な課題を解決する小さな製品を実装します。
+設計→実装→テストの流れを体験します。`,
+    keywords: ['M5Stack', 'プロジェクト', '製作', '実践', 'センサー', '作品', '開発'],
+  },
+  '53-m5stack-troubleshooting': {
+    id: '53-m5stack-troubleshooting',
+    title: 'M5Stackのトラブル対応',
+    description: 'M5Stackでよくある問題と解決方法を学びます。',
+    summary: `書き込みエラー、WiFi接続不良、センサー認識失敗などへの対処法を学びます。
+シリアルモニタでのデバッグとI2Cスキャンが問題解決の基本です。
+よくあるエラーパターンと解決策を知っておくと素早く対応できます。`,
+    keywords: ['M5Stack', 'トラブル', 'デバッグ', 'エラー', 'シリアル', 'I2C', '問題解決'],
+  },
+  '54-m5stack-choice': {
+    id: '54-m5stack-choice',
+    title: 'M5Stackの選び方',
+    description: 'M5Stackラインナップから用途に合った機種を選ぶコツを学びます。',
+    summary: `M5Stack Core（画面付き）、Stick（コンパクト）、ATOM（超小型）から用途で選びます。
+プロトタイプにはCore、量産にはATOMが向いています。
+価格、サイズ、必要な機能のバランスで最適な機種を選定します。`,
+    keywords: ['M5Stack', '選定', 'Core', 'Stick', 'ATOM', '比較', 'ラインナップ'],
+  },
+  '55-serial-communication': {
+    id: '55-serial-communication',
+    title: 'シリアル通信とは',
+    description: 'Phase 6の始まり。データを順番に送るシリアル通信の基本を学びます。',
+    summary: `シリアル通信はデータを1ビットずつ順番に送る方式です。
+パラレル通信より配線が少なく、長距離通信に向いています。
+通信速度（ボーレート）を送受信側で合わせることが重要です。`,
+    keywords: ['シリアル通信', 'ボーレート', 'TX', 'RX', 'ビット', '通信', 'パラレル'],
+  },
+  '56-uart-i2c-spi': {
+    id: '56-uart-i2c-spi',
+    title: 'UART/I2C/SPI概要',
+    description: '3つの代表的なシリアル通信方式の特徴と使い分けを学びます。',
+    summary: `UARTは1対1の非同期通信、I2Cは複数デバイスを2本で接続、SPIは高速通信に適しています。
+センサー接続にはI2C、SDカードやディスプレイにはSPIがよく使われます。
+必要な速度、デバイス数、配線本数で方式を選びます。`,
+    keywords: ['UART', 'I2C', 'SPI', 'シリアル', '通信方式', '比較', 'センサー'],
+  },
+  '57-wifi-basics': {
+    id: '57-wifi-basics',
+    title: 'WiFi通信の基礎',
+    description: '無線LANの仕組みとIoTでの活用方法を学びます。',
+    summary: `WiFiは無線でネットワークに接続する技術です。2.4GHzと5GHzの周波数帯があります。
+IoTデバイスでは2.4GHzが一般的で、障害物に強く到達距離が長いのが特徴です。
+セキュリティ設定とネットワーク設計がIoT導入の鍵になります。`,
+    keywords: ['WiFi', '無線LAN', '2.4GHz', '5GHz', 'SSID', 'セキュリティ', 'ネットワーク'],
+  },
+  '58-http-basics': {
+    id: '58-http-basics',
+    title: 'HTTP通信の基礎',
+    description: 'Webの通信方式HTTPの仕組みとGET/POSTの違いを学びます。',
+    summary: `HTTPはWebサーバーとやり取りするためのプロトコルです。
+GETはデータの取得、POSTはデータの送信に使います。
+IoTデバイスからクラウドへのデータ送信にHTTPがよく使われます。`,
+    keywords: ['HTTP', 'GET', 'POST', 'Web', 'API', 'リクエスト', 'レスポンス'],
+  },
+  '59-mqtt-basics': {
+    id: '59-mqtt-basics',
+    title: 'MQTT通信の基礎',
+    description: 'IoTで広く使われるMQTTプロトコルの仕組みを学びます。',
+    summary: `MQTTはPublish/Subscribe型の軽量プロトコルです。
+ブローカーを介してトピックごとにメッセージをやり取りします。
+HTTPより軽量で、センサーデータの継続的な送信に適しています。`,
+    keywords: ['MQTT', 'Publish', 'Subscribe', 'ブローカー', 'トピック', 'IoT', 'メッセージ'],
+  },
+  '60-rest-api': {
+    id: '60-rest-api',
+    title: 'REST APIの基礎',
+    description: 'Web APIの設計スタイルであるRESTの基本概念を学びます。',
+    summary: `REST APIはHTTPメソッドでリソースを操作する設計スタイルです。
+GET（取得）、POST（作成）、PUT（更新）、DELETE（削除）の4つが基本です。
+JSON形式でデータをやり取りし、クラウドサービスとの連携に使います。`,
+    keywords: ['REST', 'API', 'JSON', 'GET', 'POST', 'PUT', 'DELETE', 'Web'],
+  },
+  '61-cloud-basics': {
+    id: '61-cloud-basics',
+    title: 'IoTクラウドの基礎',
+    description: 'IoTデータをクラウドに送る仕組みと代表的なサービスを学びます。',
+    summary: `IoTクラウドはセンサーデータを収集・蓄積・可視化するサービスです。
+AWS IoT、Azure IoT、Google Cloud IoTなどが代表的です。
+デバイス登録、認証、データ送信の流れを理解することが重要です。`,
+    keywords: ['クラウド', 'AWS', 'Azure', 'Google', 'IoT', 'データ収集', 'サービス'],
+  },
+  '62-json-basics': {
+    id: '62-json-basics',
+    title: 'JSONデータ形式',
+    description: 'IoTで広く使われるJSONデータ形式の読み書き方法を学びます。',
+    summary: `JSONはキーと値のペアでデータを表現する形式です。
+人間にも機械にも読みやすく、Web APIのデータ交換に標準的に使われます。
+ArduinoJsonライブラリでマイコンでもJSON処理が可能です。`,
+    keywords: ['JSON', 'データ', 'フォーマット', 'キー', '値', 'API', 'ArduinoJson'],
+  },
+  '63-iot-security': {
+    id: '63-iot-security',
+    title: 'IoTセキュリティ基礎',
+    description: 'IoTシステムを安全に運用するためのセキュリティ基礎を学びます。',
+    summary: `IoTセキュリティの3要素は機密性、完全性、可用性です。
+HTTPSやTLSで通信を暗号化し、デバイス認証で不正アクセスを防ぎます。
+ファームウェア更新の仕組みとパスワード管理が重要です。`,
+    keywords: ['セキュリティ', 'HTTPS', 'TLS', '認証', '暗号化', 'IoT', '安全'],
+  },
+  '64-gateway': {
+    id: '64-gateway',
+    title: 'IoTゲートウェイ',
+    description: 'センサーとクラウドの橋渡しをするゲートウェイの役割を学びます。',
+    summary: `IoTゲートウェイはセンサーデータを集約してクラウドに送る中継役です。
+プロトコル変換、データフィルタリング、エッジ処理を担います。
+Raspberry PiやM5Stackをゲートウェイとして使うことができます。`,
+    keywords: ['ゲートウェイ', 'エッジ', '中継', 'プロトコル変換', 'データ集約', 'IoT'],
+  },
+  '65-protocol-choice': {
+    id: '65-protocol-choice',
+    title: '通信プロトコルの選び方',
+    description: '用途に応じた通信プロトコルの選び方を学びます。',
+    summary: `HTTP/MQTT/WebSocketなどから用途に応じて選択します。
+頻度が低いならHTTP、リアルタイム性が必要ならMQTTやWebSocket。
+通信量、消費電力、双方向性を考慮して決定します。`,
+    keywords: ['プロトコル', 'HTTP', 'MQTT', 'WebSocket', '選定', '通信', '比較'],
+  },
+  '66-iot-wrap': {
+    id: '66-iot-wrap',
+    title: 'IoTフェーズまとめ',
+    description: 'Phase 6のまとめ。IoTシステム全体像と構築ステップを振り返ります。',
+    summary: `IoTシステムはセンサー→通信→クラウド→可視化の流れで構成されます。
+プロトコル選定、セキュリティ、運用を総合的に設計します。
+お客様の課題を理解し、適切な構成を提案できるようになりました。`,
+    keywords: ['IoT', 'まとめ', 'システム構成', 'センサー', 'クラウド', '提案'],
+  },
+  '67-raspi-intro': {
+    id: '67-raspi-intro',
+    title: 'Raspberry Piとは',
+    description: 'Phase 7の始まり。Raspberry Piの特徴とM5Stackとの違いを学びます。',
+    summary: `Raspberry PiはLinuxが動く小型コンピュータです。
+M5Stackより高性能で、画像処理やサーバー用途に向いています。
+モデルによって性能や価格が異なり、用途に応じて選択します。`,
+    keywords: ['Raspberry Pi', 'Linux', 'コンピュータ', 'ARM', 'モデル', 'ラズパイ'],
+  },
+  '68-raspi-os-ssh': {
+    id: '68-raspi-os-ssh',
+    title: 'OS設定とSSH',
+    description: 'Raspberry PiにOSをインストールし、SSHで接続する方法を学びます。',
+    summary: `Raspberry Pi ImagerでOSをSDカードに書き込みます。
+SSHを有効化してネットワーク経由でリモート操作します。
+初期設定とセキュリティ設定を正しく行うことが重要です。`,
+    keywords: ['Raspberry Pi', 'OS', 'SSH', 'Imager', 'SDカード', 'リモート', '設定'],
+  },
+  '69-raspi-gpio': {
+    id: '69-raspi-gpio',
+    title: 'Raspberry PiのGPIO',
+    description: 'Raspberry PiのGPIOでLEDやセンサーを制御する方法を学びます。',
+    summary: `GPIOはGeneral Purpose Input/Outputの略で、汎用入出力ピンです。
+Pythonのgpiozeroライブラリで簡単に制御できます。
+ピン番号の指定方法に注意し、過電流で壊さないようにします。`,
+    keywords: ['Raspberry Pi', 'GPIO', 'gpiozero', 'Python', 'LED', '入出力', 'ピン'],
+  },
+  '70-camera-module': {
+    id: '70-camera-module',
+    title: 'カメラモジュール接続',
+    description: 'Raspberry Piにカメラモジュールを接続する方法を学びます。',
+    summary: `Raspberry Pi Camera Moduleはフレキシブルケーブルで接続します。
+現在のRaspberry Pi OS（Bookworm以降）ではカメラは自動検出されます。
+rpicam-hello --list-camerasコマンドで接続を確認できます。`,
+    keywords: ['Raspberry Pi', 'カメラ', 'Camera Module', 'rpicam', 'CSI', '接続'],
+  },
+  '71-image-capture': {
+    id: '71-image-capture',
+    title: '静止画撮影',
+    description: 'Raspberry Piで静止画を撮影する方法を学びます。',
+    summary: `libcamera-stillコマンドで静止画を撮影できます。
+解像度、露出、ホワイトバランスなどをオプションで調整します。
+Pythonのpicamera2ライブラリでプログラムから撮影を制御できます。`,
+    keywords: ['Raspberry Pi', '撮影', 'libcamera-still', 'picamera2', '静止画', '画像'],
+  },
+  '72-video-streaming': {
+    id: '72-video-streaming',
+    title: 'ストリーミング配信',
+    description: 'Raspberry Piでリアルタイム映像を配信する方法を学びます。',
+    summary: `MJPEG-streamerやlibcameraでHTTP経由で映像を配信できます。
+ネットワーク帯域と画質・フレームレートのバランスを調整します。
+遅延を減らすにはハードウェアエンコードを活用します。`,
+    keywords: ['Raspberry Pi', 'ストリーミング', 'MJPEG', 'HTTP', '映像配信', 'リアルタイム'],
+  },
+  '73-opencv-intro': {
+    id: '73-opencv-intro',
+    title: 'OpenCV入門',
+    description: 'Raspberry Piで画像処理ライブラリOpenCVを使う方法を学びます。',
+    summary: `OpenCVは画像処理・コンピュータビジョンのライブラリです。
+画像の読み込み、変換、フィルタ処理が可能です。
+顔検出や動体検知などの高度な処理も実装できます。`,
+    keywords: ['OpenCV', 'Raspberry Pi', '画像処理', 'コンピュータビジョン', '検出', 'Python'],
+  },
+  '74-image-storage': {
+    id: '74-image-storage',
+    title: '画像の保存と管理',
+    description: '撮影した画像の保存先と管理方法を学びます。',
+    summary: `画像保存先はローカル（SD/SSD）、NAS、クラウドから選択します。
+ファイル命名規則と定期削除でディスク容量を管理します。
+保存期間と容量のバランスを考慮して構成を決めます。`,
+    keywords: ['画像保存', 'ストレージ', 'NAS', 'クラウド', 'SDカード', 'SSD', '管理'],
+  },
+  '75-raspi-power': {
+    id: '75-raspi-power',
+    title: 'Raspberry Piの電源管理',
+    description: 'Raspberry Piを安定稼働させるための電源管理を学びます。',
+    summary: `Raspberry Piには安定電源が必要です（Pi 4: 5V 3A、Pi 5: 5V 5A）。
+UPSで停電時も安全にシャットダウンできます。
+電源は直接抜かず、shutdownコマンドを使うのが基本です。`,
+    keywords: ['Raspberry Pi', '電源', 'UPS', 'シャットダウン', '安定', '24時間'],
+  },
+  '76-raspi-vs-m5': {
+    id: '76-raspi-vs-m5',
+    title: 'Raspberry Pi vs M5Stack',
+    description: 'Raspberry PiとM5Stackの使い分けを学びます。',
+    summary: `Raspberry Piは画像処理・複雑な処理向き、M5Stackはセンサー収集・携帯向きです。
+用途に応じて適材適所で選択し、組み合わせて使うことも有効です。
+コスト、消費電力、必要な処理能力で判断します。`,
+    keywords: ['Raspberry Pi', 'M5Stack', '比較', '選定', '使い分け', 'IoT'],
+  },
+  '77-raspi-wrap': {
+    id: '77-raspi-wrap',
+    title: 'Raspberry Piまとめ',
+    description: 'Phase 7のまとめ。Raspberry Piで学んだ知識を振り返ります。',
+    summary: `Raspberry PiはLinuxベースのエッジデバイスとして画像処理に強みがあります。
+OS設定、GPIO、カメラ、ストリーミング、OpenCVを習得しました。
+監視カメラや検品システムの提案に活かせる知識が身につきました。`,
+    keywords: ['Raspberry Pi', 'まとめ', 'カメラ', 'エッジ', '画像処理', '総復習'],
+  },
+  '78-ai-vision-intro': {
+    id: '78-ai-vision-intro',
+    title: 'AIによる画像認識とは',
+    description: 'Phase 8の始まり。AIで映像を「理解する」仕組みを学びます。',
+    summary: `画像認識AIは学習で特徴を覚え、推論で判断します。
+出力には信頼度（確率）が付き、100%の精度は期待できません。
+分類、検出、セグメンテーションなど用途別の種類があります。`,
+    keywords: ['AI', '画像認識', '機械学習', '推論', '学習', '信頼度', '分類'],
+  },
+  '79-classification-detection': {
+    id: '79-classification-detection',
+    title: '分類と検出の違い',
+    description: '画像認識の「分類」と「検出」の違いと使い分けを学びます。',
+    summary: `分類は画像全体を1つのラベルに判定、検出は個々の物体の位置を特定します。
+位置情報が必要なら検出、不要なら分類を選びます。
+製品検査では要件に応じて適切な方式を提案します。`,
+    keywords: ['分類', '検出', 'Classification', 'Detection', 'バウンディングボックス', 'AI'],
+  },
+  '80-image-model-intuition': {
+    id: '80-image-model-intuition',
+    title: '画像モデルの直感',
+    description: 'AIモデルが画像を処理する仕組みを直感的に理解します。',
+    summary: `ニューラルネットワークは複数の層で単純→複雑な特徴を段階的に抽出します。
+学習とは重みを調整すること。事前学習モデルを活用すると効率的です。
+AIには限界があり、学習データ外の状況や完璧な精度は期待できません。`,
+    keywords: ['ニューラルネットワーク', '層', '特徴', '学習', '重み', '転移学習', 'AI'],
+  },
 }
 
 export function getLessonContent(lessonId: string): Lesson | undefined {

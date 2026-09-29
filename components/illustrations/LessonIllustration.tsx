@@ -89,6 +89,86 @@ export default function LessonIllustration({ lessonNumber, ready = true }: Lesso
       return <Lesson39Illustration />
     case 40:
       return <Lesson40Illustration />
+    case 41:
+      return <Lesson41Illustration />
+    case 42:
+      return <Lesson42Illustration />
+    case 43:
+      return <Lesson43Illustration />
+    case 44:
+      return <Lesson44Illustration />
+    case 45:
+      return <Lesson45Illustration />
+    case 46:
+      return <Lesson46Illustration />
+    case 47:
+      return <Lesson47Illustration />
+    case 48:
+      return <Lesson48Illustration />
+    case 49:
+      return <Lesson49Illustration />
+    case 50:
+      return <Lesson50Illustration />
+    case 51:
+      return <Lesson51Illustration />
+    case 52:
+      return <Lesson52Illustration />
+    case 53:
+      return <Lesson53Illustration />
+    case 54:
+      return <Lesson54Illustration />
+    case 55:
+      return <Lesson55Illustration />
+    case 56:
+      return <Lesson56Illustration />
+    case 57:
+      return <Lesson57Illustration />
+    case 58:
+      return <Lesson58Illustration />
+    case 59:
+      return <Lesson59Illustration />
+    case 60:
+      return <Lesson60Illustration />
+    case 61:
+      return <Lesson61Illustration />
+    case 62:
+      return <Lesson62Illustration />
+    case 63:
+      return <Lesson63Illustration />
+    case 64:
+      return <Lesson64Illustration />
+    case 65:
+      return <Lesson65Illustration />
+    case 66:
+      return <Lesson66Illustration />
+    case 67:
+      return <Lesson67Illustration />
+    case 68:
+      return <Lesson68Illustration />
+    case 69:
+      return <Lesson69Illustration />
+    case 70:
+      return <Lesson70Illustration />
+    case 71:
+      return <Lesson71Illustration />
+    case 72:
+      return <Lesson72Illustration />
+    case 73:
+      return <Lesson73Illustration />
+    case 74:
+      return <Lesson74Illustration />
+    case 75:
+      return <Lesson75Illustration />
+    case 76:
+      return <Lesson76Illustration />
+    case 77:
+      return <Lesson77Illustration />
+    case 78:
+      return <Lesson78Illustration />
+    case 79:
+      return <Lesson79Illustration />
+    case 80:
+      return <Lesson80Illustration />
     default:
       return <SoonIllustration />
   }
@@ -1760,6 +1840,1042 @@ function SoonIllustration() {
       <g transform="translate(310, 10)">
         <rect x="0" y="5" width="60" height="30" rx="4" fill="none" stroke="#e0e0e0" strokeWidth="2" />
         <text x="30" y="25" textAnchor="middle" fill="#e0e0e0" fontSize="10">準備中</text>
+      </g>
+    </svg>
+  )
+}
+
+function Lesson41Illustration() {
+  return (
+    <svg viewBox="0 0 680 100" xmlns="http://www.w3.org/2000/svg" className="page-illustration" aria-label="センサーのノイズ">
+      <line x1="0" y1="35" x2="680" y2="35" stroke="#e0e0e0" strokeWidth="1" />
+      <line x1="0" y1="70" x2="680" y2="70" stroke="#e0e0e0" strokeWidth="1" />
+      <g transform="translate(200, 20)">
+        <path d="M0 30 L20 35 L40 25 L60 40 L80 20 L100 35 L120 28" fill="none" stroke="#c0392b" strokeWidth="2" />
+        <text x="60" y="60" textAnchor="middle" fill="#c0392b" fontSize="9">ノイズあり</text>
+      </g>
+      <g transform="translate(310, 35)">
+        <line x1="0" y1="10" x2="30" y2="10" stroke="#3b6ea5" strokeWidth="2" />
+        <polygon points="25,5 35,10 25,15" fill="#3b6ea5" />
+        <text x="17" y="30" textAnchor="middle" fill="#3b6ea5" fontSize="8">フィルタ</text>
+      </g>
+      <g transform="translate(360, 20)">
+        <path d="M0 30 Q30 28 60 30 Q90 32 120 30" fill="none" stroke="#27ae60" strokeWidth="2" />
+        <text x="60" y="60" textAnchor="middle" fill="#27ae60" fontSize="9">安定</text>
+      </g>
+    </svg>
+  )
+}
+
+function Lesson42Illustration() {
+  return (
+    <svg viewBox="0 0 680 100" xmlns="http://www.w3.org/2000/svg" className="page-illustration" aria-label="センサーの校正">
+      <line x1="0" y1="35" x2="680" y2="35" stroke="#e0e0e0" strokeWidth="1" />
+      <line x1="0" y1="70" x2="680" y2="70" stroke="#e0e0e0" strokeWidth="1" />
+      <g transform="translate(220, 15)">
+        <rect x="0" y="10" width="60" height="40" rx="3" fill="#e3f2fd" stroke="#3b6ea5" strokeWidth="2" />
+        <text x="30" y="35" textAnchor="middle" fill="#3b6ea5" fontSize="10">センサー</text>
+        <text x="30" y="65" textAnchor="middle" fill="#c0392b" fontSize="9">25.5°C</text>
+      </g>
+      <g transform="translate(300, 35)">
+        <text x="20" y="15" textAnchor="middle" fill="#4a4a4a" fontSize="14">⇄</text>
+      </g>
+      <g transform="translate(340, 15)">
+        <rect x="0" y="10" width="60" height="40" rx="3" fill="#fff3e0" stroke="#f39c12" strokeWidth="2" />
+        <text x="30" y="35" textAnchor="middle" fill="#f39c12" fontSize="10">基準器</text>
+        <text x="30" y="65" textAnchor="middle" fill="#27ae60" fontSize="9">25.0°C</text>
+      </g>
+      <g transform="translate(420, 35)">
+        <text x="30" y="15" textAnchor="middle" fill="#3b6ea5" fontSize="10" fontWeight="500">補正: -0.5°C</text>
+      </g>
+    </svg>
+  )
+}
+
+function Lesson43Illustration() {
+  return (
+    <svg viewBox="0 0 680 100" xmlns="http://www.w3.org/2000/svg" className="page-illustration" aria-label="複数センサーの組み合わせ">
+      <line x1="0" y1="35" x2="680" y2="35" stroke="#e0e0e0" strokeWidth="1" />
+      <line x1="0" y1="70" x2="680" y2="70" stroke="#e0e0e0" strokeWidth="1" />
+      <g transform="translate(200, 15)">
+        <rect x="0" y="0" width="40" height="25" rx="3" fill="#e3f2fd" stroke="#3b6ea5" strokeWidth="2" />
+        <text x="20" y="16" textAnchor="middle" fill="#3b6ea5" fontSize="8">センサー1</text>
+        <rect x="0" y="35" width="40" height="25" rx="3" fill="#e8f5e9" stroke="#27ae60" strokeWidth="2" />
+        <text x="20" y="51" textAnchor="middle" fill="#27ae60" fontSize="8">センサー2</text>
+      </g>
+      <g transform="translate(260, 35)">
+        <line x1="0" y1="0" x2="30" y2="15" stroke="#3b6ea5" strokeWidth="1.5" />
+        <line x1="0" y1="30" x2="30" y2="15" stroke="#27ae60" strokeWidth="1.5" />
+      </g>
+      <g transform="translate(300, 25)">
+        <rect x="0" y="5" width="70" height="35" rx="5" fill="#fff3e0" stroke="#f39c12" strokeWidth="2" />
+        <text x="35" y="28" textAnchor="middle" fill="#f39c12" fontSize="9" fontWeight="500">フュージョン</text>
+      </g>
+      <g transform="translate(390, 35)">
+        <line x1="0" y1="12" x2="30" y2="12" stroke="#f39c12" strokeWidth="2" />
+        <polygon points="25,7 35,12 25,17" fill="#f39c12" />
+      </g>
+      <g transform="translate(430, 30)">
+        <text x="30" y="20" textAnchor="middle" fill="#27ae60" fontSize="11" fontWeight="600">高精度</text>
+      </g>
+    </svg>
+  )
+}
+
+function Lesson44Illustration() {
+  return (
+    <svg viewBox="0 0 680 100" xmlns="http://www.w3.org/2000/svg" className="page-illustration" aria-label="M5Stackとは何か">
+      <line x1="0" y1="35" x2="680" y2="35" stroke="#e0e0e0" strokeWidth="1" />
+      <line x1="0" y1="70" x2="680" y2="70" stroke="#e0e0e0" strokeWidth="1" />
+      <g transform="translate(270, 10)">
+        <rect x="0" y="0" width="80" height="60" rx="5" fill="#1a1a1a" stroke="#3b6ea5" strokeWidth="2" />
+        <rect x="8" y="8" width="64" height="36" rx="2" fill="#e3f2fd" />
+        <text x="40" y="30" textAnchor="middle" fill="#3b6ea5" fontSize="10" fontWeight="600">M5Stack</text>
+        <circle cx="20" cy="52" r="4" fill="#c0392b" />
+        <circle cx="40" cy="52" r="4" fill="#27ae60" />
+        <circle cx="60" cy="52" r="4" fill="#3b6ea5" />
+      </g>
+      <g transform="translate(370, 25)">
+        <text x="0" y="15" fill="#3b6ea5" fontSize="9">画面</text>
+        <text x="0" y="30" fill="#3b6ea5" fontSize="9">ボタン</text>
+        <text x="0" y="45" fill="#3b6ea5" fontSize="9">WiFi</text>
+      </g>
+    </svg>
+  )
+}
+
+function Lesson45Illustration() {
+  return (
+    <svg viewBox="0 0 680 100" xmlns="http://www.w3.org/2000/svg" className="page-illustration" aria-label="M5Stackの画面表示">
+      <line x1="0" y1="35" x2="680" y2="35" stroke="#e0e0e0" strokeWidth="1" />
+      <line x1="0" y1="70" x2="680" y2="70" stroke="#e0e0e0" strokeWidth="1" />
+      <g transform="translate(260, 10)">
+        <rect x="0" y="0" width="100" height="65" rx="5" fill="#1a1a1a" stroke="#3b6ea5" strokeWidth="2" />
+        <rect x="10" y="8" width="80" height="45" rx="2" fill="#e3f2fd" />
+        <text x="50" y="25" textAnchor="middle" fill="#3b6ea5" fontSize="9">温度: 25.5°C</text>
+        <rect x="20" y="32" width="60" height="12" rx="2" fill="#27ae60" />
+        <text x="50" y="42" textAnchor="middle" fill="white" fontSize="8">湿度: 60%</text>
+      </g>
+      <g transform="translate(380, 30)">
+        <text x="0" y="15" fill="#3b6ea5" fontSize="10" fontWeight="500">320×240</text>
+        <text x="0" y="32" fill="#4a4a4a" fontSize="9">カラー液晶</text>
+      </g>
+    </svg>
+  )
+}
+
+function Lesson46Illustration() {
+  return (
+    <svg viewBox="0 0 680 100" xmlns="http://www.w3.org/2000/svg" className="page-illustration" aria-label="M5Stackのボタン操作">
+      <line x1="0" y1="35" x2="680" y2="35" stroke="#e0e0e0" strokeWidth="1" />
+      <line x1="0" y1="70" x2="680" y2="70" stroke="#e0e0e0" strokeWidth="1" />
+      <g transform="translate(230, 20)">
+        <circle cx="30" cy="25" r="15" fill="#c0392b" stroke="#8b0000" strokeWidth="2" />
+        <text x="30" y="30" textAnchor="middle" fill="white" fontSize="12" fontWeight="600">A</text>
+        <text x="30" y="55" textAnchor="middle" fill="#4a4a4a" fontSize="8">戻る</text>
+      </g>
+      <g transform="translate(310, 20)">
+        <circle cx="30" cy="25" r="15" fill="#27ae60" stroke="#1e8449" strokeWidth="2" />
+        <text x="30" y="30" textAnchor="middle" fill="white" fontSize="12" fontWeight="600">B</text>
+        <text x="30" y="55" textAnchor="middle" fill="#4a4a4a" fontSize="8">決定</text>
+      </g>
+      <g transform="translate(390, 20)">
+        <circle cx="30" cy="25" r="15" fill="#3b6ea5" stroke="#2c5282" strokeWidth="2" />
+        <text x="30" y="30" textAnchor="middle" fill="white" fontSize="12" fontWeight="600">C</text>
+        <text x="30" y="55" textAnchor="middle" fill="#4a4a4a" fontSize="8">次へ</text>
+      </g>
+    </svg>
+  )
+}
+
+function Lesson47Illustration() {
+  return (
+    <svg viewBox="0 0 680 100" xmlns="http://www.w3.org/2000/svg" className="page-illustration" aria-label="Grove/I2Cセンサーの接続">
+      <line x1="0" y1="35" x2="680" y2="35" stroke="#e0e0e0" strokeWidth="1" />
+      <line x1="0" y1="70" x2="680" y2="70" stroke="#e0e0e0" strokeWidth="1" />
+      <g transform="translate(220, 20)">
+        <rect x="0" y="10" width="60" height="35" rx="3" fill="#1a1a1a" stroke="#3b6ea5" strokeWidth="2" />
+        <text x="30" y="32" textAnchor="middle" fill="white" fontSize="9">M5Stack</text>
+      </g>
+      <g transform="translate(290, 35)">
+        <rect x="0" y="0" width="40" height="12" rx="2" fill="#f39c12" />
+        <text x="20" y="9" textAnchor="middle" fill="white" fontSize="6">Grove</text>
+      </g>
+      <g transform="translate(340, 20)">
+        <rect x="0" y="10" width="50" height="35" rx="3" fill="#e3f2fd" stroke="#3b6ea5" strokeWidth="2" />
+        <text x="25" y="32" textAnchor="middle" fill="#3b6ea5" fontSize="8">センサー</text>
+      </g>
+      <g transform="translate(410, 30)">
+        <text x="0" y="15" fill="#3b6ea5" fontSize="10" fontWeight="500">I2C: 2本で</text>
+        <text x="0" y="30" fill="#4a4a4a" fontSize="9">複数接続</text>
+      </g>
+    </svg>
+  )
+}
+
+function Lesson48Illustration() {
+  return (
+    <svg viewBox="0 0 680 100" xmlns="http://www.w3.org/2000/svg" className="page-illustration" aria-label="I2C通信の基本">
+      <line x1="0" y1="35" x2="680" y2="35" stroke="#e0e0e0" strokeWidth="1" />
+      <line x1="0" y1="70" x2="680" y2="70" stroke="#e0e0e0" strokeWidth="1" />
+      <g transform="translate(200, 15)">
+        <rect x="0" y="10" width="60" height="40" rx="3" fill="#1a1a1a" stroke="#3b6ea5" strokeWidth="2" />
+        <text x="30" y="32" textAnchor="middle" fill="white" fontSize="8">M5Stack</text>
+        <text x="30" y="44" textAnchor="middle" fill="white" fontSize="6">(マスター)</text>
+      </g>
+      <g transform="translate(275, 30)">
+        <line x1="0" y1="10" x2="30" y2="10" stroke="#f39c12" strokeWidth="2" />
+        <line x1="0" y1="20" x2="30" y2="20" stroke="#27ae60" strokeWidth="2" />
+        <text x="15" y="40" textAnchor="middle" fill="#f39c12" fontSize="6">SDA</text>
+        <text x="15" y="50" textAnchor="middle" fill="#27ae60" fontSize="6">SCL</text>
+      </g>
+      <g transform="translate(320, 15)">
+        <rect x="0" y="5" width="50" height="25" rx="3" fill="#e3f2fd" stroke="#3b6ea5" strokeWidth="2" />
+        <text x="25" y="21" textAnchor="middle" fill="#3b6ea5" fontSize="7">センサー1</text>
+        <text x="25" y="42" textAnchor="middle" fill="#4a4a4a" fontSize="6">0x76</text>
+      </g>
+      <g transform="translate(385, 15)">
+        <rect x="0" y="5" width="50" height="25" rx="3" fill="#e8f5e9" stroke="#27ae60" strokeWidth="2" />
+        <text x="25" y="21" textAnchor="middle" fill="#27ae60" fontSize="7">センサー2</text>
+        <text x="25" y="42" textAnchor="middle" fill="#4a4a4a" fontSize="6">0x68</text>
+      </g>
+      <g transform="translate(320, 58)">
+        <text x="55" y="12" textAnchor="middle" fill="#4a4a4a" fontSize="8">2本の線で複数接続</text>
+      </g>
+    </svg>
+  )
+}
+
+function Lesson49Illustration() {
+  return (
+    <svg viewBox="0 0 680 100" xmlns="http://www.w3.org/2000/svg" className="page-illustration" aria-label="M5StackのWiFi接続">
+      <line x1="0" y1="35" x2="680" y2="35" stroke="#e0e0e0" strokeWidth="1" />
+      <line x1="0" y1="70" x2="680" y2="70" stroke="#e0e0e0" strokeWidth="1" />
+      <g transform="translate(220, 20)">
+        <rect x="0" y="10" width="60" height="40" rx="3" fill="#1a1a1a" stroke="#3b6ea5" strokeWidth="2" />
+        <text x="30" y="35" textAnchor="middle" fill="white" fontSize="9">M5Stack</text>
+      </g>
+      <g transform="translate(300, 25)">
+        <path d="M0 35 Q20 25 40 35" fill="none" stroke="#27ae60" strokeWidth="2" strokeDasharray="4,2" />
+        <path d="M5 30 Q20 20 35 30" fill="none" stroke="#27ae60" strokeWidth="2" strokeDasharray="4,2" />
+        <path d="M10 25 Q20 15 30 25" fill="none" stroke="#27ae60" strokeWidth="2" strokeDasharray="4,2" />
+        <text x="20" y="55" textAnchor="middle" fill="#27ae60" fontSize="8">WiFi</text>
+      </g>
+      <g transform="translate(360, 20)">
+        <rect x="0" y="10" width="60" height="40" rx="3" fill="#e3f2fd" stroke="#3b6ea5" strokeWidth="2" />
+        <text x="30" y="28" textAnchor="middle" fill="#3b6ea5" fontSize="8">ルーター</text>
+        <text x="30" y="42" textAnchor="middle" fill="#3b6ea5" fontSize="7">2.4GHz</text>
+      </g>
+    </svg>
+  )
+}
+
+function Lesson50Illustration() {
+  return (
+    <svg viewBox="0 0 680 100" xmlns="http://www.w3.org/2000/svg" className="page-illustration" aria-label="簡易ダッシュボード">
+      <line x1="0" y1="35" x2="680" y2="35" stroke="#e0e0e0" strokeWidth="1" />
+      <line x1="0" y1="70" x2="680" y2="70" stroke="#e0e0e0" strokeWidth="1" />
+      <g transform="translate(250, 5)">
+        <rect x="0" y="0" width="120" height="70" rx="5" fill="#1a1a1a" stroke="#3b6ea5" strokeWidth="2" />
+        <rect x="8" y="8" width="104" height="50" rx="2" fill="#e3f2fd" />
+        <rect x="12" y="12" width="45" height="20" rx="2" fill="#c0392b" opacity="0.8" />
+        <text x="35" y="25" textAnchor="middle" fill="white" fontSize="8">25.5°C</text>
+        <rect x="62" y="12" width="45" height="20" rx="2" fill="#27ae60" opacity="0.8" />
+        <text x="85" y="25" textAnchor="middle" fill="white" fontSize="8">60%RH</text>
+        <rect x="12" y="36" width="96" height="18" rx="2" fill="#3b6ea5" opacity="0.8" />
+        <rect x="14" y="42" width="60" height="8" rx="1" fill="#f39c12" />
+      </g>
+      <g transform="translate(390, 30)">
+        <text x="0" y="15" fill="#3b6ea5" fontSize="10" fontWeight="500">センサー値を</text>
+        <text x="0" y="32" fill="#4a4a4a" fontSize="9">リアルタイム表示</text>
+      </g>
+    </svg>
+  )
+}
+
+function Lesson51Illustration() {
+  return (
+    <svg viewBox="0 0 680 100" xmlns="http://www.w3.org/2000/svg" className="page-illustration" aria-label="M5Stackの電源管理">
+      <line x1="0" y1="35" x2="680" y2="35" stroke="#e0e0e0" strokeWidth="1" />
+      <line x1="0" y1="70" x2="680" y2="70" stroke="#e0e0e0" strokeWidth="1" />
+      <g transform="translate(220, 20)">
+        <rect x="0" y="10" width="70" height="40" rx="3" fill="#1a1a1a" stroke="#3b6ea5" strokeWidth="2" />
+        <rect x="8" y="35" width="54" height="10" rx="2" fill="#27ae60" />
+        <text x="35" y="42" textAnchor="middle" fill="white" fontSize="6">バッテリー</text>
+        <text x="35" y="65" textAnchor="middle" fill="#4a4a4a" fontSize="8">内蔵バッテリー</text>
+      </g>
+      <g transform="translate(310, 35)">
+        <rect x="0" y="0" width="30" height="15" rx="2" fill="#4a4a4a" />
+        <text x="15" y="11" textAnchor="middle" fill="white" fontSize="7">USB-C</text>
+      </g>
+      <g transform="translate(360, 25)">
+        <text x="0" y="15" fill="#3b6ea5" fontSize="10" fontWeight="500">5V充電</text>
+        <text x="0" y="32" fill="#4a4a4a" fontSize="9">省電力モード対応</text>
+      </g>
+    </svg>
+  )
+}
+
+function Lesson52Illustration() {
+  return (
+    <svg viewBox="0 0 680 100" xmlns="http://www.w3.org/2000/svg" className="page-illustration" aria-label="M5Stackライブラリ活用">
+      <line x1="0" y1="35" x2="680" y2="35" stroke="#e0e0e0" strokeWidth="1" />
+      <line x1="0" y1="70" x2="680" y2="70" stroke="#e0e0e0" strokeWidth="1" />
+      <g transform="translate(220, 15)">
+        <rect x="0" y="10" width="100" height="45" rx="3" fill="#e3f2fd" stroke="#3b6ea5" strokeWidth="2" />
+        <text x="50" y="28" textAnchor="middle" fill="#3b6ea5" fontSize="8">M5Stack.h</text>
+        <text x="50" y="42" textAnchor="middle" fill="#3b6ea5" fontSize="8">ArduinoJson</text>
+        <text x="50" y="55" textAnchor="middle" fill="#3b6ea5" fontSize="8">HTTPClient</text>
+      </g>
+      <g transform="translate(340, 35)">
+        <line x1="0" y1="10" x2="30" y2="10" stroke="#3b6ea5" strokeWidth="2" />
+        <polygon points="25,5 35,10 25,15" fill="#3b6ea5" />
+      </g>
+      <g transform="translate(390, 20)">
+        <text x="0" y="20" fill="#27ae60" fontSize="11" fontWeight="600">簡単開発</text>
+        <text x="0" y="40" fill="#4a4a4a" fontSize="9">公式＋便利ライブラリ</text>
+      </g>
+    </svg>
+  )
+}
+
+function Lesson53Illustration() {
+  return (
+    <svg viewBox="0 0 680 100" xmlns="http://www.w3.org/2000/svg" className="page-illustration" aria-label="M5Stackで作るミニプロジェクト">
+      <line x1="0" y1="35" x2="680" y2="35" stroke="#e0e0e0" strokeWidth="1" />
+      <line x1="0" y1="70" x2="680" y2="70" stroke="#e0e0e0" strokeWidth="1" />
+      <g transform="translate(200, 20)">
+        <rect x="0" y="5" width="50" height="35" rx="3" fill="#e3f2fd" stroke="#3b6ea5" strokeWidth="2" />
+        <text x="25" y="27" textAnchor="middle" fill="#3b6ea5" fontSize="8">センサー</text>
+      </g>
+      <g transform="translate(260, 30)">
+        <text x="10" y="15" fill="#4a4a4a" fontSize="12">+</text>
+      </g>
+      <g transform="translate(285, 20)">
+        <rect x="0" y="5" width="50" height="35" rx="3" fill="#fff3e0" stroke="#f39c12" strokeWidth="2" />
+        <text x="25" y="27" textAnchor="middle" fill="#f39c12" fontSize="8">画面</text>
+      </g>
+      <g transform="translate(345, 30)">
+        <text x="10" y="15" fill="#4a4a4a" fontSize="12">+</text>
+      </g>
+      <g transform="translate(370, 20)">
+        <rect x="0" y="5" width="50" height="35" rx="3" fill="#e8f5e9" stroke="#27ae60" strokeWidth="2" />
+        <text x="25" y="27" textAnchor="middle" fill="#27ae60" fontSize="8">ボタン</text>
+      </g>
+      <g transform="translate(430, 30)">
+        <text x="10" y="15" fill="#4a4a4a" fontSize="12">=</text>
+      </g>
+      <g transform="translate(455, 15)">
+        <rect x="0" y="10" width="60" height="40" rx="5" fill="#1a1a1a" stroke="#c0392b" strokeWidth="2" />
+        <text x="30" y="35" textAnchor="middle" fill="#c0392b" fontSize="9" fontWeight="600">作品!</text>
+      </g>
+    </svg>
+  )
+}
+
+function Lesson54Illustration() {
+  return (
+    <svg viewBox="0 0 680 100" xmlns="http://www.w3.org/2000/svg" className="page-illustration" aria-label="M5Stackのトラブル対応">
+      <line x1="0" y1="35" x2="680" y2="35" stroke="#e0e0e0" strokeWidth="1" />
+      <line x1="0" y1="70" x2="680" y2="70" stroke="#e0e0e0" strokeWidth="1" />
+      <g transform="translate(220, 20)">
+        <rect x="0" y="5" width="70" height="45" rx="3" fill="#ffcccc" stroke="#c0392b" strokeWidth="2" />
+        <text x="35" y="25" textAnchor="middle" fill="#c0392b" fontSize="10">エラー</text>
+        <text x="35" y="40" textAnchor="middle" fill="#c0392b" fontSize="8">Upload failed</text>
+      </g>
+      <g transform="translate(310, 35)">
+        <line x1="0" y1="10" x2="30" y2="10" stroke="#3b6ea5" strokeWidth="2" />
+        <polygon points="25,5 35,10 25,15" fill="#3b6ea5" />
+        <text x="17" y="30" textAnchor="middle" fill="#3b6ea5" fontSize="7">デバッグ</text>
+      </g>
+      <g transform="translate(360, 20)">
+        <rect x="0" y="5" width="70" height="45" rx="3" fill="#e8f5e9" stroke="#27ae60" strokeWidth="2" />
+        <text x="35" y="25" textAnchor="middle" fill="#27ae60" fontSize="10">解決</text>
+        <text x="35" y="40" textAnchor="middle" fill="#27ae60" fontSize="8">シリアルモニタ</text>
+      </g>
+    </svg>
+  )
+}
+
+function Lesson55Illustration() {
+  return (
+    <svg viewBox="0 0 680 100" xmlns="http://www.w3.org/2000/svg" className="page-illustration" aria-label="シリアル通信とは">
+      <line x1="0" y1="35" x2="680" y2="35" stroke="#e0e0e0" strokeWidth="1" />
+      <line x1="0" y1="70" x2="680" y2="70" stroke="#e0e0e0" strokeWidth="1" />
+      <g transform="translate(220, 25)">
+        <rect x="0" y="5" width="50" height="30" rx="3" fill="#e3f2fd" stroke="#3b6ea5" strokeWidth="2" />
+        <text x="25" y="24" textAnchor="middle" fill="#3b6ea5" fontSize="9">送信</text>
+      </g>
+      <g transform="translate(285, 32)">
+        <text x="0" y="12" fill="#3b6ea5" fontSize="8">1</text>
+        <text x="12" y="12" fill="#3b6ea5" fontSize="8">0</text>
+        <text x="24" y="12" fill="#3b6ea5" fontSize="8">1</text>
+        <text x="36" y="12" fill="#3b6ea5" fontSize="8">1</text>
+        <text x="48" y="12" fill="#3b6ea5" fontSize="8">0</text>
+        <line x1="0" y1="20" x2="60" y2="20" stroke="#3b6ea5" strokeWidth="2" />
+        <polygon points="55,15 65,20 55,25" fill="#3b6ea5" />
+        <text x="30" y="35" textAnchor="middle" fill="#4a4a4a" fontSize="7">順番に1ビットずつ</text>
+      </g>
+      <g transform="translate(370, 25)">
+        <rect x="0" y="5" width="50" height="30" rx="3" fill="#e8f5e9" stroke="#27ae60" strokeWidth="2" />
+        <text x="25" y="24" textAnchor="middle" fill="#27ae60" fontSize="9">受信</text>
+      </g>
+    </svg>
+  )
+}
+
+function Lesson56Illustration() {
+  return (
+    <svg viewBox="0 0 680 100" xmlns="http://www.w3.org/2000/svg" className="page-illustration" aria-label="UART/I2C/SPI概要">
+      <line x1="0" y1="35" x2="680" y2="35" stroke="#e0e0e0" strokeWidth="1" />
+      <line x1="0" y1="70" x2="680" y2="70" stroke="#e0e0e0" strokeWidth="1" />
+      <g transform="translate(200, 20)">
+        <rect x="0" y="10" width="60" height="30" rx="3" fill="#e3f2fd" stroke="#3b6ea5" strokeWidth="2" />
+        <text x="30" y="30" textAnchor="middle" fill="#3b6ea5" fontSize="10" fontWeight="500">UART</text>
+        <text x="30" y="55" textAnchor="middle" fill="#4a4a4a" fontSize="7">1対1</text>
+      </g>
+      <g transform="translate(290, 20)">
+        <rect x="0" y="10" width="60" height="30" rx="3" fill="#fff3e0" stroke="#f39c12" strokeWidth="2" />
+        <text x="30" y="30" textAnchor="middle" fill="#f39c12" fontSize="10" fontWeight="500">I2C</text>
+        <text x="30" y="55" textAnchor="middle" fill="#4a4a4a" fontSize="7">2本・複数</text>
+      </g>
+      <g transform="translate(380, 20)">
+        <rect x="0" y="10" width="60" height="30" rx="3" fill="#e8f5e9" stroke="#27ae60" strokeWidth="2" />
+        <text x="30" y="30" textAnchor="middle" fill="#27ae60" fontSize="10" fontWeight="500">SPI</text>
+        <text x="30" y="55" textAnchor="middle" fill="#4a4a4a" fontSize="7">高速</text>
+      </g>
+    </svg>
+  )
+}
+
+function Lesson57Illustration() {
+  return (
+    <svg viewBox="0 0 680 100" xmlns="http://www.w3.org/2000/svg" className="page-illustration" aria-label="WiFi通信の基礎">
+      <line x1="0" y1="35" x2="680" y2="35" stroke="#e0e0e0" strokeWidth="1" />
+      <line x1="0" y1="70" x2="680" y2="70" stroke="#e0e0e0" strokeWidth="1" />
+      <g transform="translate(230, 20)">
+        <rect x="0" y="10" width="50" height="35" rx="3" fill="#1a1a1a" stroke="#3b6ea5" strokeWidth="2" />
+        <text x="25" y="32" textAnchor="middle" fill="white" fontSize="8">IoT機器</text>
+      </g>
+      <g transform="translate(295, 25)">
+        <path d="M0 30 Q20 15 40 30" fill="none" stroke="#27ae60" strokeWidth="2" strokeDasharray="4,2" />
+        <path d="M5 25 Q20 10 35 25" fill="none" stroke="#27ae60" strokeWidth="2" strokeDasharray="4,2" />
+        <text x="20" y="50" textAnchor="middle" fill="#27ae60" fontSize="8">2.4GHz</text>
+      </g>
+      <g transform="translate(350, 15)">
+        <rect x="0" y="15" width="60" height="35" rx="3" fill="#e3f2fd" stroke="#3b6ea5" strokeWidth="2" />
+        <line x1="25" y1="15" x2="25" y2="5" stroke="#3b6ea5" strokeWidth="2" />
+        <line x1="35" y1="15" x2="35" y2="8" stroke="#3b6ea5" strokeWidth="2" />
+        <text x="30" y="38" textAnchor="middle" fill="#3b6ea5" fontSize="9">ルーター</text>
+      </g>
+    </svg>
+  )
+}
+
+function Lesson58Illustration() {
+  return (
+    <svg viewBox="0 0 680 100" xmlns="http://www.w3.org/2000/svg" className="page-illustration" aria-label="HTTP通信の基礎">
+      <line x1="0" y1="35" x2="680" y2="35" stroke="#e0e0e0" strokeWidth="1" />
+      <line x1="0" y1="70" x2="680" y2="70" stroke="#e0e0e0" strokeWidth="1" />
+      <g transform="translate(220, 20)">
+        <rect x="0" y="10" width="60" height="35" rx="3" fill="#e3f2fd" stroke="#3b6ea5" strokeWidth="2" />
+        <text x="30" y="32" textAnchor="middle" fill="#3b6ea5" fontSize="9">クライアント</text>
+      </g>
+      <g transform="translate(295, 25)">
+        <line x1="0" y1="12" x2="70" y2="12" stroke="#27ae60" strokeWidth="2" />
+        <polygon points="65,7 75,12 65,17" fill="#27ae60" />
+        <text x="35" y="8" textAnchor="middle" fill="#27ae60" fontSize="7">GET / POST</text>
+        <line x1="70" y1="28" x2="0" y2="28" stroke="#f39c12" strokeWidth="2" />
+        <polygon points="5,23 -5,28 5,33" fill="#f39c12" />
+        <text x="35" y="45" textAnchor="middle" fill="#f39c12" fontSize="7">Response</text>
+      </g>
+      <g transform="translate(380, 20)">
+        <rect x="0" y="10" width="60" height="35" rx="3" fill="#e8f5e9" stroke="#27ae60" strokeWidth="2" />
+        <text x="30" y="32" textAnchor="middle" fill="#27ae60" fontSize="9">サーバー</text>
+      </g>
+    </svg>
+  )
+}
+
+function Lesson59Illustration() {
+  return (
+    <svg viewBox="0 0 680 100" xmlns="http://www.w3.org/2000/svg" className="page-illustration" aria-label="MQTT通信の基礎">
+      <line x1="0" y1="35" x2="680" y2="35" stroke="#e0e0e0" strokeWidth="1" />
+      <line x1="0" y1="70" x2="680" y2="70" stroke="#e0e0e0" strokeWidth="1" />
+      <g transform="translate(200, 25)">
+        <rect x="0" y="5" width="50" height="30" rx="3" fill="#e3f2fd" stroke="#3b6ea5" strokeWidth="2" />
+        <text x="25" y="24" textAnchor="middle" fill="#3b6ea5" fontSize="8">Pub</text>
+      </g>
+      <g transform="translate(265, 30)">
+        <line x1="0" y1="12" x2="30" y2="12" stroke="#3b6ea5" strokeWidth="1.5" />
+      </g>
+      <g transform="translate(305, 15)">
+        <rect x="0" y="10" width="60" height="40" rx="5" fill="#fff3e0" stroke="#f39c12" strokeWidth="2" />
+        <text x="30" y="35" textAnchor="middle" fill="#f39c12" fontSize="9" fontWeight="500">Broker</text>
+      </g>
+      <g transform="translate(380, 30)">
+        <line x1="0" y1="12" x2="30" y2="12" stroke="#27ae60" strokeWidth="1.5" />
+      </g>
+      <g transform="translate(420, 25)">
+        <rect x="0" y="5" width="50" height="30" rx="3" fill="#e8f5e9" stroke="#27ae60" strokeWidth="2" />
+        <text x="25" y="24" textAnchor="middle" fill="#27ae60" fontSize="8">Sub</text>
+      </g>
+    </svg>
+  )
+}
+
+function Lesson60Illustration() {
+  return (
+    <svg viewBox="0 0 680 100" xmlns="http://www.w3.org/2000/svg" className="page-illustration" aria-label="REST APIの基礎">
+      <line x1="0" y1="35" x2="680" y2="35" stroke="#e0e0e0" strokeWidth="1" />
+      <line x1="0" y1="70" x2="680" y2="70" stroke="#e0e0e0" strokeWidth="1" />
+      <g transform="translate(210, 18)">
+        <rect x="0" y="5" width="55" height="22" rx="3" fill="#e3f2fd" stroke="#3b6ea5" strokeWidth="2" />
+        <text x="27" y="20" textAnchor="middle" fill="#3b6ea5" fontSize="9" fontWeight="500">GET</text>
+      </g>
+      <g transform="translate(280, 18)">
+        <rect x="0" y="5" width="55" height="22" rx="3" fill="#e8f5e9" stroke="#27ae60" strokeWidth="2" />
+        <text x="27" y="20" textAnchor="middle" fill="#27ae60" fontSize="9" fontWeight="500">POST</text>
+      </g>
+      <g transform="translate(350, 18)">
+        <rect x="0" y="5" width="55" height="22" rx="3" fill="#fff3e0" stroke="#f39c12" strokeWidth="2" />
+        <text x="27" y="20" textAnchor="middle" fill="#f39c12" fontSize="9" fontWeight="500">PUT</text>
+      </g>
+      <g transform="translate(420, 18)">
+        <rect x="0" y="5" width="55" height="22" rx="3" fill="#ffcccc" stroke="#c0392b" strokeWidth="2" />
+        <text x="27" y="20" textAnchor="middle" fill="#c0392b" fontSize="9" fontWeight="500">DELETE</text>
+      </g>
+      <g transform="translate(280, 55)">
+        <text x="60" y="15" textAnchor="middle" fill="#4a4a4a" fontSize="9">リソースをHTTPメソッドで操作</text>
+      </g>
+    </svg>
+  )
+}
+
+function Lesson61Illustration() {
+  return (
+    <svg viewBox="0 0 680 100" xmlns="http://www.w3.org/2000/svg" className="page-illustration" aria-label="IoTクラウドの基礎">
+      <line x1="0" y1="35" x2="680" y2="35" stroke="#e0e0e0" strokeWidth="1" />
+      <line x1="0" y1="70" x2="680" y2="70" stroke="#e0e0e0" strokeWidth="1" />
+      <g transform="translate(220, 25)">
+        <rect x="0" y="5" width="50" height="30" rx="3" fill="#1a1a1a" stroke="#3b6ea5" strokeWidth="2" />
+        <text x="25" y="24" textAnchor="middle" fill="white" fontSize="8">センサー</text>
+      </g>
+      <g transform="translate(285, 35)">
+        <line x1="0" y1="7" x2="40" y2="7" stroke="#3b6ea5" strokeWidth="2" />
+        <polygon points="35,2 45,7 35,12" fill="#3b6ea5" />
+      </g>
+      <g transform="translate(340, 15)">
+        <ellipse cx="40" cy="30" rx="50" ry="25" fill="#e3f2fd" stroke="#3b6ea5" strokeWidth="2" />
+        <text x="40" y="35" textAnchor="middle" fill="#3b6ea5" fontSize="10" fontWeight="500">Cloud</text>
+      </g>
+    </svg>
+  )
+}
+
+function Lesson62Illustration() {
+  return (
+    <svg viewBox="0 0 680 100" xmlns="http://www.w3.org/2000/svg" className="page-illustration" aria-label="JSONデータ形式">
+      <line x1="0" y1="35" x2="680" y2="35" stroke="#e0e0e0" strokeWidth="1" />
+      <line x1="0" y1="70" x2="680" y2="70" stroke="#e0e0e0" strokeWidth="1" />
+      <g transform="translate(240, 15)">
+        <rect x="0" y="5" width="180" height="55" rx="5" fill="#f8f9fa" stroke="#3b6ea5" strokeWidth="2" />
+        <text x="10" y="22" fill="#3b6ea5" fontSize="9" fontFamily="monospace">{"{"}</text>
+        <text x="20" y="36" fill="#c0392b" fontSize="9" fontFamily="monospace">&quot;temp&quot;</text>
+        <text x="55" y="36" fill="#4a4a4a" fontSize="9" fontFamily="monospace">: 25.5,</text>
+        <text x="20" y="50" fill="#c0392b" fontSize="9" fontFamily="monospace">&quot;humid&quot;</text>
+        <text x="65" y="50" fill="#4a4a4a" fontSize="9" fontFamily="monospace">: 60</text>
+        <text x="10" y="62" fill="#3b6ea5" fontSize="9" fontFamily="monospace">{"}"}</text>
+      </g>
+    </svg>
+  )
+}
+
+function Lesson63Illustration() {
+  return (
+    <svg viewBox="0 0 680 100" xmlns="http://www.w3.org/2000/svg" className="page-illustration" aria-label="IoTセキュリティ基礎">
+      <line x1="0" y1="35" x2="680" y2="35" stroke="#e0e0e0" strokeWidth="1" />
+      <line x1="0" y1="70" x2="680" y2="70" stroke="#e0e0e0" strokeWidth="1" />
+      <g transform="translate(260, 15)">
+        <rect x="30" y="5" width="60" height="55" rx="5" fill="#e8f5e9" stroke="#27ae60" strokeWidth="2" />
+        <circle cx="60" cy="28" r="12" fill="none" stroke="#27ae60" strokeWidth="2" />
+        <rect x="55" y="35" width="10" height="15" rx="2" fill="#27ae60" />
+        <text x="60" y="70" textAnchor="middle" fill="#27ae60" fontSize="9" fontWeight="500">HTTPS/TLS</text>
+      </g>
+      <g transform="translate(370, 30)">
+        <text x="0" y="15" fill="#3b6ea5" fontSize="10">機密性</text>
+        <text x="0" y="30" fill="#3b6ea5" fontSize="10">完全性</text>
+        <text x="0" y="45" fill="#3b6ea5" fontSize="10">可用性</text>
+      </g>
+    </svg>
+  )
+}
+
+function Lesson64Illustration() {
+  return (
+    <svg viewBox="0 0 680 100" xmlns="http://www.w3.org/2000/svg" className="page-illustration" aria-label="IoTゲートウェイ">
+      <line x1="0" y1="35" x2="680" y2="35" stroke="#e0e0e0" strokeWidth="1" />
+      <line x1="0" y1="70" x2="680" y2="70" stroke="#e0e0e0" strokeWidth="1" />
+      <g transform="translate(190, 25)">
+        <circle cx="15" cy="15" r="10" fill="#e3f2fd" stroke="#3b6ea5" strokeWidth="1.5" />
+        <circle cx="15" cy="40" r="10" fill="#e3f2fd" stroke="#3b6ea5" strokeWidth="1.5" />
+        <text x="15" y="60" textAnchor="middle" fill="#4a4a4a" fontSize="7">センサー</text>
+      </g>
+      <g transform="translate(230, 30)">
+        <line x1="0" y1="10" x2="30" y2="20" stroke="#3b6ea5" strokeWidth="1.5" />
+        <line x1="0" y1="35" x2="30" y2="25" stroke="#3b6ea5" strokeWidth="1.5" />
+      </g>
+      <g transform="translate(270, 15)">
+        <rect x="0" y="10" width="80" height="45" rx="5" fill="#fff3e0" stroke="#f39c12" strokeWidth="2" />
+        <text x="40" y="38" textAnchor="middle" fill="#f39c12" fontSize="10" fontWeight="500">Gateway</text>
+      </g>
+      <g transform="translate(365, 30)">
+        <line x1="0" y1="20" x2="30" y2="20" stroke="#27ae60" strokeWidth="2" />
+        <polygon points="25,15 35,20 25,25" fill="#27ae60" />
+      </g>
+      <g transform="translate(405, 20)">
+        <ellipse cx="35" cy="25" rx="40" ry="20" fill="#e8f5e9" stroke="#27ae60" strokeWidth="2" />
+        <text x="35" y="30" textAnchor="middle" fill="#27ae60" fontSize="9">Cloud</text>
+      </g>
+    </svg>
+  )
+}
+
+function Lesson65Illustration() {
+  return (
+    <svg viewBox="0 0 680 100" xmlns="http://www.w3.org/2000/svg" className="page-illustration" aria-label="通信プロトコルの選び方">
+      <line x1="0" y1="35" x2="680" y2="35" stroke="#e0e0e0" strokeWidth="1" />
+      <line x1="0" y1="70" x2="680" y2="70" stroke="#e0e0e0" strokeWidth="1" />
+      <g transform="translate(200, 18)">
+        <rect x="0" y="5" width="70" height="25" rx="3" fill="#e3f2fd" stroke="#3b6ea5" strokeWidth="2" />
+        <text x="35" y="22" textAnchor="middle" fill="#3b6ea5" fontSize="9">HTTP</text>
+        <text x="35" y="45" textAnchor="middle" fill="#4a4a4a" fontSize="7">低頻度</text>
+      </g>
+      <g transform="translate(295, 18)">
+        <rect x="0" y="5" width="70" height="25" rx="3" fill="#fff3e0" stroke="#f39c12" strokeWidth="2" />
+        <text x="35" y="22" textAnchor="middle" fill="#f39c12" fontSize="9">MQTT</text>
+        <text x="35" y="45" textAnchor="middle" fill="#4a4a4a" fontSize="7">軽量・常時</text>
+      </g>
+      <g transform="translate(390, 18)">
+        <rect x="0" y="5" width="70" height="25" rx="3" fill="#e8f5e9" stroke="#27ae60" strokeWidth="2" />
+        <text x="35" y="22" textAnchor="middle" fill="#27ae60" fontSize="9">WebSocket</text>
+        <text x="35" y="45" textAnchor="middle" fill="#4a4a4a" fontSize="7">リアルタイム</text>
+      </g>
+    </svg>
+  )
+}
+
+function Lesson66Illustration() {
+  return (
+    <svg viewBox="0 0 680 100" xmlns="http://www.w3.org/2000/svg" className="page-illustration" aria-label="IoTフェーズまとめ">
+      <line x1="0" y1="35" x2="680" y2="35" stroke="#e0e0e0" strokeWidth="1" />
+      <line x1="0" y1="70" x2="680" y2="70" stroke="#e0e0e0" strokeWidth="1" />
+      <g transform="translate(180, 25)">
+        <rect x="0" y="5" width="50" height="30" rx="3" fill="#e3f2fd" stroke="#3b6ea5" strokeWidth="2" />
+        <text x="25" y="24" textAnchor="middle" fill="#3b6ea5" fontSize="8">センサー</text>
+      </g>
+      <g transform="translate(245, 35)">
+        <line x1="0" y1="7" x2="25" y2="7" stroke="#3b6ea5" strokeWidth="2" />
+        <polygon points="20,2 30,7 20,12" fill="#3b6ea5" />
+      </g>
+      <g transform="translate(280, 25)">
+        <rect x="0" y="5" width="50" height="30" rx="3" fill="#fff3e0" stroke="#f39c12" strokeWidth="2" />
+        <text x="25" y="24" textAnchor="middle" fill="#f39c12" fontSize="8">通信</text>
+      </g>
+      <g transform="translate(345, 35)">
+        <line x1="0" y1="7" x2="25" y2="7" stroke="#f39c12" strokeWidth="2" />
+        <polygon points="20,2 30,7 20,12" fill="#f39c12" />
+      </g>
+      <g transform="translate(380, 25)">
+        <rect x="0" y="5" width="50" height="30" rx="3" fill="#e8f5e9" stroke="#27ae60" strokeWidth="2" />
+        <text x="25" y="24" textAnchor="middle" fill="#27ae60" fontSize="8">クラウド</text>
+      </g>
+      <g transform="translate(445, 35)">
+        <line x1="0" y1="7" x2="25" y2="7" stroke="#27ae60" strokeWidth="2" />
+        <polygon points="20,2 30,7 20,12" fill="#27ae60" />
+      </g>
+      <g transform="translate(480, 25)">
+        <rect x="0" y="5" width="50" height="30" rx="3" fill="#f3e5f5" stroke="#7b1fa2" strokeWidth="2" />
+        <text x="25" y="24" textAnchor="middle" fill="#7b1fa2" fontSize="8">可視化</text>
+      </g>
+    </svg>
+  )
+}
+
+function Lesson67Illustration() {
+  return (
+    <svg viewBox="0 0 680 100" xmlns="http://www.w3.org/2000/svg" className="page-illustration" aria-label="Raspberry Piとは">
+      <line x1="0" y1="35" x2="680" y2="35" stroke="#e0e0e0" strokeWidth="1" />
+      <line x1="0" y1="70" x2="680" y2="70" stroke="#e0e0e0" strokeWidth="1" />
+      <g transform="translate(260, 10)">
+        <rect x="0" y="5" width="100" height="60" rx="5" fill="#27ae60" stroke="#1e8449" strokeWidth="2" />
+        <rect x="10" y="12" width="30" height="20" rx="2" fill="#1a1a1a" />
+        <rect x="85" y="20" width="20" height="10" rx="1" fill="#c0c0c0" />
+        <rect x="85" y="35" width="20" height="10" rx="1" fill="#c0c0c0" />
+        <circle cx="70" cy="50" r="8" fill="#1a1a1a" />
+        <text x="50" y="80" textAnchor="middle" fill="#27ae60" fontSize="10" fontWeight="600">Raspberry Pi</text>
+      </g>
+      <g transform="translate(390, 25)">
+        <text x="0" y="15" fill="#3b6ea5" fontSize="9">Linux OS</text>
+        <text x="0" y="30" fill="#3b6ea5" fontSize="9">GPIO</text>
+        <text x="0" y="45" fill="#3b6ea5" fontSize="9">カメラ対応</text>
+      </g>
+    </svg>
+  )
+}
+
+function Lesson68Illustration() {
+  return (
+    <svg viewBox="0 0 680 100" xmlns="http://www.w3.org/2000/svg" className="page-illustration" aria-label="OS設定とSSH">
+      <line x1="0" y1="35" x2="680" y2="35" stroke="#e0e0e0" strokeWidth="1" />
+      <line x1="0" y1="70" x2="680" y2="70" stroke="#e0e0e0" strokeWidth="1" />
+      <g transform="translate(220, 20)">
+        <rect x="0" y="10" width="70" height="40" rx="3" fill="#f8f9fa" stroke="#4a4a4a" strokeWidth="2" />
+        <text x="35" y="35" textAnchor="middle" fill="#4a4a4a" fontSize="9">PC</text>
+      </g>
+      <g transform="translate(305, 30)">
+        <line x1="0" y1="15" x2="50" y2="15" stroke="#27ae60" strokeWidth="2" strokeDasharray="4,2" />
+        <text x="25" y="8" textAnchor="middle" fill="#27ae60" fontSize="8">SSH</text>
+      </g>
+      <g transform="translate(370, 20)">
+        <rect x="0" y="10" width="70" height="40" rx="3" fill="#27ae60" stroke="#1e8449" strokeWidth="2" />
+        <text x="35" y="35" textAnchor="middle" fill="white" fontSize="9">Raspberry Pi</text>
+      </g>
+    </svg>
+  )
+}
+
+function Lesson69Illustration() {
+  return (
+    <svg viewBox="0 0 680 100" xmlns="http://www.w3.org/2000/svg" className="page-illustration" aria-label="Raspberry PiのGPIO">
+      <line x1="0" y1="35" x2="680" y2="35" stroke="#e0e0e0" strokeWidth="1" />
+      <line x1="0" y1="70" x2="680" y2="70" stroke="#e0e0e0" strokeWidth="1" />
+      <g transform="translate(250, 15)">
+        <rect x="0" y="5" width="80" height="50" rx="3" fill="#27ae60" stroke="#1e8449" strokeWidth="2" />
+        <g fill="#f39c12">
+          <circle cx="12" cy="15" r="3" />
+          <circle cx="22" cy="15" r="3" />
+          <circle cx="32" cy="15" r="3" />
+          <circle cx="42" cy="15" r="3" />
+          <circle cx="52" cy="15" r="3" />
+          <circle cx="62" cy="15" r="3" />
+          <circle cx="12" cy="25" r="3" />
+          <circle cx="22" cy="25" r="3" />
+          <circle cx="32" cy="25" r="3" />
+          <circle cx="42" cy="25" r="3" />
+          <circle cx="52" cy="25" r="3" />
+          <circle cx="62" cy="25" r="3" />
+        </g>
+        <text x="40" y="45" textAnchor="middle" fill="white" fontSize="8">GPIO</text>
+      </g>
+      <g transform="translate(350, 25)">
+        <line x1="0" y1="20" x2="30" y2="20" stroke="#f39c12" strokeWidth="2" />
+      </g>
+      <g transform="translate(390, 20)">
+        <path d="M10 35 L25 35 L17 15 Z" fill="none" stroke="#c0392b" strokeWidth="2" />
+        <text x="17" y="55" textAnchor="middle" fill="#c0392b" fontSize="9">LED</text>
+      </g>
+    </svg>
+  )
+}
+
+function Lesson70Illustration() {
+  return (
+    <svg viewBox="0 0 680 100" xmlns="http://www.w3.org/2000/svg" className="page-illustration" aria-label="カメラモジュール接続">
+      <line x1="0" y1="35" x2="680" y2="35" stroke="#e0e0e0" strokeWidth="1" />
+      <line x1="0" y1="70" x2="680" y2="70" stroke="#e0e0e0" strokeWidth="1" />
+      <g transform="translate(250, 15)">
+        <rect x="0" y="10" width="70" height="45" rx="3" fill="#27ae60" stroke="#1e8449" strokeWidth="2" />
+        <rect x="55" y="25" width="20" height="8" rx="1" fill="#4a4a4a" />
+        <text x="35" y="40" textAnchor="middle" fill="white" fontSize="8">RPi</text>
+      </g>
+      <g transform="translate(325, 28)">
+        <rect x="0" y="5" width="30" height="5" fill="#f39c12" />
+        <text x="15" y="25" textAnchor="middle" fill="#f39c12" fontSize="7">フレキ</text>
+      </g>
+      <g transform="translate(360, 15)">
+        <rect x="0" y="10" width="50" height="45" rx="3" fill="#1a1a1a" stroke="#3b6ea5" strokeWidth="2" />
+        <circle cx="25" cy="32" r="12" fill="none" stroke="#3b6ea5" strokeWidth="2" />
+        <circle cx="25" cy="32" r="5" fill="#3b6ea5" />
+        <text x="25" y="65" textAnchor="middle" fill="#3b6ea5" fontSize="8">カメラ</text>
+      </g>
+    </svg>
+  )
+}
+
+function Lesson71Illustration() {
+  return (
+    <svg viewBox="0 0 680 100" xmlns="http://www.w3.org/2000/svg" className="page-illustration" aria-label="静止画撮影">
+      <line x1="0" y1="35" x2="680" y2="35" stroke="#e0e0e0" strokeWidth="1" />
+      <line x1="0" y1="70" x2="680" y2="70" stroke="#e0e0e0" strokeWidth="1" />
+      <g transform="translate(230, 15)">
+        <rect x="0" y="10" width="50" height="40" rx="3" fill="#1a1a1a" stroke="#3b6ea5" strokeWidth="2" />
+        <circle cx="25" cy="30" r="12" fill="none" stroke="#3b6ea5" strokeWidth="2" />
+        <circle cx="25" cy="30" r="5" fill="#3b6ea5" />
+      </g>
+      <g transform="translate(295, 30)">
+        <text x="15" y="18" textAnchor="middle" fill="#3b6ea5" fontSize="14">📸</text>
+      </g>
+      <g transform="translate(330, 15)">
+        <rect x="0" y="10" width="80" height="50" rx="3" fill="#e3f2fd" stroke="#3b6ea5" strokeWidth="2" />
+        <rect x="10" y="20" width="60" height="30" rx="2" fill="#c0c0c0" />
+        <text x="40" y="40" textAnchor="middle" fill="#3b6ea5" fontSize="8">image.jpg</text>
+      </g>
+    </svg>
+  )
+}
+
+function Lesson72Illustration() {
+  return (
+    <svg viewBox="0 0 680 100" xmlns="http://www.w3.org/2000/svg" className="page-illustration" aria-label="ストリーミング配信">
+      <line x1="0" y1="35" x2="680" y2="35" stroke="#e0e0e0" strokeWidth="1" />
+      <line x1="0" y1="70" x2="680" y2="70" stroke="#e0e0e0" strokeWidth="1" />
+      <g transform="translate(220, 20)">
+        <rect x="0" y="10" width="50" height="35" rx="3" fill="#1a1a1a" stroke="#3b6ea5" strokeWidth="2" />
+        <circle cx="25" cy="27" r="10" fill="none" stroke="#3b6ea5" strokeWidth="2" />
+        <text x="25" y="60" textAnchor="middle" fill="#4a4a4a" fontSize="8">カメラ</text>
+      </g>
+      <g transform="translate(285, 30)">
+        <line x1="0" y1="12" x2="20" y2="12" stroke="#27ae60" strokeWidth="2" />
+        <line x1="25" y1="12" x2="45" y2="12" stroke="#27ae60" strokeWidth="2" />
+        <line x1="50" y1="12" x2="70" y2="12" stroke="#27ae60" strokeWidth="2" />
+        <polygon points="65,7 75,12 65,17" fill="#27ae60" />
+        <text x="37" y="30" textAnchor="middle" fill="#27ae60" fontSize="7">MJPEG</text>
+      </g>
+      <g transform="translate(375, 20)">
+        <rect x="0" y="5" width="70" height="45" rx="3" fill="#f8f9fa" stroke="#4a4a4a" strokeWidth="2" />
+        <rect x="8" y="12" width="54" height="30" rx="2" fill="#e3f2fd" />
+        <text x="35" y="30" textAnchor="middle" fill="#3b6ea5" fontSize="8">▶ Live</text>
+        <text x="35" y="60" textAnchor="middle" fill="#4a4a4a" fontSize="8">ブラウザ</text>
+      </g>
+    </svg>
+  )
+}
+
+function Lesson73Illustration() {
+  return (
+    <svg viewBox="0 0 680 100" xmlns="http://www.w3.org/2000/svg" className="page-illustration" aria-label="OpenCV入門">
+      <line x1="0" y1="35" x2="680" y2="35" stroke="#e0e0e0" strokeWidth="1" />
+      <line x1="0" y1="70" x2="680" y2="70" stroke="#e0e0e0" strokeWidth="1" />
+      <g transform="translate(220, 15)">
+        <rect x="0" y="10" width="60" height="45" rx="3" fill="#e3f2fd" stroke="#3b6ea5" strokeWidth="2" />
+        <circle cx="30" cy="32" r="8" fill="#c0c0c0" />
+        <text x="30" y="65" textAnchor="middle" fill="#4a4a4a" fontSize="8">入力画像</text>
+      </g>
+      <g transform="translate(295, 30)">
+        <line x1="0" y1="15" x2="30" y2="15" stroke="#3b6ea5" strokeWidth="2" />
+        <polygon points="25,10 35,15 25,20" fill="#3b6ea5" />
+        <text x="17" y="35" textAnchor="middle" fill="#3b6ea5" fontSize="7">OpenCV</text>
+      </g>
+      <g transform="translate(340, 15)">
+        <rect x="0" y="10" width="60" height="45" rx="3" fill="#e8f5e9" stroke="#27ae60" strokeWidth="2" />
+        <circle cx="30" cy="32" r="8" fill="#c0c0c0" />
+        <rect x="20" y="22" width="20" height="20" rx="1" fill="none" stroke="#c0392b" strokeWidth="2" />
+        <text x="30" y="65" textAnchor="middle" fill="#27ae60" fontSize="8">検出結果</text>
+      </g>
+    </svg>
+  )
+}
+
+function Lesson74Illustration() {
+  return (
+    <svg viewBox="0 0 680 100" xmlns="http://www.w3.org/2000/svg" className="page-illustration" aria-label="画像の保存と管理">
+      <line x1="0" y1="35" x2="680" y2="35" stroke="#e0e0e0" strokeWidth="1" />
+      <line x1="0" y1="70" x2="680" y2="70" stroke="#e0e0e0" strokeWidth="1" />
+      <g transform="translate(200, 20)">
+        <rect x="0" y="10" width="60" height="35" rx="3" fill="#e3f2fd" stroke="#3b6ea5" strokeWidth="2" />
+        <text x="30" y="32" textAnchor="middle" fill="#3b6ea5" fontSize="8">SDカード</text>
+        <text x="30" y="55" textAnchor="middle" fill="#4a4a4a" fontSize="7">ローカル</text>
+      </g>
+      <g transform="translate(290, 20)">
+        <rect x="0" y="10" width="60" height="35" rx="3" fill="#fff3e0" stroke="#f39c12" strokeWidth="2" />
+        <text x="30" y="32" textAnchor="middle" fill="#f39c12" fontSize="8">NAS</text>
+        <text x="30" y="55" textAnchor="middle" fill="#4a4a4a" fontSize="7">ネットワーク</text>
+      </g>
+      <g transform="translate(380, 20)">
+        <ellipse cx="35" cy="27" rx="40" ry="20" fill="#e8f5e9" stroke="#27ae60" strokeWidth="2" />
+        <text x="35" y="32" textAnchor="middle" fill="#27ae60" fontSize="8">Cloud</text>
+        <text x="35" y="55" textAnchor="middle" fill="#4a4a4a" fontSize="7">無制限</text>
+      </g>
+    </svg>
+  )
+}
+
+function Lesson75Illustration() {
+  return (
+    <svg viewBox="0 0 680 100" xmlns="http://www.w3.org/2000/svg" className="page-illustration" aria-label="Raspberry Piの電源管理">
+      <line x1="0" y1="35" x2="680" y2="35" stroke="#e0e0e0" strokeWidth="1" />
+      <line x1="0" y1="70" x2="680" y2="70" stroke="#e0e0e0" strokeWidth="1" />
+      <g transform="translate(210, 20)">
+        <rect x="0" y="10" width="50" height="35" rx="3" fill="#f8f9fa" stroke="#4a4a4a" strokeWidth="2" />
+        <text x="25" y="32" textAnchor="middle" fill="#4a4a4a" fontSize="8">AC電源</text>
+      </g>
+      <g transform="translate(275, 35)">
+        <line x1="0" y1="8" x2="25" y2="8" stroke="#4a4a4a" strokeWidth="2" />
+      </g>
+      <g transform="translate(310, 20)">
+        <rect x="0" y="10" width="50" height="35" rx="3" fill="#fff3e0" stroke="#f39c12" strokeWidth="2" />
+        <text x="25" y="28" textAnchor="middle" fill="#f39c12" fontSize="8">UPS</text>
+        <rect x="10" y="32" width="30" height="8" rx="1" fill="#27ae60" />
+      </g>
+      <g transform="translate(375, 35)">
+        <line x1="0" y1="8" x2="25" y2="8" stroke="#f39c12" strokeWidth="2" />
+      </g>
+      <g transform="translate(410, 20)">
+        <rect x="0" y="10" width="50" height="35" rx="3" fill="#27ae60" stroke="#1e8449" strokeWidth="2" />
+        <text x="25" y="32" textAnchor="middle" fill="white" fontSize="8">RPi</text>
+      </g>
+    </svg>
+  )
+}
+
+function Lesson76Illustration() {
+  return (
+    <svg viewBox="0 0 680 100" xmlns="http://www.w3.org/2000/svg" className="page-illustration" aria-label="Raspberry Pi vs M5Stack">
+      <line x1="0" y1="35" x2="680" y2="35" stroke="#e0e0e0" strokeWidth="1" />
+      <line x1="0" y1="70" x2="680" y2="70" stroke="#e0e0e0" strokeWidth="1" />
+      <g transform="translate(220, 15)">
+        <rect x="0" y="10" width="70" height="45" rx="3" fill="#27ae60" stroke="#1e8449" strokeWidth="2" />
+        <text x="35" y="38" textAnchor="middle" fill="white" fontSize="10" fontWeight="500">RPi</text>
+        <text x="35" y="65" textAnchor="middle" fill="#27ae60" fontSize="8">画像処理向き</text>
+      </g>
+      <g transform="translate(310, 35)">
+        <text x="20" y="15" textAnchor="middle" fill="#4a4a4a" fontSize="14">vs</text>
+      </g>
+      <g transform="translate(360, 15)">
+        <rect x="0" y="10" width="70" height="45" rx="3" fill="#1a1a1a" stroke="#f39c12" strokeWidth="2" />
+        <rect x="10" y="18" width="50" height="25" rx="2" fill="#e3f2fd" />
+        <text x="35" y="35" textAnchor="middle" fill="#f39c12" fontSize="10" fontWeight="500">M5</text>
+        <text x="35" y="65" textAnchor="middle" fill="#f39c12" fontSize="8">センサー向き</text>
+      </g>
+    </svg>
+  )
+}
+
+function Lesson77Illustration() {
+  return (
+    <svg viewBox="0 0 680 100" xmlns="http://www.w3.org/2000/svg" className="page-illustration" aria-label="Raspberry Piまとめ">
+      <line x1="0" y1="35" x2="680" y2="35" stroke="#e0e0e0" strokeWidth="1" />
+      <line x1="0" y1="70" x2="680" y2="70" stroke="#e0e0e0" strokeWidth="1" />
+      <g transform="translate(200, 25)">
+        <rect x="0" y="5" width="55" height="30" rx="3" fill="#e3f2fd" stroke="#3b6ea5" strokeWidth="1.5" />
+        <text x="27" y="24" textAnchor="middle" fill="#3b6ea5" fontSize="7">OS/SSH</text>
+      </g>
+      <g transform="translate(265, 25)">
+        <rect x="0" y="5" width="55" height="30" rx="3" fill="#e8f5e9" stroke="#27ae60" strokeWidth="1.5" />
+        <text x="27" y="24" textAnchor="middle" fill="#27ae60" fontSize="7">GPIO</text>
+      </g>
+      <g transform="translate(330, 25)">
+        <rect x="0" y="5" width="55" height="30" rx="3" fill="#fff3e0" stroke="#f39c12" strokeWidth="1.5" />
+        <text x="27" y="24" textAnchor="middle" fill="#f39c12" fontSize="7">カメラ</text>
+      </g>
+      <g transform="translate(395, 25)">
+        <rect x="0" y="5" width="55" height="30" rx="3" fill="#f3e5f5" stroke="#7b1fa2" strokeWidth="1.5" />
+        <text x="27" y="24" textAnchor="middle" fill="#7b1fa2" fontSize="7">OpenCV</text>
+      </g>
+      <g transform="translate(290, 65)">
+        <text x="60" y="15" textAnchor="middle" fill="#27ae60" fontSize="10" fontWeight="600">PHASE 7 完了!</text>
+      </g>
+    </svg>
+  )
+}
+
+function Lesson78Illustration() {
+  return (
+    <svg viewBox="0 0 680 100" xmlns="http://www.w3.org/2000/svg" className="page-illustration" aria-label="AIによる画像認識とは">
+      <line x1="0" y1="35" x2="680" y2="35" stroke="#e0e0e0" strokeWidth="1" />
+      <line x1="0" y1="70" x2="680" y2="70" stroke="#e0e0e0" strokeWidth="1" />
+      <g transform="translate(210, 15)">
+        <rect x="0" y="10" width="60" height="45" rx="3" fill="#e3f2fd" stroke="#3b6ea5" strokeWidth="2" />
+        <text x="30" y="35" textAnchor="middle" fill="#3b6ea5" fontSize="16">📷</text>
+        <text x="30" y="65" textAnchor="middle" fill="#4a4a4a" fontSize="8">画像</text>
+      </g>
+      <g transform="translate(285, 30)">
+        <line x1="0" y1="15" x2="30" y2="15" stroke="#3b6ea5" strokeWidth="2" />
+        <polygon points="25,10 35,15 25,20" fill="#3b6ea5" />
+      </g>
+      <g transform="translate(330, 15)">
+        <rect x="0" y="10" width="70" height="45" rx="5" fill="#f3e5f5" stroke="#7b1fa2" strokeWidth="2" />
+        <text x="35" y="35" textAnchor="middle" fill="#7b1fa2" fontSize="10" fontWeight="600">AI</text>
+        <text x="35" y="50" textAnchor="middle" fill="#7b1fa2" fontSize="8">モデル</text>
+      </g>
+      <g transform="translate(415, 30)">
+        <line x1="0" y1="15" x2="30" y2="15" stroke="#7b1fa2" strokeWidth="2" />
+        <polygon points="25,10 35,15 25,20" fill="#7b1fa2" />
+      </g>
+      <g transform="translate(460, 20)">
+        <rect x="0" y="10" width="60" height="35" rx="3" fill="#e8f5e9" stroke="#27ae60" strokeWidth="2" />
+        <text x="30" y="32" textAnchor="middle" fill="#27ae60" fontSize="9" fontWeight="500">犬: 95%</text>
+      </g>
+    </svg>
+  )
+}
+
+function Lesson79Illustration() {
+  return (
+    <svg viewBox="0 0 680 100" xmlns="http://www.w3.org/2000/svg" className="page-illustration" aria-label="分類と検出の違い">
+      <line x1="0" y1="35" x2="680" y2="35" stroke="#e0e0e0" strokeWidth="1" />
+      <line x1="0" y1="70" x2="680" y2="70" stroke="#e0e0e0" strokeWidth="1" />
+      <g transform="translate(200, 15)">
+        <rect x="0" y="5" width="80" height="55" rx="3" fill="#e3f2fd" stroke="#3b6ea5" strokeWidth="2" />
+        <circle cx="40" cy="32" r="15" fill="#f39c12" />
+        <text x="40" y="70" textAnchor="middle" fill="#3b6ea5" fontSize="9" fontWeight="500">分類</text>
+        <text x="40" y="82" textAnchor="middle" fill="#4a4a4a" fontSize="7">→「みかん」</text>
+      </g>
+      <g transform="translate(330, 15)">
+        <rect x="0" y="5" width="80" height="55" rx="3" fill="#e8f5e9" stroke="#27ae60" strokeWidth="2" />
+        <circle cx="25" cy="28" r="12" fill="#f39c12" />
+        <rect x="11" y="14" width="28" height="28" rx="1" fill="none" stroke="#c0392b" strokeWidth="2" />
+        <circle cx="55" cy="38" r="10" fill="#f39c12" />
+        <rect x="43" y="26" width="24" height="24" rx="1" fill="none" stroke="#c0392b" strokeWidth="2" />
+        <text x="40" y="70" textAnchor="middle" fill="#27ae60" fontSize="9" fontWeight="500">検出</text>
+        <text x="40" y="82" textAnchor="middle" fill="#4a4a4a" fontSize="7">→位置＋ラベル</text>
+      </g>
+    </svg>
+  )
+}
+
+function Lesson80Illustration() {
+  return (
+    <svg viewBox="0 0 680 100" xmlns="http://www.w3.org/2000/svg" className="page-illustration" aria-label="画像モデルの直感">
+      <line x1="0" y1="35" x2="680" y2="35" stroke="#e0e0e0" strokeWidth="1" />
+      <line x1="0" y1="70" x2="680" y2="70" stroke="#e0e0e0" strokeWidth="1" />
+      <g transform="translate(180, 20)">
+        <rect x="0" y="10" width="40" height="35" rx="3" fill="#e3f2fd" stroke="#3b6ea5" strokeWidth="1.5" />
+        <text x="20" y="32" textAnchor="middle" fill="#3b6ea5" fontSize="7">入力</text>
+      </g>
+      <g transform="translate(230, 35)">
+        <line x1="0" y1="8" x2="15" y2="8" stroke="#3b6ea5" strokeWidth="1.5" />
+      </g>
+      <g transform="translate(250, 20)">
+        <rect x="0" y="10" width="35" height="35" rx="3" fill="#fff3e0" stroke="#f39c12" strokeWidth="1.5" />
+        <text x="17" y="28" textAnchor="middle" fill="#f39c12" fontSize="6">エッジ</text>
+        <text x="17" y="38" textAnchor="middle" fill="#f39c12" fontSize="6">色</text>
+      </g>
+      <g transform="translate(295, 35)">
+        <line x1="0" y1="8" x2="15" y2="8" stroke="#f39c12" strokeWidth="1.5" />
+      </g>
+      <g transform="translate(315, 20)">
+        <rect x="0" y="10" width="35" height="35" rx="3" fill="#f3e5f5" stroke="#7b1fa2" strokeWidth="1.5" />
+        <text x="17" y="28" textAnchor="middle" fill="#7b1fa2" fontSize="6">形</text>
+        <text x="17" y="38" textAnchor="middle" fill="#7b1fa2" fontSize="6">部品</text>
+      </g>
+      <g transform="translate(360, 35)">
+        <line x1="0" y1="8" x2="15" y2="8" stroke="#7b1fa2" strokeWidth="1.5" />
+      </g>
+      <g transform="translate(380, 20)">
+        <rect x="0" y="10" width="35" height="35" rx="3" fill="#e8f5e9" stroke="#27ae60" strokeWidth="1.5" />
+        <text x="17" y="32" textAnchor="middle" fill="#27ae60" fontSize="6">全体</text>
+      </g>
+      <g transform="translate(425, 35)">
+        <line x1="0" y1="8" x2="15" y2="8" stroke="#27ae60" strokeWidth="1.5" />
+      </g>
+      <g transform="translate(445, 20)">
+        <rect x="0" y="10" width="50" height="35" rx="3" fill="#ffcccc" stroke="#c0392b" strokeWidth="1.5" />
+        <text x="25" y="32" textAnchor="middle" fill="#c0392b" fontSize="9" fontWeight="500">猫!</text>
+      </g>
+      <g transform="translate(260, 70)">
+        <text x="80" y="10" textAnchor="middle" fill="#4a4a4a" fontSize="8">層を重ねて特徴を抽出</text>
       </g>
     </svg>
   )
